@@ -1,0 +1,795 @@
+
+/* ==================================================
+   Basic Styles
+================================================== */
+:root {
+	--work-accent: #1e90ff;
+}
+
+html{
+	width:100%;
+	font-size: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+}
+
+body{
+	background:#fff;
+	color:#000;
+	font-weight:400;
+	font-size:16px;
+	font-family: 'Montserrat', sans-serif;
+	line-height:30px;
+	letter-spacing: 0.2px;
+}
+
+
+a{
+	color:#777;
+	font-weight: 400;
+	text-decoration: none;
+	cursor: pointer;
+	
+	-webkit-transition: color 0.15s ease-in-out 0s;	
+	   -moz-transition: color 0.15s ease-in-out 0s;
+		 -o-transition: color 0.15s ease-in-out 0s;
+		    transition: color 0.15s ease-in-out 0s;
+}
+
+a:hover,
+a:active,
+a:focus{
+	outline: 0;
+	color:#000;
+	text-decoration:none;
+}
+
+a img {
+	border: none;
+}
+
+a > img {
+	vertical-align: bottom;	
+}
+
+img {
+	max-width: none;	
+}
+
+p {
+	margin: 0 0 30px;
+}
+
+ul {
+    margin: 0 0 20px 0px;
+    padding: 0;
+}
+
+ul {
+	list-style: circle inside;
+}
+
+li {
+	line-height: 30px;
+	text-indent: 0em;
+}
+
+input::input-placeholder,
+textarea::input-placeholder {
+	color: #BCBCC4;
+	opacity: 1;
+}
+
+.w-100 {
+	max-width: 100%;
+}
+
+.subsec.row {
+	margin-bottom: 50px
+}
+
+@media screen and (max-width: 768px) {
+	.row {
+		margin-left: 20px !important;
+	}
+}
+
+/* ==================================================
+   Typography
+================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap');
+
+h1 {
+	margin:0 auto;
+	/* margin-bottom: 35vh; */
+	font-weight:600;
+	font-family: 'Montserrat', sans-serif;
+	line-height:1.5em;
+	text-align: center;
+	max-width: 90%;
+	color: #000;
+}
+
+.top-margin {
+	/* height: 90vh; */
+	margin: 27vh auto;
+}
+
+.quote {
+	margin: 10vh auto;
+	text-align: center;
+}
+
+.top-margin.afterglow-top h1 {
+	color:#F13E42;
+}
+
+
+.red {
+	color: #F13E42;
+}
+
+.green {
+	color: green;
+}
+
+.purple {
+	color: purple;
+}
+
+.teal-green {
+	color: #01ADB5;
+}
+
+.yellow {
+	color: #D29A62;
+}
+
+.top-margin.petpuja-top h1 {
+	color:#D29A62;
+}
+
+.top-margin h6 {
+	font-size:16px;
+}
+
+h3,
+h6{
+	margin:0 0 20px 0;
+	color:#000;
+	font-weight:400;
+	font-family: 'Montserrat', sans-serif;
+	line-height:1.5em;
+}
+
+h3{
+	font-size:22px;
+	color:#000;
+	letter-spacing: 0.6px;
+	text-align:center !important;
+	font-weight:400;
+}
+
+h4 {
+	text-transform: uppercase;
+}
+
+h6{
+	font-size:13px;
+	font-weight:400;
+	line-height:1em;
+	color:#B5B5B5;
+	text-align:center;
+	letter-spacing: 0.5px;
+	padding-top: 5px;
+}
+
+h7{
+	font-size:14px;
+	font-weight:400;
+	letter-spacing: 1px;
+	color:#000;
+	letter-spacing: 0.5px;
+	text-align:center;
+	line-height:1.6em;	
+}
+
+h6.work {
+	font-size:15px;
+	font-weight:400;
+	line-height:1.7em;
+	color:#3d3636;
+	text-align:left;
+	letter-spacing: 0.5px;
+	padding-top: 5px;
+	margin: 0px;
+}
+
+h6.work.center {
+	font-size:15px;
+	font-weight:400;
+	line-height:1.7em;
+	color:#3d3636;
+	text-align:center;
+	letter-spacing: 0.5px;
+	padding-top: 5px;
+	margin: 0px;
+}
+
+.point {
+	text-align: left;
+	font-weight: 500;
+	margin-top: 30px;
+}
+
+/* span.work p{
+	margin: 0;
+	text-align: start !important;
+} */
+
+/* ==================================================
+   Margin Bottom Sets
+================================================== */
+
+.margin-0{
+	margin-bottom:0 !important;
+}
+
+
+/* ==================================================
+   Header
+================================================== */
+
+header {
+	background:transparent;
+	position: static;
+	width: 100%;
+	height: 100px;
+	z-index: 1001;
+	padding-top:40px;
+	padding-bottom: 40px;
+}
+
+header #logo a {
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 100px;
+	letter-spacing: 2px;
+}
+
+header #logo a:hover {
+	color: #777;	
+}
+
+
+
+/* Navigation */
+
+nav#menu {
+	float: right;
+}
+
+nav#menu #menu-nav {
+	margin: 0;
+	padding: 0;
+}
+
+nav#menu #menu-nav li {
+	position: relative;	
+	list-style: none;
+	float: left;
+	padding: 0 30px;
+	
+}
+
+nav#menu #menu-nav li a {
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 100px;
+	display: block;
+	letter-spacing: 0.2px;
+}
+
+nav#menu #menu-nav li:last-child {
+	padding-right: 0;
+}
+
+nav#menu #menu-nav li a:hover {
+	color: #777;
+}
+
+/* ==================================================
+   Intro Box
+================================================== */
+
+#intro-box {
+	position: relative;
+	background:transparent;
+	padding: 60px 0 130px;
+	text-align:center;
+}
+
+#intro-box.work {
+	position: relative;
+	background:transparent;
+	padding: 60px 0 60px;
+	text-align:center;
+}
+
+#intro-box h3 {
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 33px;
+    font-weight: 400;
+	line-height: 1.7;
+	letter-spacing: 0.5px;
+	text-align: start;
+	
+}
+
+#intro-box p {
+	text-align: start;
+}
+
+#intro-box .center {
+	text-align: center;
+}
+
+#m-0 {
+	padding-bottom: 20px;
+}
+
+#p-90 {
+	padding-bottom: 100px;
+}
+/* ==================================================
+   Team People / Single Team
+================================================== */
+
+/* Single Team Page */
+
+#single-team .team-img {
+	margin-bottom: 50px;	
+	text-align: center;
+}
+
+.team-img img {
+	width: 100%;
+}
+
+.team-img.hero img {
+	width: 85%;
+}
+
+.span8 .team-img img {
+	width: 100%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.work.team-img img {
+	width: 40%;
+}
+
+.work.team-img.laptop img {
+	width: 90%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 768px) {
+	.work.team-img img {
+		width: 100%;
+	}
+}
+
+/* ==================================================
+   Portfolio
+================================================== */
+
+#portfolio img {
+	width: 100%;	
+}
+
+#projects {
+	margin: 0;
+	padding: 0;
+}
+
+#projects li {
+	list-style: none;
+	margin-bottom: 30px;
+}
+
+.item-project {
+	position: relative;
+	overflow: hidden;	
+}
+
+/* ==================================================
+   Footer
+================================================== */
+
+footer {
+	position: relative;
+	background: transparent;	
+	padding: 40px 0 40px;
+	margin-bottom: 0px;
+}
+
+/* ==================================================
+   Footer Widgets
+================================================== */
+
+footer.footer-widgets .widget {
+	margin-bottom: 0;	
+}
+
+footer.footer-widgets {
+	color: #777;
+	font-size: 20x;
+}
+
+footer.footer-widgets a {
+	color: #777;	
+}
+
+footer.footer-widgets a:hover {
+	color: #000;
+}
+
+/* ==================================================
+   Photo Widgets
+================================================== */
+
+.photo {
+	margin-top: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.photo-row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+	justify-content: space-between;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .photo-column {
+	flex: 25%;
+	max-width: 24%;
+	padding: 0 4px;
+  }
+  
+  .photo-column img {
+	margin-top: 5%;
+	vertical-align: middle;
+	width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+	.photo-column {
+	  flex: 50%;
+	  max-width: 48%;
+	}
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+	.photo {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.photo-column {
+	  flex: 100%;
+	  max-width: 100%;
+	}
+  }
+
+  /* ==================================================
+   Button
+================================================== */
+
+   button {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	vertical-align: middle;
+	text-decoration: none;
+	background: transparent;
+	padding: 0;
+	font-size: inherit;
+	font-family: inherit;
+   }
+   
+   button.learn-more {
+	width: 17rem;
+	height: auto;
+   }
+
+   button.learn-more .circle {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: relative;
+	display: block;
+	margin: 0;
+	width: 3rem;
+	height: 3rem;
+	background: #DE2952;
+	border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	left: 0.625rem;
+	width: 1.125rem;
+	height: 0.125rem;
+	background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+	position: absolute;
+	content: "";
+	top: -0.29rem;
+	right: 0.0625rem;
+	width: 0.625rem;
+	height: 0.625rem;
+	border-top: 0.125rem solid #fff;
+	border-right: 0.125rem solid #fff;
+	transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0.75rem 0;
+	margin: 0 0 0 1.85rem;
+	color: #DE2952;
+	font-weight: 700;
+	line-height: 1.6;
+	text-align: center;  
+	text-transform: uppercase;
+   }
+
+   button:hover .circle {
+	width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+	background: #fff;
+	transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+	color: #fff;
+   }
+
+   .afterglow.container {
+	margin-bottom: 100px;
+   }
+
+   .afterglow button {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	vertical-align: middle;
+	text-decoration: none;
+	background: transparent;
+	padding: 0;
+	font-size: inherit;
+	font-family: inherit;
+   }
+   
+   .afterglow button.learn-more {
+	width: 17rem;
+	height: auto;
+   }
+
+   .afterglow button.learn-more .circle {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: relative;
+	display: block;
+	margin: 0;
+	width: 3rem;
+	height: 3rem;
+	background: #F13E42;
+	border-radius: 1.625rem;
+   }
+   
+   .afterglow button.learn-more .circle .icon {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: #fff;
+   }
+   
+   .afterglow button.learn-more .circle .icon.arrow {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	left: 0.625rem;
+	width: 1.125rem;
+	height: 0.125rem;
+	background: none;
+   }
+   
+   .afterglow button.learn-more .circle .icon.arrow::before {
+	position: absolute;
+	content: "";
+	top: -0.29rem;
+	right: 0.0625rem;
+	width: 0.625rem;
+	height: 0.625rem;
+	border-top: 0.125rem solid #fff;
+	border-right: 0.125rem solid #fff;
+	transform: rotate(45deg);
+   }
+   
+   .afterglow button.learn-more .button-text {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0.75rem 0;
+	margin: 0 0 0 1.85rem;
+	color: #F13E42;
+	font-weight: 700;
+	line-height: 1.6;
+	text-align: center;  
+	text-transform: uppercase;
+   }
+
+   .afterglow button:hover .circle {
+	width: 100%;
+   }
+   
+   .afterglow button:hover .circle .icon.arrow {
+	background: #fff;
+	transform: translate(1rem, 0);
+   }
+   
+   .afterglow button:hover .button-text {
+	color: #fff;
+   }
+
+   .petpuja.container {
+	margin-bottom: 100px;
+   }
+
+   .petpuja button {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	vertical-align: middle;
+	text-decoration: none;
+	background: transparent;
+	padding: 0;
+	font-size: inherit;
+	font-family: inherit;
+   }
+   
+   .petpuja button.learn-more {
+	width: 17rem;
+	height: auto;
+   }
+
+   .petpuja button.learn-more .circle {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: relative;
+	display: block;
+	margin: 0;
+	width: 3rem;
+	height: 3rem;
+	background: #D29A62;
+	border-radius: 1.625rem;
+   }
+   
+   .petpuja button.learn-more .circle .icon {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: #fff;
+   }
+   
+   .petpuja button.learn-more .circle .icon.arrow {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	left: 0.625rem;
+	width: 1.125rem;
+	height: 0.125rem;
+	background: none;
+   }
+   
+   .petpuja button.learn-more .circle .icon.arrow::before {
+	position: absolute;
+	content: "";
+	top: -0.29rem;
+	right: 0.0625rem;
+	width: 0.625rem;
+	height: 0.625rem;
+	border-top: 0.125rem solid #fff;
+	border-right: 0.125rem solid #fff;
+	transform: rotate(45deg);
+   }
+   
+   .petpuja button.learn-more .button-text {
+	transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0.75rem 0;
+	margin: 0 0 0 1.85rem;
+	color: #D29A62;
+	font-weight: 700;
+	line-height: 1.6;
+	text-align: center;  
+	text-transform: uppercase;
+   }
+
+   .petpuja button:hover .circle {
+	width: 100%;
+   }
+   
+   .petpuja button:hover .circle .icon.arrow {
+	background: #fff;
+	transform: translate(1rem, 0);
+   }
+   
+   .petpuja button:hover .button-text {
+	color: #fff;
+   }
+
+   /* Go To Previous/Next Project Button */
+   .button-wrapper button {
+    background-color: #6d6d6d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+	}
+
+	.button-wrapper button:hover {
+		background-color: #000000;
+	}
+
+	.button-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: -500vh; 
+	}
+
+	.button-wrapper {
+		margin: 40px; /* Adjust the amount of space between buttons */
+	}
