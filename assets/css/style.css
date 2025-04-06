@@ -410,12 +410,22 @@ header .navbar ul li a:hover {
   margin-top: 6rem;
 }
 .resumebtn .btn {
-  padding: 1.7rem 3rem;
+  /* padding: 1.7rem 3rem;
   border-radius: 0.5em;
   transition: 0.3s;
   color: #fff;
   background: #18023f;
   box-shadow: 0px 5px 10px #2b3dda;
+  font-family: "Nunito", sans-serif; */
+  margin-top: 1rem;
+  position: absolute;
+  line-height: 0;
+  padding: 1.6rem 3rem;
+  border-radius: 4em;
+  transition: 0.5s;
+  color: #fff;
+  background: #2b3dda;
+  box-shadow: 0px 5px 18px #2b3dda;
   font-family: "Nunito", sans-serif;
 }
 .resumebtn .btn span {
@@ -565,8 +575,8 @@ header .navbar ul li a:hover {
   background: rgb(255, 255, 255);
 }
 .education .box-container .box:hover {
-  transform: scale(1.03);
-  box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+  /* transform: scale(1.03); */
+  /* box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3); */
 }
 .education .box-container .box .image {
   flex: 1 1 20rem;
@@ -933,9 +943,9 @@ header .navbar ul li a:hover {
   }
   .experience .container::before {
     left: 61px;
-    border: medium solid #ffe600;
+    border: medium solid #dfdfdf;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #ffe600 transparent transparent;
+    border-color: transparent #dfdfdf transparent transparent;
   }
   .experience .left::after {
     left: 15px;
