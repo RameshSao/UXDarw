@@ -8,6 +8,10 @@
         "icon": "https://img.icons8.com/?size=48&id=4VVL78edhbW9&format=png&color=000000"
     },
     {
+        "name": "InDesign",
+        "icon": "https://img.icons8.com/?size=48&id=51lMuEpYaQ8k&format=png&color=000000"
+    },
+    {
         "name": "Illustrator",
         "icon": "https://img.icons8.com/?size=48&id=13631&format=png&color=000000"
     },
@@ -30,10 +34,5 @@
     {
         "name": "After Effect",
         "icon": "https://img.icons8.com/?size=48&id=108781&format=png&color=000000"
-    },
-    {
-        "name": "InDesign",
-        "icon": "https://img.icons8.com/?size=48&id=51lMuEpYaQ8k&format=png&color=000000"
-    },
-    
+    }
 ]
