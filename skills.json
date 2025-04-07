@@ -28,12 +28,16 @@
         "icon": "https://img.icons8.com/?size=48&id=37iEIiYKRoDs&format=png&color=000000"
     },
     {
-        "name": "MotionGraphic",
+        "name": "2d Animation",
         "icon": "https://img.icons8.com/?size=48&id=MdLjthXUdZMp&format=png&color=000000"
     },
     {
         "name": "Premiere Pro",
         "icon": "https://img.icons8.com/?size=48&id=e57Y1CnsOasB&format=png&color=000000"
+    },
+    {
+        "name": "Premiere Pro",
+        "icon": "https://img.icons8.com/color/48/adobe-audition.png"
     },
     {
         "name": "After Effect",
