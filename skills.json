@@ -16,6 +16,10 @@
         "icon": "https://static-00.iconduck.com/assets.00/file-type-drawio-icon-48x48-2xmddtvm.png"
     },
     {
+        "name": "MS Office",
+        "icon": "https://img.icons8.com/color/48/office-365.png"
+    },
+    {
         "name": "InDesign",
         "icon": "https://img.icons8.com/?size=48&id=51lMuEpYaQ8k&format=png&color=000000"
     },
@@ -46,9 +50,5 @@
     {
         "name": "Sketch",
         "icon": "https://img.icons8.com/?size=48&id=37iEIiYKRoDs&format=png&color=000000"
-    },
-    {
-        "name": "2d Animation",
-        "icon": "https://img.icons8.com/?size=48&id=MdLjthXUdZMp&format=png&color=000000"
     }
 ]
