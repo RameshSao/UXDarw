@@ -20,6 +20,10 @@
         "icon": "https://img.icons8.com/?size=48&id=13677&format=png&color=000000"
     },
     {
+        "name": "Premiere Pro",
+        "icon": "https://img.icons8.com/?size=48&id=e57Y1CnsOasB&format=png&color=000000"
+    },
+    {
         "name": "Miro",
         "icon": "https://img.icons8.com/?size=48&id=MU45yL8cD9cF&format=png&color=000000"
     },
@@ -30,10 +34,6 @@
     {
         "name": "2d Animation",
         "icon": "https://img.icons8.com/?size=48&id=MdLjthXUdZMp&format=png&color=000000"
-    },
-    {
-        "name": "Premiere Pro",
-        "icon": "https://img.icons8.com/?size=48&id=e57Y1CnsOasB&format=png&color=000000"
     },
     {
         "name": "Audition",
