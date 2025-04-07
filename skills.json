@@ -20,6 +20,14 @@
         "icon": "https://img.icons8.com/?size=48&id=13677&format=png&color=000000"
     },
     {
+        "name": "After Effect",
+        "icon": "https://img.icons8.com/?size=48&id=108781&format=png&color=000000"
+    },
+    {
+        "name": "Audition",
+        "icon": "https://img.icons8.com/color/48/adobe-audition.png"
+    },
+    {
         "name": "Premiere Pro",
         "icon": "https://img.icons8.com/?size=48&id=e57Y1CnsOasB&format=png&color=000000"
     },
@@ -34,13 +42,5 @@
     {
         "name": "2d Animation",
         "icon": "https://img.icons8.com/?size=48&id=MdLjthXUdZMp&format=png&color=000000"
-    },
-    {
-        "name": "Audition",
-        "icon": "https://img.icons8.com/color/48/adobe-audition.png"
-    },
-    {
-        "name": "After Effect",
-        "icon": "https://img.icons8.com/?size=48&id=108781&format=png&color=000000"
     }
 ]
