@@ -8,10 +8,6 @@
         "icon": "https://img.icons8.com/?size=48&id=4VVL78edhbW9&format=png&color=000000"
     },
     {
-        "name": "InDesign",
-        "icon": "https://img.icons8.com/?size=48&id=51lMuEpYaQ8k&format=png&color=000000"
-    },
-    {
         "name": "Illustrator",
         "icon": "https://img.icons8.com/?size=48&id=13631&format=png&color=000000"
     },
@@ -19,6 +15,23 @@
         "name": "Photoshop",
         "icon": "https://img.icons8.com/?size=48&id=13677&format=png&color=000000"
     },
+    {
+        "name": "Premiere Pro",
+        "icon": "https://img.icons8.com/?size=48&id=e57Y1CnsOasB&format=png&color=000000"
+    },
+    {
+        "name": "After Effect",
+        "icon": "https://img.icons8.com/?size=48&id=108781&format=png&color=000000"
+    }
+    {
+        "name": "Audition",
+        "icon": "https://img.icons8.com/color/48/adobe-audition.png"
+    },
+    {
+        "name": "InDesign",
+        "icon": "https://img.icons8.com/?size=48&id=51lMuEpYaQ8k&format=png&color=000000"
+    },
+  
     {
         "name": "Miro",
         "icon": "https://img.icons8.com/?size=48&id=MU45yL8cD9cF&format=png&color=000000"
@@ -31,16 +44,5 @@
         "name": "2d Animation",
         "icon": "https://img.icons8.com/?size=48&id=MdLjthXUdZMp&format=png&color=000000"
     },
-    {
-        "name": "Premiere Pro",
-        "icon": "https://img.icons8.com/?size=48&id=e57Y1CnsOasB&format=png&color=000000"
-    },
-    {
-        "name": "Audition",
-        "icon": "https://img.icons8.com/color/48/adobe-audition.png"
-    },
-    {
-        "name": "After Effect",
-        "icon": "https://img.icons8.com/?size=48&id=108781&format=png&color=000000"
-    }
+   
 ]
