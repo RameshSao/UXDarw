@@ -1,11 +1,11 @@
 [
     {
-        "name": "Try Text",
-        "icon": 
-    },
-    {
         "name": "Figma",
         "icon": "https://img.icons8.com/color/48/000000/figma.png"
+    },
+    {
+        "name": "Try Text",
+        "icon": 
     },
     {
         "name": "Sketch",
