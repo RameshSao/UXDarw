@@ -2,23 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="Ramesh Sao, portfolio, UI/UX Designer, product designer, accessibility expert, user research, WCAG designer" />
-  <meta name="description" content="Ramesh Sao – Senior UI/UX & Product Designer with 11+ years of experience in accessible, data-driven user experiences" />
-  <title>Ramesh Sao | Product Designer Portfolio</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link id="favicon" rel="icon" href="./assets/images/hero.png" type="image/x-png" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Ramesh Sao, portfolio, Ramesh, UI/UX Designer, personal portfolio, portfolio design, portfolio website, personal portfolio" />
+  <meta name="description" content="Welcome to Ramesh's Portfolio. UI/UX/Product Designer and Researcher" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link id='favicon' rel="shortcut icon" href="./assets/images/hero.png" type="image/x-png">
+  <title>Portfolio | Ramesh Sao</title>
+  <!-- UserWay Accessibility Widget -->
   <script src="https://cdn.userway.org/widget.js" data-account="Ughs22WMhv" defer></script>
-  <meta name="theme-color" content="#2b3dda" />
 </head>
 
 <body>
-  <header role="banner" aria-label="Site Header">
-    <a href="#home" class="logo" aria-label="Ramesh's Logo">Ramesh Portfolio</a>
-    <button id="menu" class="fas fa-bars" aria-label="Toggle navigation menu"></button>
+  <!-- pre loader -->
+  <!-- <div class="loader-container" role="status" aria-label="Loading">
+    <img draggable="false" src="./assets/images/preloader.gif" alt="Loading animation">
+  </div> -->
+
+  <!-- navbar starts -->
+  <header role="banner" aria-label="Main site header">
+    <a href="#home" class="logo" aria-label="Ramesh Portfolio Logo">
+      <span style="display: inline-block; width: 32px; height: 32px;">
+        <!-- SVG Icon --></span>
+      Ramesh Portfolio
+    </a>
+
+    <div id="menu" class="fas fa-bars" role="button" aria-label="Toggle navigation menu" tabindex="0"></div>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <ul>
         <li><a class="active" href="#home">Home</a></li>
@@ -31,78 +47,32 @@
       </ul>
     </nav>
   </header>
+  <!-- navbar ends -->
 
-  <main id="home" tabindex="-1">
-    <section class="home" aria-label="Introduction">
-      <div class="content">
-        <h1>Hi, I'm <span>Ramesh</span></h1>
-        <p>Senior UI/UX & Product Designer<br>with a passion for accessible, data-driven design</p>
-        <a href="#about" class="btn" role="button" aria-label="About Me">About Me <i class="fas fa-arrow-down"></i></a>
-        <ul class="social-icons" role="navigation" aria-label="Social Links">
-          <li><a class="linkedin" href="https://www.linkedin.com/in/RameshSao" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-          <li><a class="behance" href="https://www.behance.net/RameshSao" target="_blank" rel="noopener" aria-label="Behance"><i class="fab fa-behance"></i></a></li>
-          <li><a class="dribbble" href="http://www.dribbble.com/RameshSao" target="_blank" rel="noopener" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a></li>
-        </ul>
-      </div>
-      <div class="image" aria-hidden="true">
-        <img src="./assets/images/hero.jpg" alt="Illustration of Ramesh" draggable="false" class="tilt" />
-      </div>
-    </section>
-
-    <section class="about" id="about" aria-label="About Ramesh">
-      <h2>About <span>Me</span></h2>
-      <div class="row">
-        <div class="image">
-          <img src="./assets/images/profile.jpg" alt="Ramesh's Profile Picture" draggable="false" class="tilt" />
-        </div>
-        <div class="content">
-          <h3>I'm Ramesh</h3>
-          <p>A data-driven, detail-oriented problem solver with over 11 years of experience in product and UX design. I specialize in creating accessible, intuitive user experiences grounded in research and agile practices.</p>
-          <ul>
-            <li>Worked with ApplyBoard, Presidea, EM3, Magic EdTech, and more</li>
-            <li>Expertise in WCAG standards and GDPR compliance</li>
-            <li>Certified in UX Design, UX Management, and Design Thinking</li>
-          </ul>
-          <p><strong>Beyond Design:</strong> Tech enthusiast | Gamer | Badminton lover | Home Chef</p>
-          <div class="resumebtn">
-            <a href="assets/files/Product_Designer_Resume_RameshSao_2025.pdf" target="_blank" rel="noopener" class="btn" aria-label="View Resume">View Resume <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Continue with Skills, Education, Projects, Experience... using same optimized, accessible format -->
-
-  </main>
-
-  <footer class="footer" role="contentinfo" id="contact">
-    <div class="box-container">
-      <div class="box">
-        <h3>Contact Info</h3>
-        <p><i class="fas fa-phone"></i> <a href="tel:+918802327299">+91 8802327299</a></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:rameshsaowork@gmail.com">rameshsaowork@gmail.com</a></p>
-        <p><i class="fas fa-map-marked-alt"></i> Gurugram, Haryana, India</p>
-        <div class="share">
-          <a href="https://www.linkedin.com/in/rameshsao" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
-          <a href="https://www.behance.net/RameshSao" class="fab fa-behance" aria-label="Behance" target="_blank"></a>
-          <a href="http://www.dribbble.com/RameshSao" class="fab fa-dribbble" aria-label="Dribbble" target="_blank"></a>
-        </div>
-      </div>
-    </div>
-    <p class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/rameshsao/">Ramesh</a></p>
-  </footer>
-
-  <a href="#home" class="fas fa-angle-up" id="scroll-top" aria-label="Back to top"></a>
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="Back to top" class="fas fa-angle-up" id="scroll-top"></a>
 
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" defer></script>
-  <script src="./assets/js/particles.min.js" defer></script>
-  <script src="./assets/js/app.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
-  <script src="https://unpkg.com/scrollreveal" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
-  <script src="./assets/js/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
