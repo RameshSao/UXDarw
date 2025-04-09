@@ -58,6 +58,11 @@ html::-webkit-scrollbar-thumb {
 }
 /* pre loader end */
 
+#skills {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 /* navbar starts */
 header {
   position: fixed;
