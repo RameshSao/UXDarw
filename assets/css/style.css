@@ -87,7 +87,7 @@ header {
   justify-content: space-between;
   padding: 1.7rem 10%;
   height: 6.5rem;
-  background-color: #fff;
+  background-color: var(--bg-light);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 section {
@@ -232,11 +232,11 @@ header .navbar ul li a:hover {
   width: 70%;
   margin-left: 6rem;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px var(--text-dark);
   cursor: pointer;
 }
 .home .image img:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px var(--text-dark);
 }
 .home .content h2 {
   font-size: 5rem;
@@ -333,7 +333,7 @@ header .navbar ul li a:hover {
   background-color: var(--primary);
 }
 .social-icons a.dev:hover {
-  background-color: #070707;
+  background-color: var(--text-dark);
 }
 .social-icons a.instagram:hover {
   background-color: #ee00da;
