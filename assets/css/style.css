@@ -668,8 +668,7 @@ header .navbar ul li a:hover {
 
 /* work section starts */
 .projects {
-  /* background: #010124; */
-  background: linear-gradient(to bottom, var(--text-dark)031, var(--text-dark)02c);
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
 }
 .projects h2 {
   color: #fff;
