@@ -13,7 +13,7 @@
     },
     {
         "name": "Draw.io",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/48px-Diagrams.net_Logo.svg.png"
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/40px-Diagrams.net_Logo.svg.png"
     },
     {
         "name": "Miro",
@@ -21,14 +21,14 @@
     },
     {
         "name": "Jira",
-        "icon": "<a href="https://www.flaticon.com/free-icons/jira" title="jira icons">Jira icons created by Freepik - Flaticon</a>"
+        "icon": "https://img.icons8.com/color/48/jira.png"
     },
     {
         "name": "MS Office",
         "icon": "https://img.icons8.com/color/48/office-365.png"
     },
     {
-        "name": "XD",
+        "name": "Adobe XD",
         "icon": "https://img.icons8.com/?size=48&id=4VVL78edhbW9&format=png&color=000000"
     },
     {
@@ -54,5 +54,5 @@
       {
         "name": "InDesign",
         "icon": "https://img.icons8.com/?size=48&id=51lMuEpYaQ8k&format=png&color=000000"
-    },
+    }
 ]
