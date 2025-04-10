@@ -64,7 +64,7 @@ document.addEventListener('visibilitychange',
         }
         else {
             document.title = "Please View | Ramesh Portfolio";
-            $("#favicon").attr("href", "favicon.png");
+            $("#favicon").attr("href", "assets/images/favicon.png");
         }
     });
 
