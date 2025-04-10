@@ -741,6 +741,47 @@ header .navbar ul li a:hover {
   transform: translateX(5px); /* Icon moves slightly on hover */
 }
 
+/* Ensure the card takes full height */
+.box {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Push the button to the bottom */
+  height: 100%; /* Ensure consistent height for all cards */
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visuals */
+  border-radius: 8px; /* Optional: Rounded corners */
+  background-color: #fff; /* Optional: Background color */
+  position: relative; /* Ensure proper positioning for child elements */
+}
+
+/* Ensure the button is aligned at the bottom */
+.btns {
+  margin-top: auto; /* Push the button to the bottom */
+  text-align: center; /* Center the button horizontally */
+  padding-top: 1rem; /* Add spacing above the button */
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 1.6rem 3rem; /* Adjust padding for consistent size */
+  font-size: 1.7rem; /* Font size for readability */
+  font-weight: 600; /* Bold text */
+  color: #fff; /* White text color */
+  background-color: #2b3dda; /* Primary button color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 4em; /* Fully rounded corners */
+  box-shadow: 0px 5px 18px rgba(43, 61, 218, 0.5); /* Add shadow for depth */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  font-family: "Nunito", sans-serif; /* Consistent font */
+}
+
+.btn:hover {
+  background-color: #18023f; /* Darker color on hover */
+  box-shadow: 0px 5px 18px rgba(24, 2, 63, 0.5); /* Adjust shadow on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
 /* Remove hover effects for project content */
 .projects .box-container .box:hover .content {
   top: 0;
