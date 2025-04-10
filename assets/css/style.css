@@ -848,6 +848,13 @@ header .navbar ul li a:hover {
 .projects .viewall .btn:hover i {
   transform: translateX(5px);
 }
+
+.btns {
+  margin-top: auto; /* Push the button to the bottom */
+  text-align: left; /* Align the button to the left */
+  padding-top: 1rem; /* Add spacing above the button */
+}
+
 /* work section ends */
 
 /* experience section starts */
