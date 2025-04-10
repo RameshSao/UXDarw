@@ -60,7 +60,7 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | Ramesh Sao";
-            $("#favicon").attr("href", "assets/images/favicon.ico");
+            $("#favicon").attr("href", "assets/images/favicon_1.png");
         }
         else {
             document.title = "Please View | Ramesh Portfolio";
