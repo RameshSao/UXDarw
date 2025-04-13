@@ -6,7 +6,7 @@ The website highlights design projects, UX research, accessibility practices, an
 
 ## 🌐 Live Website
 
-Visit the live site: [https://uxdraw.com](https://wwww.uxdraw.com)
+Visit the live site: [https://uxdraw.com](https://www.uxdraw.com)
 
 ---
 
