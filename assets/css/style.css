@@ -1365,3 +1365,41 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+/* projects html start */
+/* Background styling */
+.bgimg {
+  background: linear-gradient(to bottom, #2b3dda, #18023f); /* Gradient background */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* White text color */
+  font-family: "Nunito", sans-serif; /* Consistent font */
+}
+
+/* Middle content styling */
+.middle h1 {
+  font-size: 4rem; /* Large font size for "COMING SOON" */
+  margin-bottom: 1rem;
+}
+
+.middle h2 {
+  font-size: 2.5rem; /* Font size for "Project" */
+  margin-bottom: 1rem;
+}
+
+.middle p {
+  font-size: 1.5rem; /* Font size for the description */
+  margin-top: 1rem;
+}
+
+.middle hr {
+  width: 50%;
+  border: 1px solid #fff;
+  margin: 1rem auto;
+}
+
+
+/* projects html end */
