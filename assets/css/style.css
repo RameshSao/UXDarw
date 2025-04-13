@@ -476,7 +476,7 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
   min-height: 90vh;
-  background: linear-gradient(to bottom, #2b3dda, #18023f);
+  background: linear-gradient(to bottom, #2b3dda, #2b3dda);
 }
 .skills h2 {
   color: #fff;
@@ -657,7 +657,7 @@ header .navbar ul li a:hover {
 /* work section starts */
 .projects {
   /* background: #010124; */
-  background: linear-gradient(to bottom, #000031, #00002c);
+  background: linear-gradient(to bottom, #2b3dda, #2b3dda);
 }
 .projects h2 {
   color: #fff;
@@ -858,6 +858,7 @@ header .navbar ul li a:hover {
 /* work section ends */
 
 /* experience section starts */
+
 .experience .timeline {
   position: relative;
   max-width: 1200px;
@@ -1050,7 +1051,7 @@ header .navbar ul li a:hover {
 
 /* Contact Section Styling */
 #contact {
-  background: linear-gradient(to bottom, #2b3dda, #18023f); /* Example gradient background */
+  background: linear-gradient(to bottom, #2b3dda, #2b3dda); /* Example gradient background */
   color: #fff; /* Ensure text is readable */
   padding: 4rem 2rem;
 }
@@ -1369,7 +1370,7 @@ form .button-area {
 /* projects html start */
 /* Background styling */
 .bgimg {
-  background: linear-gradient(to bottom, #2b3dda, #18023f); /* Gradient background */
+  background: linear-gradient(to bottom, #2b3dda, #2b3dda); /* Gradient background */
   height: 100vh; /* Full viewport height */
   display: flex;
   justify-content: center;
