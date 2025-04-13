@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Material Design Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">MyBrand</div>
+    <div class="menu-toggle material-icons">menu</div>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="btn primary">Sign Up</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Build Beautiful Interfaces with Ease</h1>
+      <p>Modern, responsive UI kits built on Material Design principles.</p>
+      <button class="btn primary">Get Started</button>
+      <button class="btn outlined">Learn More</button>
+    </div>
+  </section>
+
+  <section class="features" id="features" data-aos="fade-up" id="features">
+    <h2>Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="material-icons">speed</span>
+        <h3>Fast</h3>
+        <p>Optimized and responsive design components for modern websites.</p>
+      </div>
+      <div class="feature-card">
+        <span class="material-icons">design_services</span>
+        <h3>Customizable</h3>
+        <p>Fully adjustable themes and components to suit your brand.</p>
+      </div>
+      <div class="feature-card">
+        <span class="material-icons">devices</span>
+        <h3>Responsive</h3>
+        <p>Looks great on desktop, tablet, and mobile devices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing" data-aos="fade-up" id="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-table">
+      <div class="pricing-card">
+        <h3>Free</h3>
+        <p>$0/month</p>
+        <ul>
+          <li>Basic Components</li>
+          <li>Responsive Layout</li>
+        </ul>
+        <button class="btn outlined">Choose</button>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Pro</h3>
+        <p>$9.99/month</p>
+        <ul>
+          <li>All Components</li>
+          <li>Priority Support</li>
+        </ul>
+        <button class="btn primary">Choose</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <p>&copy; 2025 MyBrand. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
