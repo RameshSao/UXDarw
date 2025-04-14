@@ -615,74 +615,209 @@
 
 <script src="https://cdn.userway.org/widget.js" data-account="Ughs22WMhv"></script>
 
-<!-- Cookie Consent Banner -->
-<div id="cookie-banner" style="
-  display: none;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #2b3dda;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-">
-  <span style="flex: 1;">
-    We cannot disable third-party cookies, so a reject option is not available.
-    <a href="/cookies.html" style="color: #ffe600; text-decoration: underline;">Cookies Policy</a>.
-  </span>
-  <div style="display: flex; gap: 1rem;">
-    <button id="accept-cookies" style="
+<!-- ==== Cookie Consent Starts ==== -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cookie Consent</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Cookie Banner */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2b3dda;
+      color: white;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      z-index: 9999;
+      flex-wrap: wrap;
+    }
+
+    #cookie-banner span {
+      flex: 1;
+      font-size: 1.4rem;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cookie-buttons button {
       padding: 0.8rem 1.8rem;
-      background-color: #ffe600;
-      color: #18023f;
       font-size: 1.4rem;
       font-weight: 600;
       border: none;
       border-radius: 2rem;
       cursor: pointer;
       transition: background 0.3s ease;
-    ">Accept</button>
-    <!-- <button id="reject-cookies" style="
-      padding: 0.8rem 1.8rem;
-      background-color: #f44336;
-      color: #ffffff;
+    }
+
+    #accept-all { background-color: #ffe600; color: #18023f; }
+    #reject-all { background-color: #f44336; color: white; }
+    #manage-preferences { background-color: white; color: #2b3dda; }
+
+    /* Preferences Modal */
+    #cookie-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #cookie-modal {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    #cookie-modal h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .cookie-option {
+      margin-bottom: 1rem;
       font-size: 1.4rem;
-      font-weight: 600;
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .modal-buttons button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1.3rem;
       border: none;
-      border-radius: 2rem;
+      border-radius: 1.5rem;
       cursor: pointer;
-      transition: background 0.3s ease;
-    ">Reject</button> -->
+    }
+
+    #save-preferences { background-color: #2b3dda; color: white; }
+    #close-preferences { background-color: #ccc; color: #000; }
+  </style>
+</head>
+<body>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner">
+  <span>We use cookies for analytics and performance. <a href="/cookies.html" style="color: #ffe600; text-decoration: underline;">Cookies Policy</a></span>
+  <div class="cookie-buttons">
+    <button id="accept-all">Accept All</button>
+    <button id="reject-all">Reject All</button>
+    <button id="manage-preferences">Manage Preferences</button>
+  </div>
+</div>
+
+<!-- Modal Overlay -->
+<div id="cookie-modal-overlay">
+  <div id="cookie-modal">
+    <h2>Manage Cookie Preferences</h2>
+    <div class="cookie-option">
+      <label><input type="checkbox" id="gaConsent" /> Google Analytics</label>
+    </div>
+    <div class="cookie-option">
+      <label><input type="checkbox" id="faConsent" /> Font Awesome Tracking</label>
+    </div>
+    <div class="modal-buttons">
+      <button id="save-preferences">Save Preferences</button>
+      <button id="close-preferences">Close</button>
+    </div>
   </div>
 </div>
 
 <script>
-  window.addEventListener("DOMContentLoaded", function () {
-    // Display the banner if the user hasn't accepted or rejected cookies
-    if (!localStorage.getItem("cookiesAccepted") && !localStorage.getItem("cookiesRejected")) {
-      document.getElementById("cookie-banner").style.display = "flex";
+  document.addEventListener('DOMContentLoaded', function () {
+    const banner = document.getElementById('cookie-banner');
+    const overlay = document.getElementById('cookie-modal-overlay');
+    const modal = document.getElementById('cookie-modal');
+
+    const btnAccept = document.getElementById('accept-all');
+    const btnReject = document.getElementById('reject-all');
+    const btnManage = document.getElementById('manage-preferences');
+    const btnSave = document.getElementById('save-preferences');
+    const btnClose = document.getElementById('close-preferences');
+
+    const gaCheckbox = document.getElementById('gaConsent');
+    const faCheckbox = document.getElementById('faConsent');
+
+    // Show banner if no choice is made
+    if (!localStorage.getItem('cookieChoice')) {
+      banner.style.display = 'flex';
     }
 
-    // Handle Accept button click
-    document.getElementById("accept-cookies").addEventListener("click", function () {
-      localStorage.setItem("cookiesAccepted", "true"); // Store as string
-      document.getElementById("cookie-banner").style.display = "none"; // Hide the banner
+    // Accept All
+    btnAccept.addEventListener('click', function () {
+      localStorage.setItem('gaConsent', 'true');
+      localStorage.setItem('faConsent', 'true');
+      localStorage.setItem('cookieChoice', 'accepted');
+      banner.style.display = 'none';
     });
 
-    // Handle Reject button click
-    document.getElementById("reject-cookies").addEventListener("click", function () {
-      localStorage.setItem("cookiesRejected", "true"); // Store rejection as string
-      document.getElementById("cookie-banner").style.display = "none"; // Hide the banner
+    // Reject All
+    btnReject.addEventListener('click', function () {
+      localStorage.setItem('gaConsent', 'false');
+      localStorage.setItem('faConsent', 'false');
+      localStorage.setItem('cookieChoice', 'rejected');
+      banner.style.display = 'none';
+    });
+
+    // Manage Preferences
+    btnManage.addEventListener('click', function () {
+      overlay.style.display = 'flex';
+    });
+
+    // Save Preferences
+    btnSave.addEventListener('click', function () {
+      localStorage.setItem('gaConsent', gaCheckbox.checked.toString());
+      localStorage.setItem('faConsent', faCheckbox.checked.toString());
+      localStorage.setItem('cookieChoice', 'custom');
+      overlay.style.display = 'none';
+      banner.style.display = 'none';
+    });
+
+    // Close Modal
+    btnClose.addEventListener('click', function () {
+      overlay.style.display = 'none';
+    });
+
+    // Close on outside click
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) {
+        overlay.style.display = 'none';
+      }
     });
   });
 </script>
+
+</body>
+</html>
 
 
 </body>
