@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +6,79 @@
   <title>Cookies Policy | UXDraw</title>
   <link rel="stylesheet" href="style.css" />
   <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-png">
+  <style>
+      body {
+      font-family:'Poppins', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #0a66c2;
+    }
+    a {
+      color: #0a66c2;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .homebtn .btn {
+  /* padding: 1.7rem 3rem;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  color: #fff;
+  background: #18023f;
+  box-shadow: 0px 5px 10px #2b3dda;
+  font-family: "Nunito", sans-serif; */
+  margin-top: 1rem;
+  margin-bottom: 2rem; /* Add gap below the button */
+  position: absolute;
+  line-height: 0;
+  padding: 1.6em 2rem;
+  border-radius: 4em;
+  transition: 0.5s;
+  color: #fff;
+  background: #2b3dda;
+  box-shadow: 0px 5px 18px #2b3dda;
+  font-family: "Nunito", sans-serif;
+}
+.homebtn .btn span {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.homebtn .btn i {
+  margin-left: 0.3rem;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.homebtn .btn:hover {
+  background: #18023f;
+}
+.homebtn .btn:hover i {
+  transform: translateX(5px);
+}
+    
+  </style>
 </head>
-<body style="font-family: 'Poppins', sans-serif; padding: 2rem; max-width: 960px; margin: auto; color: #000; background: #fff;">
-  <h1 style="font-size: 3rem; color: #2b3dda;">Cookies Policy</h1>
+<body>
+
+  <h1>Cookies Policy</h1>
   <p>Effective Date: April 14, 2025</p>
 
-  <h2 style="margin-top:2rem; color: #18023f;">1. Introduction</h2>
+  <h2>1. Introduction</h2>
   <p>At UXDraw.com, we use cookies and similar technologies to improve your browsing experience, understand usage patterns, and personalize content. This Cookies Policy explains what cookies are, how we use them, and how you can manage your preferences.</p>
 
-  <h2 style="margin-top:2rem; color: #18023f;">2. What Are Cookies?</h2>
+  <h2>2. What Are Cookies?</h2>
   <p>Cookies are small text files stored on your device when you visit a website. They help the site remember your preferences and enhance your user experience.</p>
 
-  <h2 style="margin-top:2rem; color: #18023f;">3. Types of Cookies We Use</h2>
+  <h2>3. Types of Cookies We Use</h2>
   <ul>
     <li><strong>Essential Cookies:</strong> Necessary for website functionality.</li>
     <li><strong>Analytics Cookies:</strong> Understand how visitors interact with the site.</li>
@@ -26,7 +86,7 @@
     <li><strong>Third-Party Cookies:</strong> Set by external services (e.g., analytics, embeds).</li>
   </ul>
 
-  <h2 style="margin-top:2rem; color: #18023f;">4. Who Collects Cookies?</h2>
+  <h2>4. Who Collects Cookies?</h2>
   <ul>
     <li><strong>Your Website (First-Party Cookies):</strong> No current use, may be added later for preferences.</li>
     <li><strong>Third-Party Services:</strong>
@@ -41,73 +101,20 @@
     </li>
   </ul>
 
-  <h2 style="margin-top:2rem; color: #18023f;">5. Managing Cookies</h2>
+  <h2>5. Managing Cookies</h2>
   <p>You can control or delete cookies via your browser settings. Disabling some cookies may affect your experience. See guides for <a href="https://support.google.com/chrome/answer/95647">Chrome</a>, <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">Firefox</a>, <a href="https://support.apple.com/en-us/HT201265">Safari</a>, and <a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09">Edge</a>.</p>
 
-  <h2 style="margin-top:2rem; color: #18023f;">6. Contact Us</h2>
+  <h2>6. Contact Us</h2>
   <p>📧 <a href="mailto:hello@uxdraw.com">hello@uxdraw.com</a></p>
 
-  <!-- Cookie Consent Banner -->
-<div id="cookie-banner" style="
-display: none;
-position: fixed;
-bottom: 0;
-width: 100%;
-background-color: #2b3dda;
-color: #ffffff;
-font-family: 'Poppins', sans-serif;
-font-size: 1.4rem;
-padding: 1.5rem 2rem;
-box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-z-index: 9999;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-">
-<span style="flex: 1;">
-  This site uses cookies to improve your experience. Read our
-  <a href="/cookies.html" style="color: #ffe600; text-decoration: underline;">Cookies Policy</a>.
-</span>
-<div style="display: flex; gap: 1rem;">
-  <button id="accept-cookies" style="
-    padding: 0.8rem 1.8rem;
-    background-color: #ffe600;
-    color: #18023f;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  ">Accept</button>
-  <button id="reject-cookies" style="
-    padding: 0.8rem 1.8rem;
-    background-color: #f44336;
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  ">Reject</button>
-</div>
-</div>
-
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      if (!localStorage.getItem("cookiesAccepted")) {
-        document.getElementById("cookie-banner").style.display = "flex";
-      }
-      document.getElementById("accept-cookies").addEventListener("click", function () {
-        localStorage.setItem("cookiesAccepted", true);
-        document.getElementById("cookie-banner").style.display = "none";
-      });
-    });
-  </script>
+  <div class="homebtn">
+    <a href="https://www.uxdraw.com" target="_blank" class="btn">
+      <span>Back Home</span>
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
 
 
-
+  
 </body>
 </html>
