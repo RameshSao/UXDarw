@@ -1080,7 +1080,7 @@ header .navbar ul li a:hover {
 #contact .box h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #ffe600; /* Highlighted text color */
+  color: #ffffff; /* Highlighted text color */
 }
 
 #contact .box p {
@@ -1410,8 +1410,6 @@ form .button-area {
 
 .image img.tilt {
   margin-top: 0;
-}
-margin-left: 10
 }
 
 /* Gap Header To Hi there animation Text
