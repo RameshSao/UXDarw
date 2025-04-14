@@ -1411,7 +1411,10 @@ form .button-area {
 .image img.tilt {
   margin-top: 0;
 }
+margin-left: 10
+}
 
+/* Gap Header To Hi there animation Text
 
 .home .content h2 {
   margin-top: 20px; /* Add space above the "Hi There," text */
@@ -1421,4 +1424,5 @@ form .button-area {
   padding-top: 20px; /* Add space above the entire content block */
 }
 
-/* projects html end */
+
+/* Gap Header To Hi there animation Text
