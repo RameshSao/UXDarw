@@ -1402,6 +1402,14 @@ form .button-area {
   margin: 1rem auto;
 }
 
+.image {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
 
+.image img.tilt {
+  margin-top: 0;
+}
 
 /* projects html end */
