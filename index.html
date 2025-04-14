@@ -615,6 +615,75 @@
 
 <script src="https://cdn.userway.org/widget.js" data-account="Ughs22WMhv"></script>
 
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #2b3dda;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+">
+  <span style="flex: 1;">
+    This site uses cookies to improve your experience. Read our
+    <a href="/cookies.html" style="color: #ffe600; text-decoration: underline;">Cookies Policy</a>.
+  </span>
+  <div style="display: flex; gap: 1rem;">
+    <button id="accept-cookies" style="
+      padding: 0.8rem 1.8rem;
+      background-color: #ffe600;
+      color: #18023f;
+      font-size: 1.4rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    ">Accept</button>
+    <button id="reject-cookies" style="
+      padding: 0.8rem 1.8rem;
+      background-color: #f44336;
+      color: #ffffff;
+      font-size: 1.4rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    ">Reject</button>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Display the banner if the user hasn't accepted or rejected cookies
+    if (!localStorage.getItem("cookiesAccepted") && !localStorage.getItem("cookiesRejected")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+
+    // Handle Accept button click
+    document.getElementById("accept-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true"); // Store as string
+      document.getElementById("cookie-banner").style.display = "none"; // Hide the banner
+    });
+
+    // Handle Reject button click
+    document.getElementById("reject-cookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesRejected", "true"); // Store rejection as string
+      document.getElementById("cookie-banner").style.display = "none"; // Hide the banner
+    });
+  });
+</script>
+
 
 </body>
 
