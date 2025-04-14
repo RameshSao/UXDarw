@@ -1402,6 +1402,13 @@ form .button-area {
   margin: 1rem auto;
 }
 
-
+.image {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center-align text */
+  gap: 1rem; /* Add spacing between the heading and the image */
+}
 
 /* projects html end */
