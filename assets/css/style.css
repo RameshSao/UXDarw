@@ -1412,4 +1412,13 @@ form .button-area {
   margin-top: 0;
 }
 
+
+.home .content h2 {
+  margin-top: 20px; /* Add space above the "Hi There," text */
+}
+
+.home .content {
+  padding-top: 20px; /* Add space above the entire content block */
+}
+
 /* projects html end */
