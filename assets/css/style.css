@@ -64,6 +64,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* navbar starts */
+
 header {
   position: fixed;
   top: 0;
@@ -126,6 +127,7 @@ header .navbar ul li a:hover {
   border-bottom: 0.2rem solid #2b3dda;
   padding: 0.5rem 0;
 }
+
 /* navbar ends */
 
 /* hamburger icon starts*/
