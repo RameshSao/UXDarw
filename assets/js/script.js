@@ -223,3 +223,42 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const themeToggle = document.getElementById('theme-toggle');
+    const lightIcon = document.getElementById('light-icon');
+    const darkIcon = document.getElementById('dark-icon');
+    const body = document.body;
+  
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      body.classList.add(savedTheme);
+      if (savedTheme === 'dark-theme') {
+        lightIcon.style.display = 'block';
+        darkIcon.style.display = 'none';
+      } else {
+        lightIcon.style.display = 'none';
+        darkIcon.style.display = 'block';
+      }
+    }
+  
+    // Toggle theme on icon click
+    themeToggle.addEventListener('click', function () {
+      if (body.classList.contains('dark-theme')) {
+        body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light-theme');
+        lightIcon.style.display = 'none';
+        darkIcon.style.display = 'block';
+      } else {
+        body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark-theme');
+        lightIcon.style.display = 'block';
+        darkIcon.style.display = 'none';
+      }
+    });
+  });
+
+
+
+

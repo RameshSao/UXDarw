@@ -1451,6 +1451,32 @@ a.ai-style-change-1 {
   font-weight: bold; /* or font-weight: 700; */
 }
 
+/* Light Theme (Default) */
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background: #121212;
+  color: #ffffff;
+}
+
+/* Header Styling for Dark Theme */
+header.dark-theme {
+  background: #1e1e1e;
+}
+
+/* Icon Styling */
+#theme-toggle i {
+  transition: color 0.3s ease;
+}
+
+
+
+
 /* Header Logo Text Bold
 
 
