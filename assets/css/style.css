@@ -1,6 +1,200 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
+:root {
+  --background: #ffffff;
+  --text: #000000;
+  --primary: #2b3dda;
+  --primary-dark: #18023f;
+  --secondary: #f8f9fa;
+  --highlight: #ffe600;
+  --card-bg: #ffffff;
+  --section-bg: #f8f9fa;
+  --nav-link: #000000;
+  --nav-link-active: #2b3dda;
+  --skills-bg: linear-gradient(to bottom, #2b3dda, #2b3dda);
+  --skills-card-bg: rgba(0,0,22,0.9);
+  --footer-bg: rgb(0, 1, 43);
+  --footer-text: #fff;
+}
+
+body.dark-theme {
+  --background: #121212;
+  --text: #ffffff;
+  --primary: #4dabf7;
+  --primary-dark: #1e1e1e;
+  --secondary: #1e1e1e;
+  --highlight: #ffe600;
+  --card-bg: #1e1e1e;
+  --section-bg: #181818;
+  --nav-link: #ffffff;
+  --nav-link-active: #4dabf7;
+  --skills-bg: linear-gradient(to bottom, #232a3a, #232a3a);
+  --skills-card-bg: rgba(30,30,30,0.9);
+  --footer-bg: #1e1e1e;
+  --footer-text: #fff;
+}
+
+/* General */
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+section,
+.about,
+.skills,
+.abilities,
+.education,
+.projects,
+.experience,
+#contact {
+  background: var(--section-bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header & Navigation */
+header {
+  background: var(--secondary);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+header .logo {
+  color: var(--text);
+}
+header .navbar ul li a {
+  color: var(--nav-link);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  color: var(--nav-link-active);
+  border-bottom: 0.2rem solid var(--nav-link-active);
+  padding: 0.5rem 0;
+}
+
+/* Skills Section */
+.skills {
+  background: var(--skills-bg);
+}
+.skills .container {
+  background: var(--skills-card-bg);
+  color: #fff;
+}
+.skills .container .bar {
+  background: var(--skills-card-bg);
+  color: #fff;
+}
+
+/* About Section */
+.about {
+  background: var(--section-bg);
+  color: var(--text);
+}
+.about .row .content h3,
+.about .row .content .tag {
+  color: var(--text);
+}
+.about .row .content .box-container .box p span {
+  color: var(--primary);
+}
+
+/* Projects Section */
+.projects {
+  background: var(--skills-bg);
+}
+.projects .box-container .box {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* Education Section */
+.education {
+  background: var(--section-bg);
+  color: var(--text);
+}
+.education .box-container .box {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* Experience Section */
+.experience .content {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* Contact Section */
+#contact {
+  background: var(--skills-bg);
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+}
+.footer .box-container .box h3,
+.footer .credit {
+  color: var(--footer-text);
+}
+.footer .box-container .box p,
+.footer .box-container .box a {
+  color: #ccc;
+}
+.footer .box-container .box a:hover {
+  color: var(--highlight);
+}
+
+/* Buttons */
+button,
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+button:hover,
+.btn:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/* Theme Toggle Icons */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+#theme-toggle i {
+  font-size: 24px;
+  transition: color 0.3s;
+}
+#theme-toggle i#light-icon {
+  color: #f39c12;
+  display: none;
+}
+#theme-toggle i#dark-icon {
+  color: var(--primary);
+}
+body.dark-theme #theme-toggle i#light-icon {
+  display: block;
+}
+body.dark-theme #theme-toggle i#dark-icon {
+  display: none;
+}
+
+/* Responsive and other existing styles remain unchanged */
+
 * {
   margin: 0;
   padding: 0;
