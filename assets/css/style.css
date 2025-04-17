@@ -53,11 +53,6 @@ body.dark-theme .projects {
   height: 100%;
 }
 
-.content {
-  position: relative;
-  top: -50px;
-}
-
 
 /* Header fixes for dark theme */
 body.dark-theme header {
