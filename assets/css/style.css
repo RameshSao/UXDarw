@@ -44,7 +44,14 @@ body.dark-theme .projects {
   background-color: #000000; /* A bit lighter than #0f1629 */
 }
 
+/* Add your custom styles here */
 
+.lottie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
 
 /* Header fixes for dark theme */
