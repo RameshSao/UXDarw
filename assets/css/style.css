@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
 :root {
-  --background: #ffffff;
+  --background: var(--card-bg);
   --text: #000000;
   --primary: #2b3dda;
   --primary-dark: #18023f;
@@ -21,7 +21,7 @@
 body.dark-theme {
   --background: #121212;
   --text: #ffffff;
-  --primary: #4dabf7;
+  --primary: #2b3dda;
   --primary-dark: #1e1e1e;
   --secondary: #1e1e1e;
   --highlight: #ffe600;
@@ -33,6 +33,28 @@ body.dark-theme {
   --skills-card-bg: rgba(30,30,30,0.9);
   --footer-bg: #1e1e1e;
   --footer-text: #fff;
+}
+
+
+/* Header fixes for dark theme */
+body.dark-theme header {
+  background-color: var(--card-bg);
+  color: var(--text);
+  box-shadow: none;
+}
+
+body.dark-theme header .logo {
+  color: var(--text);
+}
+
+body.dark-theme header .navbar ul li a {
+  color: var(--nav-link); /* This ensures all links are visible */
+}
+
+body.dark-theme header .navbar ul li a.active,
+body.dark-theme header .navbar ul li a:hover {
+  color: var(--nav-link-active);
+  border-bottom: 0.2rem solid var(--nav-link-active);
 }
 
 
@@ -213,13 +235,13 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #ffffff;
+  background: (--section-bg);
   font-family: "Poppins", sans-serif;
 }
 
 *::selection {
   background: #2b3dda;
-  color: #ffffff;
+  color: (--section-bg);
 }
 
 html {
@@ -230,7 +252,7 @@ html::-webkit-scrollbar {
   width: 0.8rem;
 }
 html::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: var(--section-bg);
 }
 html::-webkit-scrollbar-thumb {
   background: #2b3dda;
@@ -242,7 +264,7 @@ html::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   z-index: 10000;
-  background: #ffffff;
+  background: var(--section-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,7 +294,7 @@ header {
   justify-content: space-between;
   padding: 1.7rem 10%;
   height: 6.5rem;
-  background-color: #fff;
+  background-color: var(--card-bg);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 section {
@@ -281,7 +303,7 @@ section {
 }
 .heading {
   font-size: 3.5rem;
-  color: rgb(32, 32, 32);
+  color: var(--text);
   font-weight: 800;
   text-align: center;
 }
@@ -292,7 +314,7 @@ header .logo {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
-  color: #000000;
+  color: var(--text);
 }
 header .logo i {
   font-size: 2.2rem;
@@ -311,7 +333,7 @@ header .navbar li {
 }
 header .navbar ul li a {
   font-size: 1.57rem;
-  color: #000000;
+  color: var(--text);
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.04rem;
@@ -449,7 +471,7 @@ header .navbar ul li a:hover {
 }
 .home .content p {
   font-size: 2.5rem;
-  color: #000;
+  color: var(--text);
   font-weight: 600;
   padding: 1rem 0;
 }
@@ -562,7 +584,7 @@ header .navbar ul li a:hover {
 
 /* about section starts */
 .about {
-  background: rgb(255, 255, 255);
+  background: background: var(--card-bg);
 }
 .about .row {
   display: flex;
@@ -593,7 +615,7 @@ header .navbar ul li a:hover {
   padding: 3rem;
 }
 .about .row .content h3 {
-  color: rgb(27, 27, 27);
+  color: var(--text);
   font-size: 5rem;
 }
 .about .row .content .tag {
@@ -760,7 +782,7 @@ header .navbar ul li a:hover {
 
 /* education section starts */
 .education {
-  background: #ffffff;
+  background: var(--section-bg);
   min-height: 80vh;
 }
 .education .qoute {
@@ -788,7 +810,7 @@ header .navbar ul li a:hover {
   margin-top: 2rem;
   overflow: hidden;
   transition: 0.3s;
-  background: rgb(255, 255, 255);
+  background: background: var(--card-bg);
 }
 .education .box-container .box:hover {
   /* transform: scale(1.03); */
@@ -814,7 +836,7 @@ header .navbar ul li a:hover {
 }
 .education .box-container .box .content h3 {
   font-size: 2.5rem;
-  color: #012970;
+  color: var(--primary);
   padding: 0.5rem 0;
   font-weight: 600;
   text-align: left;
@@ -889,7 +911,7 @@ header .navbar ul li a:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  background-color: #ffffff; /* Set background color for better readability */
+  background-color: var(--card-bg); /* Set background color for better readability */
   height: auto; /* Set height to auto to accommodate varying text lengths */
   padding: 2rem; /* Add padding for better text alignment */
   margin-bottom: 2rem; /* Add margin between boxes */
@@ -914,7 +936,7 @@ header .navbar ul li a:hover {
 
 .projects .desc p {
   font-size: 1.6rem; /* Adjust font size */
-  color: #000; /* Set text color */
+  color: var(--text); /* Set text color */
 }
 
 .btn {
@@ -961,7 +983,7 @@ header .navbar ul li a:hover {
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visuals */
   border-radius: 8px; /* Optional: Rounded corners */
-  background-color: #fff; /* Optional: Background color */
+  background-color: var(--card-bg); /* Optional: Background color */
   position: relative; /* Ensure proper positioning for child elements */
 }
 
@@ -1017,13 +1039,13 @@ header .navbar ul li a:hover {
 .projects .box-container .box .tag h3 {
   font-size: 2.5rem; /* Increase the font size of the project title */
   font-weight: 700;  /* Make the font bold */
-  color: #000;       /* Ensure it's a clear, readable color */
+  color: var(--text);       /* Ensure it's a clear, readable color */
   margin-bottom: 1rem; /* Add some space below the title */
 }
 
 .projects .desc p {
   font-size: 1.6rem; /* Adjust the font size of the description text */
-  color: #333;       /* Ensure the description text is readable */
+  color: var(--text);       /* Ensure the description text is readable */
 }
 
 .projects .viewall {
@@ -1036,7 +1058,7 @@ header .navbar ul li a:hover {
   padding: 1.6rem 3rem;
   border-radius: 0.5em;
   transition: 0.5s;
-  color: rgb(255, 255, 255);
+  color: background: var(--card-bg);
   font-weight: 700;
   border: 2px solid #fff;
   box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
@@ -1053,8 +1075,8 @@ header .navbar ul li a:hover {
   transition: 0.3s;
 }
 .projects .viewall .btn:hover {
-  background: #fff;
-  color: #000;
+  background: var(--card-bg);
+  color: var(--text);
 }
 .projects .viewall .btn:hover i {
   transform: translateX(5px);
@@ -1163,7 +1185,7 @@ header .navbar ul li a:hover {
 .experience .content .desc h3 {
   font-size: 2.2rem; /* Increase job title font size */
   font-weight: 700;  /* Make the job titles bold */
-  color: #000;       /* Set a readable color */
+  color: var(--text);       /* Set a readable color */
   margin-bottom: 1rem; /* Add space below the title */
 }
 
@@ -1171,13 +1193,13 @@ header .navbar ul li a:hover {
 .experience .content .tag h2 {
   font-size: 2rem;    /* Increase company name font size */
   font-weight: 600;   /* Make the company name slightly bold */
-  color: #333;        /* Set a readable color */
+  color: var(--text);        /* Set a readable color */
 }
 
 /* Increase the text size of the description */
 .experience .content .desc p {
   font-size: 1.6rem;  /* Increase the font size of the description */
-  color: #333;        /* Set a readable color for the description */
+  color: var(--text);        /* Set a readable color for the description */
   margin-bottom: 0.5rem; /* Add space between paragraphs */
 }
 
@@ -1665,8 +1687,8 @@ a.ai-style-change-1 {
 
 /* Light Theme (Default) */
 body {
-  background: #ffffff;
-  color: #000000;
+  background: var(--section-bg);
+  color: var(--text);
   font-family: "Poppins", sans-serif;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -1674,7 +1696,7 @@ body {
 header {
   position: relative;
   background: #f8f9fa;
-  color: #000000;
+  color: var(--text);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -1694,13 +1716,13 @@ button {
 
 .footer {
   background: #f1f1f1;
-  color: #000000;
+  color: var(--text);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .card {
-  background: #ffffff;
-  color: #000000;
+  background: var(--section-bg);
+  color: var(--text);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1770,5 +1792,83 @@ body.dark-theme #theme-toggle i#dark-icon {
 
 
 Footer Icon
+
+/* === Custom Dark Theme Fixes === */
+
+/* Header Dark Fix */
+body.dark-theme header {
+  background-color: var(--card-bg);
+  color: var(--text);
+  box-shadow: none;
+}
+body.dark-theme header .navbar ul li a {
+  color: var(--nav-link);
+}
+body.dark-theme header .navbar ul li a.active,
+body.dark-theme header .navbar ul li a:hover {
+  color: var(--nav-link-active);
+  border-bottom: 0.2rem solid var(--nav-link-active);
+}
+
+/* Education Cards Dark Fix */
+body.dark-theme .education .box-container .box {
+  background-color: #1a1a1a;
+  box-shadow: none;
+}
+
+/* Project Button Dark Fix */
+body.dark-theme .projects .btn,
+body.dark-theme .resumebtn .btn {
+  background-color: #4dabf7;
+  box-shadow: none;
+  color: #121212;
+}
+body.dark-theme .projects .btn:hover,
+body.dark-theme .resumebtn .btn:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+/* Experience Container Dark Fix */
+body.dark-theme .experience .content {
+  background-color: #1a1a1a;
+  color: var(--text);
+}
+
+/* Hi There (Home Heading) Text White on Dark Theme */
+body.dark-theme .home .content h2 {
+  color: #ffffff;
+}
+
+/* Skills & Abilities Section - Make card backgrounds darker if needed */
+body.dark-theme .skills .container,
+body.dark-theme .skills .container .bar {
+  background: rgba(20, 20, 20, 0.9);
+  box-shadow: none;
+}
+
+/* Projects - Button dark blue like background */
+body.dark-theme .projects .btn,
+body.dark-theme .resumebtn .btn {
+  background-color: #232a3a;
+  box-shadow: none;
+  color: #ffffff;
+}
+body.dark-theme .projects .btn:hover,
+body.dark-theme .resumebtn .btn:hover {
+  background-color: #4dabf7;
+  color: #121212;
+}
+
+/* Contact Section - Use dark blue background */
+body.dark-theme #contact {
+  background: #0f1629;
+}
+
+/* Match Projects and Skills section background with Contact section in dark mode */
+body.dark-theme .projects,
+body.dark-theme .skills {
+  background: #0f1629;
+}
 
 
