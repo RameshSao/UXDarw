@@ -35,6 +35,7 @@ body.dark-theme {
   --footer-text: #fff;
 }
 
+
 /* General */
 body {
   background: var(--background);
@@ -261,11 +262,11 @@ html::-webkit-scrollbar-thumb {
 /* navbar starts */
 
 header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
+  right: 20px
+  z-index: 1100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -330,6 +331,15 @@ header .navbar ul li a:hover {
   font-size: 3rem;
   cursor: pointer;
   color: #18023f;
+  display: block
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+}
+
+ /* ...Menu */
+#menu {
   display: none;
 }
 @media (max-width: 768px) {
@@ -337,7 +347,7 @@ header .navbar ul li a:hover {
     display: block;
     position: absolute;
     top: 20px;
-    right: 60px; /* Move left to make space for theme toggle */
+    right: 20px; /* Move left to make space for theme toggle */
     z-index: 1100;
   }
   header .navbar {
@@ -1662,6 +1672,7 @@ body {
 }
 
 header {
+  position: relative;
   background: #f8f9fa;
   color: #000000;
   transition: background 0.3s ease, color 0.3s ease;
@@ -1729,9 +1740,10 @@ button.dark-theme {
 #theme-toggle {
   position: absolute;
   top: 20px;
-  right: 20px;
-  cursor: pointer;
+  right: 60px;
   z-index: 1101;
+  cursor: pointer;
+  
 }
 
 #theme-toggle i {
