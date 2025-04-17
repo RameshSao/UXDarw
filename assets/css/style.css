@@ -28,12 +28,23 @@ body.dark-theme {
   --card-bg: #1e1e1e;
   --section-bg: #181818;
   --nav-link: #ffffff;
-  --nav-link-active: #4dabf7;
+  --nav-link-active: #2b3dda;
   --skills-bg: linear-gradient(to bottom, #232a3a, #232a3a);
   --skills-card-bg: rgba(30,30,30,0.9);
   --footer-bg: #1e1e1e;
   --footer-text: #fff;
 }
+
+body.dark-theme .about,
+body.dark-theme .education,
+body.dark-theme .experience,
+body.dark-theme .home,
+body.dark-theme .skills,
+body.dark-theme .projects {
+  background-color: #000000; /* A bit lighter than #0f1629 */
+}
+
+
 
 
 /* Header fixes for dark theme */
@@ -1091,6 +1102,15 @@ header .navbar ul li a:hover {
 /* work section ends */
 
 /* experience section starts */
+
+body.dark-theme .experience .timeline::after {
+  background: #0f1629;
+}
+
+body.dark-theme .home .content p {
+  color: #ffffff;
+}
+
 
 .experience .timeline {
   position: relative;
