@@ -3,36 +3,36 @@
 
 :root {
   --background: var(--card-bg);
-  --text: #000000;
+  --text: #18023f;
   --primary: #2b3dda;
   --primary-dark: #18023f;
   --secondary: #f8f9fa;
   --highlight: #ffe600;
   --card-bg: #ffffff;
   --section-bg: #f8f9fa;
-  --nav-link: #000000;
+  --nav-link: #18023f;
   --nav-link-active: #2b3dda;
   --skills-bg: linear-gradient(to bottom, #2b3dda, #2b3dda);
-  --skills-card-bg: rgba(0,0,22,0.9);
-  --footer-bg: rgb(0, 1, 43);
-  --footer-text: #fff;
+  --skills-card-bg: #18023f;
+  --footer-bg: #18023f;
+  --footer-text: #ffffff;
 }
 
 body.dark-theme {
-  --background: #121212;
+  --background: #18023f;
   --text: #ffffff;
   --primary: #2b3dda;
-  --primary-dark: #1e1e1e;
-  --secondary: #1e1e1e;
+  --primary-dark: #000000;
+  --secondary: #000000;
   --highlight: #ffe600;
-  --card-bg: #1e1e1e;
-  --section-bg: #181818;
+  --card-bg: #000000;
+  --section-bg: #000000;
   --nav-link: #ffffff;
   --nav-link-active: #2b3dda;
-  --skills-bg: linear-gradient(to bottom, #232a3a, #232a3a);
-  --skills-card-bg: rgba(30,30,30,0.9);
-  --footer-bg: #1e1e1e;
-  --footer-text: #fff;
+  --skills-bg: linear-gradient(to bottom, #000000, #000000);
+  --skills-card-bg: #000000;
+  --footer-bg: #000000;
+  --footer-text: #ffffff;
 }
 
 body.dark-theme .about,
@@ -352,7 +352,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 8%;
+  padding: 1.7rem 8%;
   height: 6.5rem;
   background-color: var(--card-bg);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
