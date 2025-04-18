@@ -1760,15 +1760,22 @@ form .button-area {
 
 .home .content h2 {
   margin-top: 20px; /* Add space above the "Hi There," text */
-}
 
 .home .content {
   padding-top: 20px; /* Add space above the entire content block */
 }
 
+a.ai-style-change-1 {
+  font-weight: bold; /* or font-weight: 700; */
+}
 
 h2.ai-style-change-1 {
   margin-top: 60px;
+}
+
+ul {
+  position: relative; !important;
+  top: -6px; !important;
 }
 
 .content h2 {
@@ -1789,9 +1796,7 @@ fas fa-envelope {
 
 
 
-a.ai-style-change-1 {
-  font-weight: bold; /* or font-weight: 700; */
-}
+
 
 
 /* Header Logo Text Bold
@@ -1908,7 +1913,7 @@ Footer Icon
 
 /* Header Dark Fix */
 body.dark-theme header {
-  background-color: var(--card-bg);
+  background-color:var(--card-bg);
   color: var(--text);
   box-shadow: none;
 }
