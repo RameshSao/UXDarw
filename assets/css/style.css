@@ -1982,6 +1982,12 @@ body.dark-theme .skills {
   background: #0f1629;
 }
 
+
+/* Footer Icons - Change color to white */
+i.fas.fa-phone::before {
+  color: #ffffff;
+}
+
 i.fas.fa-envelope::before {
   color: #ffffff;
 }
