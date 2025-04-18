@@ -1982,4 +1982,12 @@ body.dark-theme .skills {
   background: #0f1629;
 }
 
+i.fas.fa-envelope::before {
+  color: #ffffff;
+}
+
+i.fas.fa-map-marked-alt::before {
+  color: #ffffff;
+}
+
 
