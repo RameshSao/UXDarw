@@ -339,6 +339,8 @@ html::-webkit-scrollbar-thumb {
   margin-bottom: 0 !important;
 }
 
+
+
 /* navbar starts */
 
 header {
@@ -350,7 +352,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 2rem;
+  padding: 1.6rem 8%;
   height: 6.5rem;
   background-color: var(--card-bg);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
