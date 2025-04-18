@@ -3,18 +3,18 @@
 
 :root {
   --background: var(--card-bg);
-  --text: #18023f;
+  --text: #000000;
   --primary: #2b3dda;
   --primary-dark: #18023f;
   --secondary: #f8f9fa;
   --highlight: #ffe600;
   --card-bg: #ffffff;
   --section-bg: #f8f9fa;
-  --nav-link: #18023f;
+  --nav-link: #000000;
   --nav-link-active: #2b3dda;
   --skills-bg: linear-gradient(to bottom, #2b3dda, #2b3dda);
-  --skills-card-bg: #18023f;
-  --footer-bg: #00012b;
+  --skills-card-bg: rgba(0,0,22,0.9);
+  --footer-bg: rgb(0, 1, 43);
   --footer-text: #fff;
 }
 
@@ -25,7 +25,7 @@ body.dark-theme {
   --primary-dark: #1e1e1e;
   --secondary: #1e1e1e;
   --highlight: #ffe600;
-  --card-bg: #000000;
+  --card-bg: #1e1e1e;
   --section-bg: #181818;
   --nav-link: #ffffff;
   --nav-link-active: #2b3dda;
@@ -352,7 +352,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.7rem 8%;
+  padding: 1.6rem 8%;
   height: 6.5rem;
   background-color: var(--card-bg);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
@@ -1332,7 +1332,7 @@ body.dark-theme .home .content p {
   transition: 0.5s;
   color: #fff;
   background: #18023f;
-  box-shadow: 0px 5px 10px #2b3dda;
+  box-shadow: 0px 5px 10px #3044f799;
   text-align: center;
 }
 .morebtn .btn span {
@@ -1954,21 +1954,21 @@ body.dark-theme .home .content h2 {
 /* Skills & Abilities Section - Make card backgrounds darker if needed */
 body.dark-theme .skills .container,
 body.dark-theme .skills .container .bar {
-  background: #14141e6;
+  background: rgba(20, 20, 20, 0.9);
   box-shadow: none;
 }
 
 /* Projects - Button dark blue like background */
 body.dark-theme .projects .btn,
 body.dark-theme .resumebtn .btn {
-  background-color: #0f1629;
+  background-color: #232a3a;
   box-shadow: none;
   color: #ffffff;
 }
 body.dark-theme .projects .btn:hover,
 body.dark-theme .resumebtn .btn:hover {
-  background-color: #2b3dda;
-  color: #ffffff;
+  background-color: #4dabf7;
+  color: #121212;
 }
 
 /* Contact Section - Use dark blue background */
@@ -1980,20 +1980,6 @@ body.dark-theme #contact {
 body.dark-theme .projects,
 body.dark-theme .skills {
   background: #0f1629;
-}
-
-
-/* Footer Icons - Change color to white */
-i.fas.fa-phone::before {
-  color: #ffffff;
-}
-
-i.fas.fa-envelope::before {
-  color: #ffffff;
-}
-
-i.fas.fa-map-marked-alt::before {
-  color: #ffffff;
 }
 
 

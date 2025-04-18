@@ -60,12 +60,9 @@
           </g>
           <path class="st0" d="M64.3,112.9l-1.1.7-20.9,12.7h-.2v.2s-.2,0-.3,0h-.7c-.4,0-.8,0-1.1-.3-.3-.2-.6-.4-.8-.8-.6-1-.3-2.4.7-3l3.3-2,15.7-9.5,3.2-1.9c.7-.4,1.5-.4,2.1,0h0c.3.2.6.4.8.7.6,1.1.3,2.4-.7,3h-.1Z"/>
         </svg></i>
-        <a href="#" class="logo">Ramesh Portfolio</a>
-        <div class="header-actions">
-          <div id="theme-toggle">
-            <i id="light-icon" class="fas fa-sun"></i>
-            <i id="dark-icon" class="fas fa-moon"></i>
-          </div>
+      </span>Ramesh Portfolio</a>
+
+    <div id="menu" class="fas fa-bars"></div>
     <nav class="navbar">
       <ul>
         <li><a class="active" href="#home">Home</a></li>
@@ -77,6 +74,13 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    
+      <!-- Theme Toggle Icons -->
+      <div id="theme-toggle" style="position: absolute; top: 20px; right: 20px; cursor: pointer;">
+        <i id="light-icon" class="fas fa-sun" style="font-size: 24px; color: #f39c12; display: none;"></i>
+        <i id="dark-icon" class="fas fa-moon" style="font-size: 24px; color: #2b3dda;"></i>
+      </div>
 
 
   </header>
@@ -632,6 +636,115 @@
 <!-- <script src="https://cdn.userway.org/widget.js" data-account="Ughs22WMhv"></script> -->
 
 <!-- ==== Cookie Consent Starts ==== -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cookie Consent</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Cookie Banner */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2b3dda;
+      color: white;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      z-index: 9999;
+      flex-wrap: wrap;
+    }
+
+    #cookie-banner span {
+      flex: 1;
+      font-size: 1.4rem;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cookie-buttons button {
+      padding: 0.8rem 1.8rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #accept-all { background-color: #ffe600; color: #18023f; }
+    #reject-all { background-color: #f44336; color: white; }
+    #manage-preferences { background-color: white; color: #2b3dda; }
+
+    /* Preferences Modal */
+    #cookie-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #cookie-modal {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    #cookie-modal h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .cookie-option {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .modal-buttons button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 1.5rem;
+      cursor: pointer;
+    }
+
+    #save-preferences { background-color: #2b3dda; color: white; }
+    #close-preferences { background-color: #ccc; color: #000; }
+  </style>
+</head>
+<body>
+
 <!-- Cookie Banner -->
 <div id="cookie-banner">
   <span>We use cookies for analytics and performance. <a href="/cookies.html" style="color: #ffe600; text-decoration: underline;">Cookies Policy</a></span>
@@ -658,99 +771,6 @@
     </div>
   </div>
 </div>
-
-<style>
-  /* Cookie Banner */
-  #cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #2b3dda;
-    color: white;
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    z-index: 9999;
-    flex-wrap: wrap;
-  }
-
-  #cookie-banner span {
-    flex: 1;
-    font-size: 1.4rem;
-  }
-
-  .cookie-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .cookie-buttons button {
-    padding: 0.8rem 1.8rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-
-  #accept-all { background-color: #ffe600; color: #18023f; }
-  #reject-all { background-color: #f44336; color: white; }
-  #manage-preferences { background-color: white; color: #2b3dda; }
-
-  /* Preferences Modal */
-  #cookie-modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 99999;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #cookie-modal {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  }
-
-  #cookie-modal h2 {
-    margin-top: 0;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .cookie-option {
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-  }
-
-  .modal-buttons {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-
-  .modal-buttons button {
-    padding: 0.8rem 1.5rem;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 1.5rem;
-    cursor: pointer;
-  }
-
-  #save-preferences { background-color: #2b3dda; color: white; }
-  #close-preferences { background-color: #ccc; color: #000; }
-</style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -815,6 +835,11 @@
     });
   });
 </script>
-<!-- ==== Cookie Consent Ends ==== -->
+
 </body>
+</html>
+
+
+</body>
+
 </html>
