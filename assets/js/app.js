@@ -23,13 +23,13 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": "#000000"
+        "value": "#898989"
       },
       "shape": {
-        "type": "circle",
+        "type": "star",
         "stroke": {
-          "width": 0,
-          "color": "#000000"
+          "width": 2,
+          "color": "#898989"
         },
         "polygon": {
           "nb_sides": 5
@@ -51,21 +51,21 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 5,
+        "value": 2,
         "random": true,
         "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
+          "enable": true,
+          "speed": 21.86889999433029,
+          "size_min": 0,
           "sync": false
         }
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
-        "color": "#000000",
-        "opacity": 0.4,
-        "width": 1
+        "distance": 255.89764094362266,
+        "color": "#898989",
+        "opacity": 0.26389444222311087,
+        "width": 1.4
       },
       "move": {
         "enable": true,
@@ -74,6 +74,7 @@ particlesJS('particles-js',
         "random": false,
         "straight": false,
         "out_mode": "out",
+        "bounce": false,
         "attract": {
           "enable": false,
           "rotateX": 600,
@@ -82,15 +83,15 @@ particlesJS('particles-js',
       }
     },
     "interactivity": {
-      "detect_on": "canvas",
+      "detect_on": "window",
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "repulse"
+          "mode": "grab"
         },
         "onclick": {
           "enable": true,
-          "mode": "push"
+          "mode": "repulse"
         },
         "resize": true
       },
@@ -109,7 +110,8 @@ particlesJS('particles-js',
           "speed": 3
         },
         "repulse": {
-          "distance": 200
+          "distance": 200,
+          "duration": 0.4
         },
         "push": {
           "particles_nb": 4
@@ -119,15 +121,7 @@ particlesJS('particles-js',
         }
       }
     },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#000000",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
+    "retina_detect": true
   }
 
 );
