@@ -55,19 +55,21 @@ body.dark-theme .projects {
 
 i#light-icon::before {
   position: absolute;
-  left: -60px;
+  left: -80px;
   /* Other styles for the pseudo-element should be included here, Theme Icon Position */
 }
 
 i#dark-icon.fas.fa-moon::before {
   position: absolute;
-  left: -60px;
+  left: -80px;
   /* Other styles for the pseudo-element should be included here, Theme Icon Position */
 }
 
 body.dark-theme #menu::before {
   color: white;
 }
+
+
 
 /* Header fixes for dark theme */
 body.dark-theme header {
@@ -218,6 +220,13 @@ header .navbar ul li a:hover {
 }
 .footer .box-container .box a:hover {
   color: var(--highlight);
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Buttons */
