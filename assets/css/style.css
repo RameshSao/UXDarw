@@ -53,7 +53,7 @@ body.dark-theme .projects {
   height: 100%;
 }
 
-/* i#light-icon::before {
+i#light-icon::before {
   position: absolute;
   left: -80px;
   /* Other styles for the pseudo-element should be included here, Theme Icon Position */
@@ -63,7 +63,7 @@ i#dark-icon.fas.fa-moon::before {
   position: absolute;
   left: -80px;
   /* Other styles for the pseudo-element should be included here, Theme Icon Position */
-} */
+}
 
 body.dark-theme #menu::before {
   color: white;
@@ -264,6 +264,12 @@ button:hover,
 #theme-toggle i#light-icon {
   color: #f39c12;
 }
+body.dark-theme #theme-toggle i#light-icon {
+  display: block;
+}
+body.dark-theme #theme-toggle i#dark-icon {
+  display: none;
+}
 
 /* Scroll Top */
 #scroll-top {
@@ -448,7 +454,7 @@ header .navbar ul li a:hover {
   font-size: 3rem;
   cursor: pointer;
   color: #2b3dda;
-  display: block;
+  display: block
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1865,7 +1871,7 @@ button.dark-theme {
 
 /* Theme Toggle Icons */
 #theme-toggle {
-  position: static;
+  position: absolute;
   top: 20px;
   right: 60px;
   z-index: 1101;
@@ -1876,6 +1882,23 @@ button.dark-theme {
 #theme-toggle i {
   font-size: 24px;
   transition: color 0.3s ease;
+}
+
+#theme-toggle i#light-icon {
+  color: #f39c12;
+  display: none;
+}
+
+#theme-toggle i#dark-icon {
+  color: #2b3dda;
+}
+
+body.dark-theme #theme-toggle i#light-icon {
+  display: block;
+}
+
+body.dark-theme #theme-toggle i#dark-icon {
+  display: none;
 }
 
 
@@ -1973,113 +1996,4 @@ i.fas.fa-map-marked-alt::before {
   color: #ffffff;
 }
 
-/* Align theme toggle with navbar links */
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
 
-.navbar ul {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#theme-toggle {
-  cursor: pointer;
-  margin-left: 1.5rem;
-  display: flex;
-  align-items: center;
-}
-
-#theme-toggle i {
-  font-size: 24px;
-  margin: 0 0.2rem;
-}
-
-#theme-toggle .toggle-text {
-  font-size: 1.57rem;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: inherit;
-  margin-left: 0.3rem;
-}
-
-
-/* Theme Toggle: Show next theme option */
-#theme-toggle #light-icon,
-#theme-toggle #light-text {
-  display: none;
-}
-#theme-toggle #dark-icon,
-#theme-toggle #dark-text {
-  display: inline;
-}
-body.dark-theme #theme-toggle #light-icon,
-body.dark-theme #theme-toggle #light-text {
-  display: inline;
-}
-body.dark-theme #theme-toggle #dark-icon,
-body.dark-theme #theme-toggle #dark-text {
-  display: none;
-}
-
-/* Icon colors */
-#theme-toggle #light-icon { color: #f39c12; }
-#theme-toggle #dark-icon { color: #2b3dda; }
-
-/* Text styling */
-#theme-toggle .toggle-text {
-  font-size: 1.57rem;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: inherit;
-  margin-left: 0.3rem;
-}
-
-#theme-toggle i {
-  font-size: 20px !important; /* Change this value to your desired size */
-  margin: 0 0.2rem;
-}
-
-@media (max-width: 768px) {
-  #theme-toggle .toggle-text {
-    display: none;
-  }
-}
-
-#theme-toggle .toggle-text {
-  display: none !important;
-}
-
-
-.header-actions {
-  display: flex;
-  align-items: center;#menu {
-    font-size: 3rem;
-    cursor: pointer;
-    color: #2b3dda;
-    display: block
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1100;
-  }
-  gap: 1rem;
-}
-
-@media (max-width: 768px) {
-  .header-actions {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1200;
-  }
-  #theme-toggle {
-    margin-left: 0;
-  }
-}
