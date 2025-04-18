@@ -2045,3 +2045,14 @@ body.dark-theme #theme-toggle #dark-text {
   color: inherit;
   margin-left: 0.3rem;
 }
+
+#theme-toggle i {
+  font-size: 20px !important; /* Change this value to your desired size */
+  margin: 0 0.2rem;
+}
+
+@media (max-width: 768px) {
+  #theme-toggle .toggle-text {
+    display: none;
+  }
+}
