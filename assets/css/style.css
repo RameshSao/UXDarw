@@ -65,6 +65,9 @@ i#dark-icon.fas.fa-moon::before {
   /* Other styles for the pseudo-element should be included here */
 }
 
+body.dark-theme #menu::before {
+  color: white;
+}
 
 /* Header fixes for dark theme */
 body.dark-theme header {
