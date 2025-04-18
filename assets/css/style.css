@@ -385,6 +385,7 @@ header .navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 11000
 }
 header .navbar li {
   margin-left: 2.5rem;
@@ -470,6 +471,7 @@ header .navbar ul li a:hover {
   }
   header .navbar.nav-toggle {
     right: 0;
+    z-index: 1100;
   }
 }
 /* hamburger icon ends */
