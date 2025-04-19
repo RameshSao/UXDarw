@@ -2010,96 +2010,143 @@ body.dark-theme .tag {
   vertical-align: middle;
 }
 
-
-.testimonials {
-  background: var(--section-bg);
-  padding: 6rem 9% 2rem;
-}
-
-.testimonials .heading {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.testimonial-swiper {
-  position: relative;
-}
-
-.testimonial-box {
+.testimonial .swiper-slide.box {
   background: var(--card-bg);
-  padding: 3rem 2rem;
+  color: var(--text);
+  padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   position: relative;
-  min-height: 340px;
+  overflow: hidden;
+  min-height: 280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .swiper-slide.box i.fa-quote-right {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 5rem;
+  opacity: 0.1;
+  color: var(--text);
+}
+
+.testimonial .swiper-slide.box i.fa-quote-left {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.testimonial .user {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.testimonial .user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.testimonial .user .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.testimonial .user .info h3 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.testimonial .user .info span {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.testimonial .user .info a {
+  color: #0077b5;
+  font-size: 1.8rem;
+  margin-top: 0.2rem;
+}
+
+.testimonial .swiper-button-next,
+.testimonial .swiper-button-prev {
+  width: 42px;
+  height: 42px;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  .testimonial .swiper-button-next,
+  .testimonial .swiper-button-prev {
+    display: none;
+  }
+  .testimonial .swiper-slide.box {
+    margin-right: 0 !important;
+  }
+}
+.testimonial .swiper-wrapper {
+  align-items: stretch;
+}
+.testimonial .swiper-slide.box {
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.testimonial-box p {
-  font-size: 1.6rem;
-  color: var(--text);
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  z-index: 2;
-}
-
-.testimonial-box h4 {
-  font-weight: bold;
-  color: var(--primary);
+.testimonial .swiper-slide.box p {
   font-size: 1.5rem;
-  margin-bottom: 0.4rem;
-  z-index: 2;
+  line-height: 1.6;
 }
 
-.testimonial-box span {
-  font-size: 1.3rem;
-  color: var(--text);
-  z-index: 2;
-}
-
-.quote-bg {
-  font-size: 10rem;
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  color: #ccc;
-  opacity: 0.2;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* Swiper Arrows */
-.custom-prev,
-.custom-next {
-  display: none;
-}
-
-@media (min-width: 320px) {
-  .custom-prev,
-  .custom-next {
-    width: 44px;
-    height: 44px;
-    line-height: 44px;
-    font-size: 2rem;
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--primary);
-    color: white;
-    border-radius: 50%;
-    z-index: 10;
-    text-align: center;
-    cursor: pointer;
+@media (max-width: 600px) {
+  .testimonial .swiper-slide.box p {
+    font-size: 1.4rem;
   }
-
-  .custom-prev {
-    left: 1rem;
+  .testimonial .user .info h3 {
+    font-size: 1.4rem;
   }
-
-  .custom-next {
-    right: 1rem;
+  .testimonial .user .info span {
+    font-size: 1.1rem;
   }
+}
+.testimonial .swiper-button-next,
+.testimonial .swiper-button-prev {
+  width: 42px;
+  height: 42px;
+  font-size: 1.1rem;
+  color: var(--primary);
+  background-color: var(--card-bg); /* Optional: match your theme */
+  border-radius: 50%; /* This makes it a perfect circle */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.testimonial .swiper-button-next:hover,
+.testimonial .swiper-button-prev:hover {
+  background-color: var(--primary); /* On hover */
+  color: #fff;
+}
+.testimonial .swiper-button-next::after,
+.testimonial .swiper-button-prev::after {
+  font-size: 1.2rem; /* Change this to make it smaller */
+}
+.testimonial .swiper-button-next::after,
+.testimonial .swiper-button-prev::after {
+  font-weight: 800; /* Makes the arrow bolder */
+  font-size: 1.4rem; /* Optional: adjust size as needed */
 }
