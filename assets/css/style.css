@@ -2076,30 +2076,30 @@ body.dark-theme .tag {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 320px) {
   .custom-prev,
   .custom-next {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 2rem;
     display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: var(--primary);
     color: white;
-    width: 3.5rem;
-    height: 3.5rem;
     border-radius: 50%;
     z-index: 10;
     text-align: center;
-    line-height: 3.5rem;
-    font-size: 1.8rem;
     cursor: pointer;
   }
 
   .custom-prev {
-    left: -1rem;
+    left: 1rem;
   }
 
   .custom-next {
-    right: -1rem;
+    right: 1rem;
   }
 }
