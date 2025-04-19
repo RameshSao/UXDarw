@@ -54,14 +54,14 @@ body.dark-theme .projects {
 }
 
 i#light-icon::before {
-  position: absolute;
-  left: -80px;
+  position: static;
+  left: 20px;
   /* Other styles for the pseudo-element should be included here, Theme Icon Position */
 }
 
 i#dark-icon.fas.fa-moon::before {
-  position: absolute;
-  left: -80px;
+  position: static;
+  left: 20px;
   /* Other styles for the pseudo-element should be included here, Theme Icon Position */
 }
 
@@ -1982,4 +1982,19 @@ body.dark-theme .skills {
   background: #0f1629;
 }
 
+header .navbar ul {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
+header .navbar li {
+  display: flex;
+  align-items: center;       /* Center the link vertically inside li */
+  height: 100%;
+  margin-left: 2.5rem;
+}
