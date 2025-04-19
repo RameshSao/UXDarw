@@ -237,7 +237,7 @@ header .navbar ul li a:hover {
 }
 .footer .box-container .box p,
 .footer .box-container .box a {
-  color: #ccc;
+  color: #ffffff;
 }
 .footer .box-container .box a:hover {
   color: var(--highlight);
@@ -454,7 +454,7 @@ header .navbar ul li a:hover {
   font-size: 3rem;
   cursor: pointer;
   color: #2b3dda;
-  display: block
+  display: block;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -686,7 +686,7 @@ header .navbar ul li a:hover {
 
 /* about section starts */
 .about {
-  background: background: var(--card-bg);
+  background: var(--card-bg);
 }
 .about .row {
   display: flex;
@@ -910,12 +910,15 @@ header .navbar ul li a:hover {
   margin-top: 2rem;
   overflow: hidden;
   transition: 0.3s;
-  background: background: var(--card-bg);
+  background: var(--card-bg);
 }
 .education .box-container .box:hover {
+  transform: scale(1.03); /* Example: Add a hover effect */
+  box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3); /* Example: Add shadow */
+}
   /* transform: scale(1.03); */
   /* box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3); */
-}
+
 .education .box-container .box .image {
   flex: 1 1 20rem;
   width: 100%;
@@ -1158,7 +1161,7 @@ header .navbar ul li a:hover {
   padding: 1.6rem 3rem;
   border-radius: 0.5em;
   transition: 0.5s;
-  color: background: var(--card-bg);
+  color: var(--card-bg);
   font-weight: 700;
   border: 2px solid #fff;
   box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
@@ -1413,7 +1416,6 @@ body.dark-theme .home .content p {
   background: transparent; /* Remove white background */
   box-shadow: none; /* Optional: Remove shadow if not needed */
   border: none; /* Optional: Remove border if not needed */
-}
   padding: 0rem; /* Add padding for better spacing */
   border-radius: 1rem; /* Rounded corners */
   transition: transform 0.3s ease; /* Smooth hover effect */
@@ -1651,7 +1653,7 @@ form .button-area {
   color: #e90606;
   margin: 0 0.3rem;
   font-size: 1.5rem;
-  animation: pound 0.35s infinite alternate; !important; /* Disable the scaling animation */
+  animation: pound 0.35s infinite alternate; /* Disable the scaling animation */
 }
 @-webkit-keyframes pound {
   to {
@@ -1758,7 +1760,7 @@ form .button-area {
 
 .home .content h2 {
   margin-top: 20px; /* Add space above the "Hi There," text */
-}
+
 
 .home .content {
   padding-top: 20px; /* Add space above the entire content block */

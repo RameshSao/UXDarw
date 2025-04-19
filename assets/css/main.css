@@ -1,5 +1,5 @@
 .badge {
-  background-color: #1e90ff;
+  background-color: #2b3dda;
   color: #fff;
   padding: 4px 8px;
   text-align: center;
@@ -9,7 +9,7 @@
    Basic Styles
 ================================================== */
 :root {
-	--work-accent: #1e90ff;
+	--work-accent: #2b3dda;
 }
 
 html{
