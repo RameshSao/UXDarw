@@ -558,7 +558,118 @@
 </section> -->
   <!-- contact section ends -->
 
+<!-- Testimonials Section -->
+<section class="testimonials reveal" style="background: var(--section-bg); padding: 6rem 9% 2rem;">
+  <h2 class="heading"><i class="fas fa-users"></i> What <span>People Say</span></h2>
+  <div class="swiper testimonial-slider" style="padding-top: 2rem;">
+    <div class="swiper-wrapper">
+      <!-- Testimonial 1 -->
+      <div class="swiper-slide box" style="background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <p style="font-size: 1.6rem; color: var(--text); margin-bottom: 1rem;">
+          “Ramesh is a dedicated, customer centric product specialist with a through knowledge of the tools required to get the job done. He helped us conceptualise many products and user journeys.”
+        </p>
+        <p style="font-weight: bold; color: var(--primary);">Karun Kandoi</p>
+        <p style="color: var(--text); font-size: 1.4rem;">Founder & CEO @ Vedysea</p>
+      </div>
 
+      <!-- Testimonial 2 -->
+      <div class="swiper-slide box" style="background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <p style="font-size: 1.6rem; color: var(--text); margin-bottom: 1rem;">
+          “Ramesh has done a phenomenal work on our Project BroBazaar, he has excellent UI & UX skills.
+          highly recommended.”
+        </p>
+        <p style="font-weight: bold; color: var(--primary);">Gaurev Kapoor</p>
+        <p style="color: var(--text); font-size: 1.4rem;">Founder & CEO @ RealBetter</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="swiper-slide box" style="background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <p style="font-size: 1.6rem; color: var(--text); margin-bottom: 1rem;">
+          “He is very creative in his work, updated with latest trends of UX Design and always come up with out of box idea to make user experience simple and elegant.
+          After he has joined our team , we need not worry about UX Design, we highly relied on him. I highly recommend him for his understanding business problem from user perspective and design skill. ”
+        </p>
+        <p style="font-weight: bold; color: var(--primary);">Vikash Gupta</p>
+        <p style="color: var(--text); font-size: 1.4rem;">Mobile App Specialist</p>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="swiper-slide box" style="background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <p style="font-size: 1.6rem; color: var(--text); margin-bottom: 1rem;">
+          “Ramesh is a great human and a designer. I had the opportunity to work with him in Magic Software and it was a sheer learning experience. 
+          He is a complete package and has holistic knowledge about software, video making skills, and experience design. His willingness to learn and grow is inspiring.
+          The best part about him is his awareness about myriad topics and I feel that has shaped his thinking and design skills positively.
+          Hope to work with you again in the future. ”
+        </p>
+        <p style="font-weight: bold; color: var(--primary);">Guneet Bhatia</p>
+        <p style="color: var(--text); font-size: 1.4rem;">User Experience Designer @ Microsoft</p>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="swiper-slide box" style="background: var(--card-bg); padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <p style="font-size: 1.6rem; color: var(--text); margin-bottom: 1rem;">
+          “I enjoyed working with Ramesh as a Game Developer and highly recommend him for his exceptional UI/UX design skills. Ramesh has the unique ability to design visually appealing and effective User Interfaces and handled multiple game projects.”
+        </p>
+        <p style="font-weight: bold; color: var(--primary);">Yogesh Kumar</p>
+        <p style="color: var(--text); font-size: 1.4rem;">Game Developer</p>
+      </div>
+      
+
+    </div>
+    <div class="swiper-pagination" style="margin-top: 2rem;"></div>
+  </div>
+</section>
+
+
+<!-- End of Testimonials Section -->
+
+<!-- SwiperJS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.testimonial-slider', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+
+  // Animation like rest of the site
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+  revealElements.forEach(el => observer.observe(el));
+</script>
+
+<style>
+/* Inherit existing reveal styles */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<!-- Testimonials Section End Here -->
 
   <!-- footer section starts -->
   <section class="footer" id="contact">
