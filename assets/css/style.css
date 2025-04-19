@@ -54,14 +54,14 @@ body.dark-theme .projects {
 }
 
 i#light-icon::before {
-  position: static;
-  left: 20px;
+  position: absolute;
+  left: -70px;
   /* Other styles for the pseudo-element should be included here, Theme Icon Position */
 }
 
 i#dark-icon.fas.fa-moon::before {
-  position: static;
-  left: 20px;
+  position: absolute;
+  left: -70px;
   /* Other styles for the pseudo-element should be included here, Theme Icon Position */
 }
 
