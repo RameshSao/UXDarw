@@ -1,118 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="Ramesh Sao, UX Designer, portfolio, blog, UXDraw blog" />
-  <meta name="description" content="Read insightful UX design articles by Ramesh Sao on UXDraw" />
-  <title>UXDraw Blog Articles</title>
-
-  <!-- Global CSS (Optional: Add your site's style.css if needed) -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-
-  <!-- Blog Style -->
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 2rem;
-      background: #f9f9f9;
-      margin: 0;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-    .blog-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .blog-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-    .blog-card:hover {
-      transform: translateY(-5px);
-    }
-    .blog-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .blog-card h3 {
-      margin: 1rem;
-      font-size: 1.2rem;
-    }
-    .blog-card p {
-      margin: 0 1rem 1rem;
-      color: #555;
-      flex-grow: 1;
-    }
-    .blog-card a {
-      margin: 1rem;
-      color: #0077cc;
-      font-weight: bold;
-      text-decoration: none;
-      align-self: flex-start;
-    }
-  </style>
-</head>
 <body>
+  <h2>Redirecting to blog...</h2>
+<p>If you're not redirected, <a href="https://blog.uxdraw.com">click here</a>.</p>
+<script>
+  setTimeout(() => {
+    window.location.href = "https://blog.uxdraw.com";
+  }, 1000);
+</script>
 
-  <h1>UXDraw Blog Articles</h1>
-  <div class="blog-list" id="blogList">Loading...</div>
-
-  <script>
-    const query = `
-      {
-        user(username: "uxdraw") {
-          publication {
-            posts(page: 0) {
-              title
-              brief
-              slug
-              coverImage
-              dateAdded
-            }
-          }
-        }
-      }
-    `;
-
-    fetch("https://gql.hashnode.com", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query })
-    })
-    .then(res => res.json())
-    .then(data => {
-      const posts = data.data.user.publication.posts;
-      const blogList = document.getElementById("blogList");
-      blogList.innerHTML = "";
-
-      posts.forEach(post => {
-        const postURL = `https://uxdraw.hashnode.dev/${post.slug}`;
-        blogList.innerHTML += `
-          <div class="blog-card">
-            <img src="${post.coverImage}" alt="${post.title}" />
-            <h3>${post.title}</h3>
-            <p>${post.brief}</p>
-            <a href="${postURL}" target="_blank">Read more →</a>
-          </div>
-        `;
-      });
-    })
-    .catch((err) => {
-      console.error("Error loading blog posts:", err);
-      document.getElementById("blogList").innerHTML = "<p>Oops! Blog failed to load.</p>";
-    });
-  </script>
-
+</body>
 </body>
 </html>
