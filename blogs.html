@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="Ramesh Sao, portfolio, Ramesh, UI/UX Designer, personal portfolio, portfolio design, portfolio website, personal portfolio" />
+  <meta name="description" content="Welcome to Ramesh's Portfolio. UI/UX/Product Designer and Researcher" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-png">
+  <title>Project | Coming Soon</title>
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Blog – UXDraw</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+        background: #f9f9f9;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .blog-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      .blog-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card:hover {
+        transform: translateY(-5px);
+      }
+      .blog-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+      .blog-card h3 {
+        margin: 1rem;
+        font-size: 1.2rem;
+      }
+      .blog-card p {
+        margin: 0 1rem 1rem;
+        color: #555;
+        flex-grow: 1;
+      }
+      .blog-card a {
+        margin: 1rem;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <h1>UXDraw Blog Articles</h1>
+    <div class="blog-list" id="blogList">Loading...</div>
+  
+    <script>
+      const query = `
+        {
+          user(username: "yourusername") {
+            publication {
+              posts(page: 0) {
+                title
+                brief
+                slug
+                coverImage
+                dateAdded
+              }
+            }
+          }
+        }
+      `;
+  
+      fetch("https://gql.hashnode.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+      })
+      .then(res => res.json())
+      .then(data => {
+        const posts = data.data.user.publication.posts;
+        const blogList = document.getElementById("blogList");
+        blogList.innerHTML = "";
+  
+        posts.forEach(post => {
+          const postURL = `https://uxdraw.hashnode.dev/${post.slug}`;
+          blogList.innerHTML += `
+            <div class="blog-card">
+              <img src="${post.coverImage}" alt="${post.title}" />
+              <h3>${post.title}</h3>
+              <p>${post.brief}</p>
+              <a href="${postURL}" target="_blank">Read more →</a>
+            </div>
+          `;
+        });
+      })
+      .catch(() => {
+        document.getElementById("blogList").innerHTML = "<p>Oops! Blog failed to load.</p>";
+      });
+    </script>
+  
+  </body>
+  </html>
+  
+
+</body>
+</html>
