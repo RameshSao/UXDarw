@@ -85,7 +85,7 @@
     <script>
       const query = `
         {
-          user(username: "yourusername") {
+          user(username: "uxdraw") {
             publication {
               posts(page: 0) {
                 title
@@ -93,6 +93,10 @@
                 slug
                 coverImage
                 dateAdded
+                author {
+                  name
+                  profileImage
+                }
               }
             }
           }
