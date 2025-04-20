@@ -2018,7 +2018,7 @@ body.dark-theme .tag {
   position: relative;
   overflow: hidden;
   min-height: 280px;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2099,11 +2099,15 @@ body.dark-theme .tag {
   align-items: stretch;
 }
 .testimonial .swiper-slide.box {
-  height: auto;
+  height: auto !important;
+  min-height: unset;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 3rem; /* gives breathing room at the bottom */
 }
+
+
 
 .testimonial .swiper-slide.box p {
   font-size: 1.5rem;
@@ -2150,3 +2154,39 @@ body.dark-theme .tag {
   font-weight: 800; /* Makes the arrow bolder */
   font-size: 1.4rem; /* Optional: adjust size as needed */
 }
+
+
+.user-initials {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1 / 1; /* ensures perfect square */
+  border-radius: 50%;
+  background-color: #2b3dda; /* or var(--primary) */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-right: 1rem;
+  line-height: 1; /* fixes vertical centering issue */
+}
+
+.testimonial .swiper-slide.box {
+  outline: 1px dashed red;
+}
+
+.testimonial .swiper-slide.box {
+  padding-bottom: 4rem; /* space for the quote */
+}
+
+.testimonial {
+  padding-bottom: 6rem;
+}
+
+.swiper.testimonial-slider {
+  overflow: visible;
+}
+
+

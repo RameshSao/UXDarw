@@ -561,7 +561,8 @@
         <i class="fas fa-quote-left"></i>
         <p>Ramesh is a highly reliable and proactive team player. He consistently delivers quality work and brings innovative design solutions that resonate with user needs. His communication and leadership are excellent.</p>
         <div class="user">
-          <img src="./assets/images/profile.webp" alt="Karun">
+          <div class="user-initials">KK</div>
+
           <div class="info">
             <h3>Karun Kandoi</h3>
             <span>Chief Experience Officer, ApplyBoard</span>
@@ -643,9 +644,9 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.testimonial-slider', {
-    loop: false,
+    loop: true,
     grabCursor: true,
-    spaceBetween: 20,
+    spaceBetween: 40,
     slidesPerView: 1,
     centeredSlides: false,
     slideToClickedSlide: true,
@@ -654,14 +655,19 @@
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
+      425: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+      },
       768: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 40,
       },
       1024: {
         slidesPerView: 4,
         spaceBetween: 30,
       }
+      
     },
     autoplay: {
       delay: 5000,
@@ -670,7 +676,6 @@
     speed: 600,
   });
 </script>
-
 
 
 
