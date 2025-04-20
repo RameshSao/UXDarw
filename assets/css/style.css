@@ -2173,9 +2173,9 @@ body.dark-theme .tag {
   line-height: 1; /* fixes vertical centering issue */
 }
 
-.testimonial .swiper-slide.box {
+/* .testimonial .swiper-slide.box {
   outline: 1px dashed red;
-}
+} */
 
 .testimonial .swiper-slide.box {
   padding-bottom: 4rem; /* space for the quote */
