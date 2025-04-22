@@ -1774,10 +1774,9 @@ h2.ai-style-change-1 {
 .content h2 {
   margin-top: 24px;
 }
+    color: #ffffff !important; /* Force the color change */
+  }
 
-.fas.fa-phone {
-  color: #ffffff !important; /* Force the color change */
-}
 
 fas fa-envelope {
   color: #ffffff !important; /* Force the color change */
@@ -2173,36 +2172,31 @@ body.dark-theme .tag {
   line-height: 1; /* fixes vertical centering issue */
 }
 
-/* .testimonial .swiper-slide.box {
-  outline: 1px dashed red;
-} */
+/* Prevent horizontal overflow on mobile for the testimonial section */
 
-.testimonial .swiper-slide.box {
-  padding-bottom: 4rem; /* space for the quote */
-}
-
-.testimonial {
-  padding-bottom: 6rem;
-}
-
-.swiper.testimonial-slider {
-  overflow: visible;
-}
-
-/* Prevent horizontal scroll on mobile */
-// filepath: c:\Users\Ramesh\Documents\GitHub\Portfolio\assets\css\style.css
 html, body {
-  max-width: 100vw;
   overflow-x: hidden;
 }
 
-.swiper,
-.box-container,
-section {
-  box-sizing: border-box;
-  max-width: 100vw;
+
+.testimonials {
   overflow-x: hidden;
+  max-width: 100vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
+
+.swiper-wrapper {
+  box-sizing: border-box;
+}
+
+.swiper-slide {
+  max-width: 100% !important;  /* Prevent Swiper slide overflow */
+  box-sizing: border-box;
+}
+
+
 
 .fas.fa-phone::before,
 i.fas.fa-envelope::before,
