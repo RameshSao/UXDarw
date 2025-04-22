@@ -181,8 +181,8 @@ document.onkeydown = function (e) {
 const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
-    duration: ,600
-    reset: true
+    duration: 600,
+    reset: false
 });
 
 /* SCROLL HOME */
