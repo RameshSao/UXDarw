@@ -221,3 +221,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
+// Enable smooth scrolling via CSS
+document.documentElement.style.scrollBehavior = 'smooth';
+
+// Find all in-page links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();               // stop the default jump
+    const targetId = this.getAttribute('href').slice(1);
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) return;
+
+    // Scroll to it
+    targetEl.scrollIntoView({ behavior: 'smooth' });
+
+    // Remove the hash from the URL without reloading
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  });
+});
