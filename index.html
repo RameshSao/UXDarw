@@ -2,965 +2,1230 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords"
-    content="Ramesh Sao, portfolio, Ramesh, UI/UX Designer, personal portfolio, portfolio design, portfolio website, personal portfolio" />
-  <meta name="description" content="Welcome to Ramesh's Portfolio. UI/UX/Product Designer and Researcher" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
- <!-- Swiper for Testimonial -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Favicon -->
-  <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-png">
-  <title>Portfolio | Ramesh Sao</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>UXDraw</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+   <!-- ======================================================== --><!-- End of comment -->
+
 </head>
 
-<body>
+<body class="index-page">
 
-  <!-- pre loader -->
-  <!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-  <!-- navbar starts -->
-  <header>
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.png" alt="logo">
+        <h1 class="sitename">UXDraw</h1>
+      </a>
 
-    <a href="#" class="logo" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px;">
-      <span style="display: inline-block; width: 32px; height: 32px;">
-        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 128 128">
-          <!-- Generator: Adobe Illustrator 29.3.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 146)  -->
-          <defs>
-            <style>
-              .st0 {
-                fill: #2b3dda;
-              }
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 3</a></li>
+             
+            </ul>
+
+            
+          </li>
+          <!-- <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <i class="bi bi-moon"></i>
+          </button>
+        </ul> -->
         
-              .st1 {
-                fill: #fff;
-              }
-            </style>
-          </defs>
-          <g>
-            <g>
-              <path class="st0" d="M112.4,30.1s0-.2-.1-.3c0-.2-.2-.3-.3-.4,0-.2-.3-.3-.5-.4L64.8,1.6c-.7-.4-1.5-.4-2.2,0l-23.4,13.9h-.1l-22.6,13.5c-.7.4-1.1,1.1-1.1,1.9v80.2c0,.8.4,1.5,1.1,1.9l23.3,13.4c.3.2.7.3,1.1.3s.2,0,.3,0h.4s.2,0,.3-.1h.2c.5-.6.8-1.2.8-1.9v-22.3l15.7,8.9,4.4,2.5,22.6,12.8s.2,0,.3.1c.3.1.7.2,1.1,0,.1,0,.2,0,.3,0,.2,0,.4-.1.5-.2h.2c.5-.6.8-1.2.8-1.9v-26.3c0-.8-.4-1.5-1.1-1.9l-1-.6h-.2c0,0-18.7-11.4-18.7-11.4l18.7-11.1h.2c0-.1,4.1-2.6,4.1-2.6h.2c0-.1,20.1-12.1,20.1-12.1.7-.4,1.1-1.1,1.1-1.9v-25.8c0-.3,0-.6-.2-.8h.3ZM108.3,55.3h0c0,.1-19.1,11.5-19.1,11.5h0c0,0-4.3,2.6-4.3,2.6h-.1c0,0-21.7,13-21.7,13-.7.4-1.1,1.1-1.1,1.9s.2.9.4,1.3c0,0,0,0,0,0,.2.2.4.4.6.6l21.9,13.3v21.3l-20.4-11.6h0l-22.1-12.6c-.3-.2-.7-.3-1.1-.3s-.8,0-1.1.3c-.7.4-1.1,1.1-1.1,1.9v22.3l-19-10.9V32.2l20.4-12.2h0s4.2-2.6,4.2-2.6h.1c0,0,19.2-11.5,19.2-11.5l42.4,24.9h0s2.1,1.2,2.1,1.2v23.2Z"/>
-              <polygon class="st1" points="108.3 34.7 108.3 55.3 108.2 55.4 89.1 66.8 89 66.9 89 46.2 89.1 46.1 108.2 34.8 108.3 34.7"/>
-              <polygon class="st1" points="106.2 30.9 106 31 86.8 42.4 44.5 17.5 44.5 17.5 44.6 17.4 63.8 6 106.2 30.9"/>
-              <path class="st1" d="M62.8,82.4l21.9-13v-23.3l-44.4-26.1-20.5,12.2v77.6l19,10.9v-22.3c0-.8.4-1.5,1.1-1.9.3-.2.7-.3,1.1-.3s.8,0,1.1.3l22.1,12.6h0l20.4,11.6v-21.3l-21.9-13.3c-.7-.4-1.1-1.1-1-1.9,0-.8.4-1.5,1.1-1.9h0ZM41.3,73.2c-.3.2-.8.3-1.1.3s-.8,0-1.1-.3c-.7-.4-1.1-1.1-1.1-1.9v-27.3c0-.8.4-1.5,1.1-1.9.7-.4,1.5-.4,2.2,0l23,13.3c.7.4,1.1,1.1,1.1,1.9s-.4,1.5-1.1,1.9l-23,14h0Z"/>
-            </g>
-            <path class="st0" d="M112.6,30.9c0,.4,0,.8-.3,1.1-.2.3-.5.6-.8.8l-3.2,1.9h0c0,0-19.1,11.4-19.1,11.4h0c0,0-1,.7-1,.7-.3.2-.7.3-1.1.3s-.8,0-1.1-.3l-1.1-.6h-.1c0,0-44.3-26.1-44.3-26.1h0s-1-.7-1-.7c-1-.6-1.4-2-.8-3,.2-.3.4-.6.7-.8h.1c.7-.4,1.5-.4,2.1,0l3.2,1.9h0s42.3,24.9,42.3,24.9l19.2-11.4h.2c0-.1,3-1.9,3-1.9.7-.4,1.5-.4,2.2,0,.2,0,.3.2.5.4s.2.3.3.4c0,0,0,.1,0,.2,0,0,0,0,0,.1.1.3.2.5.2.8h0Z"/>
-            <path class="st0" d="M112.6,84.1c0-.3-.1-.6-.3-.9,0,0,0,0,0,0,0-.1-.2-.3-.3-.4h0c0-.1,0-.1,0-.2,0,0,0,0,0,0,0,0-.2-.1-.3-.2-.7-.4-1.5-.4-2.2,0l-3.2,1.9h0s-19.2,11.5-19.2,11.5h-.2c0,0-1,.7-1,.7-.7.4-1.1,1.1-1.1,1.9v26.3c0,.8.4,1.5,1.1,1.9,0,0,.2,0,.3,0,.3.1.5.2.8.2h.6c.2,0,.4,0,.5-.2h.2c0,0,23.3-13.9,23.3-13.9.7-.4,1.1-1.1,1.1-1.9v-26.6s0,0,0-.1ZM108.2,109.4l-19.1,11.3v-21.2l19.1-11.5v21.4Z"/>
-            <polygon class="st1" points="108.2 88 108.2 109.4 89.1 120.7 89.1 99.5 108.2 88"/>
-            <polygon class="st1" points="106.1 84.2 106.1 84.2 86.9 95.7 86.8 95.8 86.6 95.7 67.9 84.4 86.6 73.3 86.8 73.2 86.8 73.2 106 84.1 106.1 84.2"/>
-            <path class="st0" d="M112.6,84.1v.2c0,.3,0,.7-.3.9-.4.7-1.2,1.1-1.9,1.1s-.8,0-1.1-.3l-3.2-1.8h-.1c0,0-19.2-11-19.2-11h0s-1.1-.6-1.1-.6c-.7-.4-1.1-1.1-1.1-1.9v-25.8c0-1.2,1-2.2,2.2-2.2s2.2,1,2.2,2.2v24.5l2.1,1.2h0s20.3,11.6,20.3,11.6c.2,0,.3.2.4.3s0,0,0,0c0,0,0,0,0,0,0,0,0,0,0,0,.1.1.2.3.3.5,0,0,0,0,0,0,.1.3.2.6.2.9h0Z"/>
-            <path class="st0" d="M64.3,55.5l-23-13.3c-.7-.4-1.5-.4-2.2,0s-1.1,1.1-1.1,1.9v27.3c0,.8.4,1.5,1.1,1.9.3.2.7.3,1.1.3s.8,0,1.1-.3l23-14c.7-.4,1.1-1.1,1.1-1.9s-.4-1.5-1.1-1.9h0ZM42.4,67.5v-19.6l16.5,9.5-16.5,10h0Z"/>
-          </g>
-          <path class="st0" d="M64.3,112.9l-1.1.7-20.9,12.7h-.2v.2s-.2,0-.3,0h-.7c-.4,0-.8,0-1.1-.3-.3-.2-.6-.4-.8-.8-.6-1-.3-2.4.7-3l3.3-2,15.7-9.5,3.2-1.9c.7-.4,1.5-.4,2.1,0h0c.3.2.6.4.8.7.6,1.1.3,2.4-.7,3h-.1Z"/>
-        </svg></i>
-      </span>Ramesh Portfolio</a>
+        
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Case Study</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="blogs.html">Blog</a></li>
-      </ul>
-    </nav>
+      <a class="btn-getstarted" href="index.html#about">Start</a>
+
+    </div>
 
     
-      <!-- Theme Toggle Icons -->
-      <div id="theme-toggle" style="position: absolute; top: 20px; right: 20px; cursor: pointer;">
-        <i id="light-icon" class="fas fa-sun" style="font-size: 24px; color: #f39c12; display: none;"></i>
-        <i id="dark-icon" class="fas fa-moon" style="font-size: 24px; color: #2b3dda;"></i>
-      </div>
-
-
+    
   </header>
-  <!-- navbar ends -->
 
+  <main class="main">
 
-  <!-- hero section starts -->
-  <section class="home" id="home">
-    <div id="particles-js"></div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
 
-    <div class="content">
-      
-      <h2><span class="wave">👋</span> Hi There,<br /> It's <span> Ramesh Sao </span></h2>
-      <p>I'm into <span class="typing-text"></span></p>
-      <a href="#about" class="btn"><span>About Me</span>
-        <i class="fas fa-arrow-circle-down"></i>
-      </a>
-      <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/RameshSao" target="_blank"><i
-                class="fab fa-linkedin"></i></a></li>
-          <li><a class="behance" aria-label="behance" href="https://www.behance.net/RameshSao" target="_blank"><i
-                class="fab fa-behance"></i></a></li>
-          <li><a class="dribbble" aria-label="dribbble" href="http://www.dribbble.com/RameshSao" target="_blank"><i
-                class="fab fa-dribbble"></i></a></li>
-        </ul>
-      </div>
-      
-    </div>
-    <div class="image">
-      <h2 class="heading"><i class="fas fa-tasks"></i> Process <span>I Follow</span></h2>
-      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-      <div class="lottie-container">  
-  <!-- Only Change below line -->
-        <dotlottie-player src="https://lottie.host/1db9d8e3-bc4b-4c18-b882-a1721b31cdd6/g3Pri3QjRH.lottie" background="transparent" speed="0.02" style="width: 340px; height: 340px" direction="1" playMode="normal" loop autoplay scroll></dotlottie-player>      </div>
-    </div>
-  </section>
-  <!-- hero section ends -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <div class="company-badge mb-4">
+                <i class="bi bi-gear-fill me-2"></i>
+                Working for your success
+              </div>
+              <h1 class="mb-4">
+                Your<br>
+                Only<br>
+                <span class="accent-text">Partners in Innovation</span>
+              </h1>
+              <p class="mb-4 mb-md-5">
+                At UXDraw, we believe great design is about more than aesthetics
+              </p>
 
-  <!-- about section starts -->
-  <section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-
-    <div class="row">
-
-      <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile.webp" alt="Ramesh Sao Profile 1">
-        <img draggable="false" class="tilt" src="./assets/images/profile2.webp" alt="Ramesh Sao Profile 2">
-      </div>
-      <div class="content">
-        <h3>I'm</h3>
-        <span class="tag">Data-Driven, Detail-Oriented, Problem Solver </span>
-        <p>with 11+ years of experience</p>
-        <p>
-          <b>Proficient in simplifying complex
-            processes, collaborating cross-functionally, and delivering intuitive user experiences in agile
-            environments</b>.
-        </p>
-
-        <p>
-          My experience as a designer in <b>ApplyBoard's</b> product team equips me to <b>leverage data
-            analysis
-            for
-            quantitative UX research, enabling insightful, user-centric, and impactful designs</b>.</p>
-
-        <p>I’m passionate about <b>continuous learning</b>, connecting with diverse people, and creating simple
-          solutions that enhance everyday experiences. </p>
-        <p><b>Thoughtful design fascinates me for its transformative potential</b>.
-        </p>
-        <p>With a strong curiosity for understanding <b>why
-            and how</b> users interact with products, I strive to refine and elevate those experiences, making them
-          memorable.</p>
-
-        <p><b>Outside of work, </b></p>
-
-        <p>- I am a Tech Enthusiast and I love travelling.</p>
-        <p>- I enjoy playing mobile games and badminton.</p>
-        <p>- I want to become a healthier version of myself. I aim for consistency in routines and I cook my own meals.
-        </p>
-
-<!-- Replace your old resume button with the following code inside the appropriate section (e.g., About or wherever your resume button is) -->
-<div class="resumebtn">
-  <a href="\assets\files\Product_Designer_Resume_RameshSao_2025.pdf" class="btn" target="_blank" style="margin-left: 1rem;">
-    <span>View Resume</span>
-    <i class="fas fa-eye"></i>
-  </a>
-  <a href="\assets\files\Product_Designer_Resume_RameshSao_2025.pdf" class="btn" download>
-    <span>Download</span>
-    <i class="fas fa-download"></i>
-  </a>
-</div>
-      </div>
-    </div>
-  </section>
-  <!-- about section ends -->
-  
-
-  <!-- skills section starts -->
-  <section class="skills" id="skills">
-    <h2 class="heading"><i class="fas fa-bezier-curve"></i> Skills & <span>Abilities</span></h2>
-
-    <div class="container">
-      <div class="row" id="skillsContainer">
-
-      </div>
-    </div>
-  </section>
-  <!-- skills section ends -->
-
-
-
-  <!-- education section starts -->
-  <section class="education" id="education">
-
-    <h1 class="heading"><i class="fas fa-graduation-cap"></i> Education & <span>Certificates</span></h1>
-
-    <p class="qoute">"Education is the most powerful weapon which you can use to change the world" - Nelson Mandela
-    </p>
-
-    <div class="box-container">
-
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/educat/mgu.webp" alt="Mahatma Gandhi University">
-        </div>
-        <div class="content">
-          <h3>Bachelor of Science in Multimedia and Animation</h3>
-          <p>Mahatma Gandhi University </p>
-          <h4>2010-2013 | Completed</h4>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/educat/google.webp" alt="Google UX Design Specialization">
-        </div>
-        <div class="content">
-          <h3>UX Design Specialization</h3>
-          <p>Google</p>
-          <h4>January 2021 - August 2021 | Completed</h4>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="https://public-images.interaction-design.org/ixdf-brand/ixdf-logo-symbol-bg-transparent.png" alt="IxDF Logo">
-        </div>
-        <div class="content">
-          <h3>UX Management: Strategy and Tactics</h3>
-          <p>Interaction Design Foundation</p>
-          <h4>March 2022 - July 2022 | Completed</h4>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- education section ends -->
-
-
-  <section class="projects" id="projects">
-    <h2 class="heading"><i class="fas fa-pencil-ruler"></i> Case <span>Study</span></h2>
-  
-    <div class="box-container">
-  
-      <div class="box">
-        <div class="content">
-          <div class="tag">
-            <h3>ApplyBoard : Abroad Learning</h3>
+              <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
+                <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
+                  <i class="bi bi-play-circle me-1"></i>
+                  Play Video
+                </a> -->
+              </div>
+            </div>
           </div>
-          <div class="desc">
-            <p>As a Senior Product Designer at ApplyBoard, I lead the design process to create accessible, user-centric
-              solutions for students, educators, and partners worldwide. Using research and data-driven insights, I develop
-              seamless, impactful experiences across platforms to enhance the educational journey.
+
+          <div class="col-lg-6">
+            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+              <img src="assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid">
+              <div class="customers-badge">
+                <div class="customer-avatars">
+                  <img src="assets/img/avatar-1.webp" alt="Customer 1" class="avatar">
+                  <img src="assets/img/avatar-2.webp" alt="Customer 2" class="avatar">
+                  <img src="assets/img/avatar-3.webp" alt="Customer 3" class="avatar">
+                  <img src="assets/img/avatar-4.webp" alt="Customer 4" class="avatar">
+                  <img src="assets/img/avatar-5.webp" alt="Customer 5" class="avatar">
+                  <span class="avatar more">12+</span>
+                </div>
+                <p class="mb-0 mt-2">12,000+ lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-trophy"></i>
+              </div>
+              <div class="stat-content">
+                <h4>3x Won Awards</h4>
+                <p class="mb-0">Vestibulum ante ipsum</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <div class="stat-content">
+                <h4>6.5k Faucibus</h4>
+                <p class="mb-0">Nullam quis ante</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <div class="stat-content">
+                <h4>80k Mauris</h4>
+                <p class="mb-0">Etiam sit amet orci</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <div class="stat-content">
+                <h4>6x Phasellus</h4>
+                <p class="mb-0">Vestibulum ante ipsum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center justify-content-between">
+
+          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+            <span class="about-meta">ABOUT US</span>
+            <h2 class="about-title">We User Experience Design, Research & Analysis Wing</h2>
+            <p class="about-description">We are a user-first design agency focused on creating intuitive, inclusive, and impactful digital experiences.
+              <span></span>Driven by strategy, shaped by research, and powered by creativity — we turn ideas into reality.</span></p>
+
+            <div class="row feature-list-wrapper">
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i>UX strategy aligned with goals</li>
+                  <li><i class="bi bi-check-circle-fill"></i>User research & insights</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Scalable, accessible UI design</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i>Collaboration with teams of all sizes</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Prototypes, audits & design systems</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Web and Mobile App Development</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="info-wrapper">
+              <div class="row gy-4">
+                <div class="col-lg-5">
+                  <div class="profile d-flex align-items-center gap-3">
+                    <img src="assets/img/avatar-1.webp" alt="CEO Profile" class="profile-image">
+                    <div>
+                      <h4 class="profile-name">Ramesh Sao</h4>
+                      <p class="profile-position">Founder &amp; CEO</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="contact-info d-flex align-items-center gap-2">
+                    <i class="bi bi-telephone-fill"></i>
+                    <div>
+                      <p class="contact-label">Call us anytime</p>
+                      <p class="contact-number">+91 8802327299</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="image-wrapper">
+              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                <img src="assets/img/about-5.webp" alt="Business Meeting" class="img-fluid main-image rounded-4">
+                <img src="assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
+              </div>
+              <div class="experience-badge floating">
+                <h3>15+ <span>Years</span></h3>
+                <p>Of experience in business service</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <!-- <div class="container">
+
+        <div class="d-flex justify-content-center">
+
+          <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                <h4>Modisit</h4>
+              </a> -->
+            </li><!-- End tab nav item -->
+
+            <!-- <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                <h4>Praesenti</h4>
+              </a><!-- End tab nav item -->
+
+            <!-- </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                <h4>Explica</h4>
+              </a>
+            </li>
+            <!-- End tab nav item -->
+<!-- 
+          </ul>
+
+        </div>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="features-tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Voluptatem dignissimos provident</h3>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-illustration-1.webp" alt="" class="img-fluid">
+              </div>
+            </div> -->
+          </div><!-- End tab content item -->
+
+          <!-- <div class="tab-pane fade" id="features-tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Neque exercitationem debitis</h3>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-illustration-2.webp" alt="" class="img-fluid">
+              </div>
+            </div> -->
+          <!-- End tab content item -->
+
+          <!-- <div class="tab-pane fade" id="features-tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Voluptatibus commodi accusamu</h3>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</span></li>
+                </ul>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-illustration-3.webp" alt="" class="img-fluid">
+              </div>
+            </div> -->
+          
+          <!-- End tab content item -->
+
+        <!--
+
+      </div>
+
+    </section> -->
+    <!-- /Features Section -->
+
+    <!-- Features Cards Section -->
+    <section id="features-cards" class="features-cards section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box orange">
+              <i class="bi bi-award"></i>
+              <h4>Corporis voluptates</h4>
+              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+            </div>
+          </div>
+          
+          <!-- End Feature Borx-->
+
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box blue">
+              <i class="bi bi-patch-check"></i>
+              <h4>Explicabo consectetur</h4>
+              <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+            </div>
+          </div>
+          
+          <!-- End Feature Borx-->
+
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box green">
+              <i class="bi bi-sunrise"></i>
+              <h4>Ullamco laboris</h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+            </div>
+          </div>
+          
+          <!-- End Feature Borx-->
+
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box red">
+              <i class="bi bi-shield-check"></i>
+              <h4>Labore consequatur</h4>
+              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+            </div>
+          </div>
+          
+          <!-- End Feature Borx-->
+
+        </div>
+
+      </div>
+
+    </section>
+    
+    <!-- /Features Cards Section Ends-->
+
+
+        <!-- Services Section Start -->
+
+        <section id="services" class="services section light-background">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Services</h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+          </div><!-- End Section Title -->
+    
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+            <div class="row g-4">
+    
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card d-flex">
+                  <div class="icon flex-shrink-0">
+                    <i class="bi bi-bezier"></i>
+                  </div>
+                  <div>
+                    <h3>Branding</h3>
+                    <p>Crafting memorable brand identities that connect emotionally and stand out visually. We focus on creating unique designs that resonate with your target audience.</p>
+                    <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Service Card -->
+    
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card d-flex">
+                  <div class="icon flex-shrink-0">
+                    <i class="bi bi-brush"></i>
+                  </div>
+                  <div>
+                    <h3>Product Design</h3>
+                    <p>Creating intuitive and engaging user experiences across web and mobile platforms.</p>
+                    <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Service Card -->
+    
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card d-flex">
+                  <div class="icon flex-shrink-0">
+                    <i class="bi bi-code"></i>
+                  </div>
+                  <div>
+                    <h3>Development</h3>
+                    <p>Building fast, scalable, and accessible digital products with clean, efficient code.</p>
+                    <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Service Card -->
+    
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card d-flex">
+                  <div class="icon flex-shrink-0">
+                    <i class="bi bi-clipboard-data"></i>
+                  </div>
+                  <div>
+                    <h3>Marketing</h3>
+                    <p>Driving growth with data-backed strategies that convert audiences into customers.</p>
+                    <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Service Card -->
+    
+            </div>
+    
+          </div>
+    
+        </section>
+        
+        <!-- /Services Section End-->
+    
+
+    <!-- Features 2 Section -->
+    <!-- <section id="features-2" class="features-2 section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-4">
+
+            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>Use On Any Device</h3>
+                  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-display"></i>
+                </div>
+              </div>
+            </div> -->
+            
+            <!-- End .feature-item -->
+
+            <!-- <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>Feather Icons</h3>
+                  <p>Phasellus ullamcorper ipsum rutrum nunc nunc nonummy metus vestibulum volutpat sapien arcu sed augue aliquam erat volutpat.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-feather"></i>
+                </div>
+              </div>
+            </div> -->
+            
+            <!-- End .feature-item -->
+
+            <!-- <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>Retina Ready</h3>
+                  <p>Aenean tellus metus bibendum sed posuere ac mattis non nunc vestibulum fringilla purus sit amet fermentum aenean commodo.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-eye"></i>
+                </div>
+              </div>
+            </div> -->
+            
+            <!-- End .feature-item -->
+
+          </div>
+
+          <!-- <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="phone-mockup text-center">
+              <img src="assets/img/phone-app-screen.webp" alt="Phone Mockup" class="img-fluid">
+            </div>
+          </div> -->
+          
+          <!-- End Phone Mockup -->
+
+          <!-- <div class="col-lg-4">
+
+            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-code-square"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>W3c Valid Code</h3>
+                  <p>Donec vitae sapien ut libero venenatis faucibus nullam quis ante etiam sit amet orci eget eros faucibus tincidunt.</p>
+                </div>
+              </div>
+            </div> -->
+            
+            <!-- End .feature-item -->
+
+            <!-- <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-phone"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Fully Responsive</h3>
+                  <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet adipiscing sem neque sed ipsum.</p>
+                </div>
+              </div>
+            </div> -->
+            
+            <!-- End .feature-item -->
+
+            <!-- <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="bi bi-browser-chrome"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Browser Compatibility</h3>
+                  <p>Nullam dictum felis eu pede mollis pretium integer tincidunt cras dapibus vivamus elementum semper nisi aenean vulputate.</p>
+                </div>
+              </div>
+            </div> -->
+            
+            <!-- End .feature-item -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    
+    <!-- /Features 2 Section -->
+
+    <!-- Call To Action Section -->
+    <!-- <section id="call-to-action" class="call-to-action section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row content justify-content-center align-items-center position-relative">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-4 mb-4">Maecenas tempus tellus eget condimentum</h2>
+            <p class="mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            <a href="#" class="btn btn-cta">Call To Action</a>
+          </div> -->
+
+          <!-- Abstract Background Elements -->
+          <!-- <div class="shape shape-1">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div>
+
+          <div class="shape shape-2">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div> -->
+
+          <!-- Dot Pattern Groups -->
+          <!-- <div class="dots dots-1">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
+            </svg>
+          </div>
+
+          <div class="dots dots-2">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern-2)"></rect>
+            </svg>
+          </div>
+
+          <div class="shape shape-3">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div>
+        </div>
+
+      </div> -->
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+<!-- /Testimonials Section -->
+
+<section id="testimonials" class="testimonials section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper testimonials-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <h3>Saul Goodman</h3>
+            <h4>Ceo &amp; Founder</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
             </p>
           </div>
         </div>
-        <div class="btns">
-          <a href="applyboard.html" class="btn" target="_blank">
-            <span>View</span>
-            <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      </div>
-  
-      <div class="box">
-        <div class="content">
-          <div class="tag">
-            <h3>Presidea Tech : Proptech</h3>
-          </div>
-          <div class="desc">
-            <p>I led this project from inception, beginning with developing a clear understanding of the stakeholder’s
-              vision. I provided comprehensive guidance and solutions throughout the ideation phase, ensuring that the
-              project stayed aligned with the original goals. My role extended through to delivery, where I oversaw the
-              implementation process, including managing third-party contributors to ensure seamless integration and
-              execution of the project.</p>
-          </div>
-        </div>
-        <div class="btns">
-          <a href="realbetter.html" class="btn" target="_blank">
-            <span>View</span>
-            <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      </div>
-  
-      <div class="box">
-        <div class="content">
-          <div class="tag">
-            <h3>EM3 : Agri Services</h3>
-          </div>
-          <div class="desc">
-            <p>As the sole designer, I was responsible for revamping the legacy pages of the Samadhan App, which caters to
-              Farmers, Operators, Center Managers, and Admins. I focused on making these pages more user-friendly,
-              reusable, and easier to develop and manage for future updates. The Samadhan App is available on Android and
-              Web platforms.</p>
-          </div>
-        </div>
-        <div class="btns">
-          <a href="samadhan.html" class="btn" target="_blank">
-            <span>View</span>
-            <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      </div>
-  
-      <div class="box">
-        <div class="content">
-          <div class="tag">
-            <h3>Magic Software : EdTech</h3>
-          </div>
-          <div class="desc">
-            <p>In the Product Team, I independently managed the UI/UX design for two products simultaneously: MagicBox and
-              AskKea (Leap).</p>
-          </div>
-        </div>
-        <div class="btns">
-          <a href="magicbox_askkea.html" class="btn" target="_blank">
-            <span>View</span>
-            <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      </div>
-  
-      <div class="box">
-        <div class="content">
-          <div class="tag">
-            <h3>BlackLight Studio Works : Gaming</h3>
-          </div>
-          <div class="desc">
-            <p>I have independently developed 5 to 6 mobile games, which collectively have garnered between 500,000 and
-              1,000,000 downloads. These apps consistently maintain an average rating of 4.5 or higher across various app
-              stores & have been featured multiple times.</p>
-          </div>
-        </div>
-        <div class="btns">
-          <a href="solitaire.html" class="btn" target="_blank">
-            <span>View</span>
-            <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      </div>
-  
-    </div>
-  </section>
-  <!-- work project section ends -->
-
-
-  <!-- experience section starts -->
-  <section class="experience" id="experience">
-
-    <h2 class="heading"><i class="fa fa-briefcase"></i> Experience <span>Earned</span></h2>
-
-    <div class="timeline">
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>ApplyBoard - Abroad Learning</h2>
-          </div>
-          <div class="desc">
-            <h3>Senior Product Designer 4</h3>
-            <p><b>April 2022 - September 2024</b></p>
-            <p>- As a Senior Product Designer at ApplyBoard, I collaborate closely with a team of skilled professionals
-              to develop cutting-edge and accessible solutions tailored to the needs of students, educators, and
-              partners worldwide. My role involves leading the design process from concept to implementation, ensuring
-              that our products not only meet high standards of usability and accessibility but also address the diverse
-              requirements of our global user base..</p>
-            <p>- By leveraging user research, data-driven insights, and a deep understanding of the education landscape,
-              I contribute to creating impactful solutions that enhance the educational journey and facilitate seamless
-              interactions across various platforms and devices..</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Presidea Tech - Technology for Innovations</h2>
-          </div>
-          <div class="desc">
-            <h3>Senior UX Designer</h3>
-            <p><b>Feb 2021 - March 2022</b></p>
-            <p>- I led this project from inception, beginning with developing a clear understanding of the stakeholder’s
-              vision. I provided comprehensive guidance and solutions throughout the ideation phase, ensuring that the
-              project stayed aligned with the original goals.</p>
-            <p>- My role extended through to delivery, where I oversaw the implementation process, including managing
-              third-party contributors to ensure seamless integration and execution of the project..</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>EM3 Agriservices Pvt. Ltd.</h2>
-          </div>
-          <div class="desc">
-            <h3>Senior UX Designer | Internship</h3>
-            <p><b>May 2023 - December 2023</b></p>
-            <p>- As the sole designer, I was responsible for revamping the legacy pages of the Samadhan App, which
-              caters to Farmers, Operators, Center Managers, and Admins. I focused on making these pages more
-              user-friendly, reusable, and easier to develop and manage for future updates. The Samadhan App is
-              available on Android and Web platforms.</p>
-            <p>- Designed a user-friendly Attendance Management System with 20+ metrics, integrating
-              notifications to enhance usability for personalized and office-wide needs..</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Magic Software - Magic EdTech.</h2>
-          </div>
-          <div class="desc">
-            <h3>Senior User Experience Designer</h3>
-            <p><b>November 2017 - October 2019 (2 Year)</b></p>
-            <p>- In the Product Team, I independently managed the UI/UX design for two products simultaneously: MagicBox
-              and AskKea (also known as Leap).
-
-              MagicBox is a leading e-learning solution from Magic Software, renowned globally by publishers. It is
-              available across multiple platforms, including Android, iOS, Windows, macOS, Chromebook, and as a web app.
-
-              Leap, a new venture by Magic Software, focuses on corporate learning and incorporates AI and ML
-              technologies. It is available on Android, iOS, and as a web app.</p>
-            <p>- Streamlined e-commerce checkout, reducing time by 30% and boosting satisfaction by 25% and conversion
-              rates by 15%.</p>
-            <p>- Effectively communicated design solutions to cross-functional teams and stakeholders using tools like
-              Figma, Adobe XD, Jira, and ReactJS.</p>
-            <p> </p>
-            <h3>Senior Associate User Experience Designer</h3>
-            <p><b>November 2016 - October 2017 (1 Year)</b></p>
-            <p>- As a member of the service team, I worked on a variety of e-learning projects, focusing on creating
-              effective and engaging educational solutions. Additionally, I played a key role in ensuring that our
-              digital content complied with Web Content Accessibility Guidelines (WCAG 2.0), making our platforms
-              accessible to users with diverse needs. This involved implementing accessibility best practices and
-              conducting thorough evaluations to enhance the usability and inclusivity of our e-learning offerings.
-
-              In addition, I led a team of 20 creative professionals, including 10 graphic designers, 6 2D animators, 2
-              UI designers, and 2 junior designers, coordinating their efforts to achieve cohesive and high-quality
-              results..</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>BlackLight Studio Works Pvt. Ltd</h2>
-          </div>
-          <div class="desc">
-            <h3>Game Designer</h3>
-            <p><b>November 2014 - October 2016</b></p>
-            <p>- I have independently designed 5 to 6 mobile games, which collectively have garnered between 500,000 and
-              1,000,000 downloads. These apps consistently maintain an average rating of 4.5 or higher across various
-              app stores and have been featured multiple times.</p>
-            <p>- Streamlined e-commerce checkout, reducing time by 30% and boosting satisfaction by 25% and conversion
-              rates by 15%.</p>
-            <p>- Performed A/B testing, added night theme also introduced multiple theming options.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Qubix Events and Conferences</h2>
-          </div>
-          <div class="desc">
-            <h3>Graphic Designer</h3>
-            <p><b>November 2013 - October 2014</b></p>
-            <p>- I primarily focused on print media assignments, designing a wide range of materials including event
-              billboards, panels, banners, pamphlets, and logos. My work included creating visual assets for notable
-              clients such as BMW, Make My Trip, Aviva, and Cargill.</p>
-            <p>- Streamlined e-commerce checkout, reducing time by 30% and boosting satisfaction by 25% and conversion
-              rates by 15%.</p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>Zee Media</h2>
-          </div>
-          <div class="desc">
-            <h3>Designer - Intern</h3>
-            <p><b>August 2013 - October 2013</b></p>
-            <p>In this role in the Advertising Department, I directed and created multiple advertisements for Dabur, as
-              well as daily promotional illustrations. Additionally, at Zee News, I was also member of the production
-              team for the "Bharat Bhagya Vidhata" program.</p>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="morebtn">
-    <a href="/experience" class="btn"><span>View All</span>
-      <i class="fas fa-arrow-right"></i>
-  </a>
-  </div> -->
-
-    </div>
-
-  </section>
-  <!-- experience section ends -->
-
-  <!-- contact section starts -->
-  <!-- <section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
-
-      <div class="contact-details">
-        <div class="field">
-          <i class='fas fa-phone-alt'></i>
-          <span>Phone: <a href="tel:+1234567890">+1234567890</a></span>
-        </div>
-        
-        <div class="field">
-          <i class='fas fa-envelope'></i>
-          <span>Email: <a href="mailto:example@example.com">example@example.com</a></span>
-        </div>
-
-        <div class="field">
-          <i class='fab fa-github'></i>
-          <span>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></span>
-        </div>
-
-        <div class="field">
-          <i class='fab fa-linkedin'></i>
-          <span>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section> -->
-  <!-- contact section ends -->
-
-<!-- testimonial section starts -->
-<section class="testimonial" id="testimonial">
-  <h2 class="heading"><i class="fas fa-quote-left"></i> Testimonials <span>from LinkedIn</span></h2>
-
-  <div class="swiper testimonial-slider">
-    <div class="swiper-wrapper">
-
-      <!-- Testimonial Card 1 -->
-      <div class="swiper-slide box">
-        <i class="fas fa-quote-left"></i>
-        <p>Ramesh is a dedicated, customer centric product specialist with a through knowledge of the tools required to get the job done. He helped us conceptualise many products and user journeys. 
-        </p>
-        <div class="user">
-          <div class="user-initials">KK</div>
-
-          <div class="info">
-            <h3>Karun Kandoi</h3>
-            <span>Founder and CEO @ Vedysea</span>
-            <a href="https://www.linkedin.com/in/rameshsao/details/recommendations/?detailScreenTabIndex=0" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <i class="fas fa-quote-right"></i>
-      </div>
-
-      <!-- Testimonial Card 2 -->
-      <div class="swiper-slide box">
-        <i class="fas fa-quote-left"></i>
-        <p>Ramesh has done a phenomenal work on our Project BroBazaar, he has excellent UI & UX skills.
-          highly recommended</p>
-        <div class="user">
-          <div class="user-initials">GK</div>
-          <div class="info">
-            <h3>Gaurev Kapoor</h3>
-            <span>Founder and CEO @ ReakBetter</span>
-            <a href="https://www.linkedin.com/in/rameshsao/details/recommendations/?detailScreenTabIndex=0" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <i class="fas fa-quote-right"></i>
-      </div>
-
-      <!-- Testimonial Card 3 -->
-      <div class="swiper-slide box">
-        <i class="fas fa-quote-left"></i>
-        <p>Ramesh is a creative and trend-savvy UX designer who consistently delivers simple, elegant solutions. His user-first approach and design skills made him a key asset to our team. Highly recommended!</p>
-        <div class="user">
-          <div class="user-initials">VG</div>
-          <div class="info">
-            <h3>Vikash Gupta</h3>
-            <span>Mobile App Specialist @ Ex- Samsung, Ex-Paytm</span>
-            <a href="https://www.linkedin.com/in/rameshsao/details/recommendations/?detailScreenTabIndex=0" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <i class="fas fa-quote-right"></i>
-      </div>
-
-      <!-- Testimonial Card 4 -->
-      <div class="swiper-slide box">
-        <i class="fas fa-quote-left"></i>
-        <p>Ramesh is a talented designer with deep knowledge of UX, software, and video. Working with him at Magic Software was inspiring. Hope to collaborate again!</p>
-        <div class="user">
-          <div class="user-initials">GB</div>
-          <div class="info">
-            <h3>Guneet Bhatia</h3>
-            <span>User Experience Designer @ Microsoft</span>
-            <a href="https://www.linkedin.com/in/rameshsao/details/recommendations/?detailScreenTabIndex=0" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <i class="fas fa-quote-right"></i>
-      </div>
-
-            <!-- Testimonial Card 5 -->
-            <div class="swiper-slide box">
-              <i class="fas fa-quote-left"></i>
-              <p>I enjoyed working with Ramesh as a Game Developer. His UI/UX skills are exceptional, and he consistently delivered visually appealing, effective designs across multiple game projects.</p>
-              <div class="user">
-                <div class="user-initials">YK</div>
-                <div class="info">
-                  <h3>Yogesh Kumar</h3>
-                  <span>Tech Lead</span>
-                  <a href="https://www.linkedin.com/in/rameshsao/details/recommendations/?detailScreenTabIndex=0" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
-              </div>
-              <i class="fas fa-quote-right"></i>
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
             </div>
-
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <h3>Matt Brandon</h3>
+            <h4>Freelancer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"><i class="bi bi-arrow-left"></i></div>
+      <div class="swiper-button-next"><i class="bi bi-arrow-right"></i></div>
     </div>
-
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div>
 </section>
-<!-- testimonial section ends -->
 
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.testimonial-slider', {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 40,
-    slidesPerView: 1,
-    centeredSlides: false,
-    slideToClickedSlide: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      425: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      }
-      
-    },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    speed: 600,
-  });
-</script>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+        <div class="row gy-4">
 
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
 
-  <!-- footer section starts -->
-  <section class="footer" id="contact">
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
 
-    <div class="box-container">
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="800" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
 
-      <div class="box">
-        <h3>Ramesh's Portfolio</h3>
-        <p>Thank you for visiting my portfolio website.</p>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
       </div>
 
-      <!-- <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div> -->
+    </section><!-- /Stats Section -->
 
-      <div class="box">
-        <h3>contact info</h3>
-        <p> <i class="fas fa-phone"></i> +91 8802327299</p>
-        <p> <i class="fas fa-envelope"></i> rameshsaowork@gmail.com</p>
-        <p> <i class="fas fa-map-marked-alt"></i> Subhash Chowk, Gurugram, Haryana, India</p>
-        <div class="share">
 
-          <a href="https://www.linkedin.com/in/rameshsao" class="fab fa-linkedin" aria-label="LinkedIn"
-            target="_blank"></a>
-          <a href="https://www.behance.net/RameshSao" class="fab fa-behance" aria-label="behance" target="_blank"></a>
-          <a href="http://www.dribbble.com/RameshSao" class="fab fa-dribbble" aria-label="dribbble" target="_blank"></a>
+    <!-- Pricing Section Start -->
+<!-- 
+    <section id="pricing" class="pricing section light-background"> -->
+
+      <!-- Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 justify-content-center"> -->
+
+          <!-- Basic Plan -->
+          <!-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-card">
+              <h3>Basic Plan</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">9.9</span>
+                <span class="period">/ month</span>
+              </div>
+              <p class="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+
+              <h4>Featured Included:</h4>
+              <ul class="features-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Duis aute irure dolor
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Excepteur sint occaecat
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Nemo enim ipsam voluptatem
+                </li>
+              </ul>
+
+              <a href="#" class="btn btn-primary">
+                Buy Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+ -->
+          <!-- Standard Plan -->
+          <!-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-card popular">
+              <div class="popular-badge">Most Popular</div>
+              <h3>Standard Plan</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">19.9</span>
+                <span class="period">/ month</span>
+              </div>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+
+              <h4>Featured Included:</h4>
+              <ul class="features-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Lorem ipsum dolor sit amet
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Consectetur adipiscing elit
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Sed do eiusmod tempor
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Ut labore et dolore magna
+                </li>
+              </ul>
+
+              <a href="#" class="btn btn-light">
+                Buy Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div> -->
+
+          <!-- Premium Plan -->
+          <!-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="pricing-card">
+              <h3>Premium Plan</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">39.9</span>
+                <span class="period">/ month</span>
+              </div>
+              <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.</p>
+
+              <h4>Featured Included:</h4>
+              <ul class="features-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Temporibus autem quibusdam
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Saepe eveniet ut et voluptates
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Nam libero tempore soluta
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Cumque nihil impedit quo
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Maxime placeat facere possimus
+                </li>
+              </ul>
+
+              <a href="#" class="btn btn-primary">
+                Buy Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div></section> -->
+      
+      <!-- /Pricing Section End -->
+
+    <!-- Faq Section Start -->
+    <!-- <section class="faq-9 faq section light-background" id="faq">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5" data-aos="fade-up">
+            <h2 class="faq-title">Have a question? Check out the FAQ</h2>
+            <p class="faq-description">Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet adipiscing sem neque sed ipsum.</p>
+            <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                <div class="faq-content">
+                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                <div class="faq-content">
+                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
+                <div class="faq-content">
+                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
+                <div class="faq-content">
+                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
+    </section> -->
+    
+    <!-- /Faq Section End -->
+
+    <!-- Call To Action 2 Section Start-->
+    <!-- <section id="call-to-action-2" class="call-to-action-2 section dark-background">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>Call To Action</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a class="cta-btn" href="#">Call To Action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section> -->
+    
+    <!-- /Call To Action 2 Section End -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Info</h3>
+              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Our Location</h4>
+                  <p>Subhash Chowk,</p>
+                  <p>Gurgaon, Haryana, India</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email Address</h4>
+                  <p>hello@uxdraw.com</p>
+                  <p>ramesh@uxdraw.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Get In Touch</h3>
+              <p>We’d love to hear from you. Reach out with your ideas, questions, or project needs — we're here to help you build better experiences.</p>
+
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">UXDraw</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Near Subhash Chowk,</p>
+            <p>Gurgaon, Haryana, India</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 5589 5548 55</span></p>
+            <p><strong>Email:</strong> <span>hello@uxdraw.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rameshsao/"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Branding</a></li>
+            <li><a href="#">Product Design</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Product Management</a></li>
+          </ul>
+        </div>
+
+
+      </div>
     </div>
 
-    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
-        href="https://www.linkedin.com/in/rameshsao/"> Ramesh</a></h1>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">UXDraw</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
 
-  </section>
-  <!-- footer section ends -->
-
-
-  <!-- scroll top btn -->
-  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-  <!-- scroll back to top -->
-
-
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-  <!-- jquery cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- typed.js cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
-    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- particle.js links -->
-  <script src="./assets/js/particles.min.js"></script>
-  <script src="./assets/js/app.js"></script>
-
-  <!-- vanilla tilt.js links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- scroll reveal anim -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-  <script src="./assets/js/script.js"></script>
-
-<!-- <script src="https://cdn.userway.org/widget.js" data-account="Ughs22WMhv"></script> -->
-
-<!-- ==== Cookie Consent Starts ==== -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cookie Consent</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Cookie Banner */
-    #cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #2b3dda;
-      color: white;
-      display: none;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 2rem;
-      z-index: 9999;
-      flex-wrap: wrap;
-    }
-
-    #cookie-banner span {
-      flex: 1;
-      font-size: 1.4rem;
-    }
-
-    .cookie-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .cookie-buttons button {
-      padding: 0.8rem 1.8rem;
-      font-size: 1.4rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 2rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    #accept-all { background-color: #ffe600; color: #18023f; }
-    #reject-all { background-color: #18023f; color: white; }
-    #manage-preferences { background-color: white; color: #2b3dda; }
-
-    /* Preferences Modal */
-    #cookie-modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 99999;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #cookie-modal {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      max-width: 500px;
-      width: 90%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-
-    #cookie-modal h2 {
-      margin-top: 0;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .cookie-option {
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
-
-    .modal-buttons {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .modal-buttons button {
-      padding: 0.8rem 1.5rem;
-      font-size: 1.3rem;
-      border: none;
-      border-radius: 1.5rem;
-      cursor: pointer;
-    }
-
-    #save-preferences { background-color: #2b3dda; color: white; }
-    #close-preferences { background-color: #ccc; color: #000; }
-  </style>
-</head>
-<body>
-
-<!-- Cookie Banner -->
-<div id="cookie-banner">
-  <span>We use cookies for analytics and performance. <a href="/cookies.html" style="color: #ffe600; text-decoration: underline;">Cookies Policy</a></span>
-  <div class="cookie-buttons">
-    <button id="accept-all">Accept All</button>
-    <button id="reject-all">Reject All</button>
-    <button id="manage-preferences">Manage Preferences</button>
-  </div>
-</div>
-
-<!-- Modal Overlay -->
-<div id="cookie-modal-overlay">
-  <div id="cookie-modal">
-    <h2>Manage Cookie Preferences</h2>
-    <div class="cookie-option">
-      <label><input type="checkbox" id="gaConsent" /> Google Analytics</label>
+        Designed by <a href="https://www.linkedin.com/in/rameshsao/">Ramesh Sao</a>
+      </div>
     </div>
-    <div class="cookie-option">
-      <label><input type="checkbox" id="faConsent" /> Font Awesome Tracking</label>
-    </div>
-    <div class="modal-buttons">
-      <button id="save-preferences">Save Preferences</button>
-      <button id="close-preferences">Close</button>
-    </div>
-  </div>
-</div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const banner = document.getElementById('cookie-banner');
-    const overlay = document.getElementById('cookie-modal-overlay');
-    const modal = document.getElementById('cookie-modal');
+  </footer>
 
-    const btnAccept = document.getElementById('accept-all');
-    const btnReject = document.getElementById('reject-all');
-    const btnManage = document.getElementById('manage-preferences');
-    const btnSave = document.getElementById('save-preferences');
-    const btnClose = document.getElementById('close-preferences');
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    const gaCheckbox = document.getElementById('gaConsent');
-    const faCheckbox = document.getElementById('faConsent');
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
-    // Show banner if no choice is made
-    if (!localStorage.getItem('cookieChoice')) {
-      banner.style.display = 'flex';
-    }
-
-    // Accept All
-    btnAccept.addEventListener('click', function () {
-      localStorage.setItem('gaConsent', 'true');
-      localStorage.setItem('faConsent', 'true');
-      localStorage.setItem('cookieChoice', 'accepted');
-      banner.style.display = 'none';
-    });
-
-    // Reject All
-    btnReject.addEventListener('click', function () {
-      localStorage.setItem('gaConsent', 'false');
-      localStorage.setItem('faConsent', 'false');
-      localStorage.setItem('cookieChoice', 'rejected');
-      banner.style.display = 'none';
-    });
-
-    // Manage Preferences
-    btnManage.addEventListener('click', function () {
-      overlay.style.display = 'flex';
-    });
-
-    // Save Preferences
-    btnSave.addEventListener('click', function () {
-      localStorage.setItem('gaConsent', gaCheckbox.checked.toString());
-      localStorage.setItem('faConsent', faCheckbox.checked.toString());
-      localStorage.setItem('cookieChoice', 'custom');
-      overlay.style.display = 'none';
-      banner.style.display = 'none';
-    });
-
-    // Close Modal
-    btnClose.addEventListener('click', function () {
-      overlay.style.display = 'none';
-    });
-
-    // Close on outside click
-    overlay.addEventListener('click', function (e) {
-      if (e.target === overlay) {
-        overlay.style.display = 'none';
-      }
-    });
-  });
-</script>
-
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
