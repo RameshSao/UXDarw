@@ -53,17 +53,6 @@ body.dark-theme .projects {
   height: 100%;
 }
 
-i#light-icon::before {
-  position: absolute;
-  left: -70px;
-  /* Other styles for the pseudo-element should be included here, Theme Icon Position */
-}
-
-i#dark-icon.fas.fa-moon::before {
-  position: absolute;
-  left: -70px;
-  /* Other styles for the pseudo-element should be included here, Theme Icon Position */
-}
 
 body.dark-theme #menu::before {
   color: white;
@@ -255,20 +244,6 @@ button:hover,
 .btn:hover {
   background: var(--primary-dark);
   color: #fff;
-}
-
-/* Theme Toggle Icons */
-#theme-toggle i#dark-icon {
-  color: var(--primary);
-}
-#theme-toggle i#light-icon {
-  color: #f39c12;
-}
-body.dark-theme #theme-toggle i#light-icon {
-  display: block;
-}
-body.dark-theme #theme-toggle i#dark-icon {
-  display: none;
 }
 
 /* Scroll Top */
@@ -1875,38 +1850,6 @@ button.dark-theme {
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Theme Toggle Icons */
-#theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 60px;
-  z-index: 1101;
-  cursor: pointer;
-  
-}
-
-#theme-toggle i {
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-#theme-toggle i#light-icon {
-  color: #f39c12;
-  display: none;
-}
-
-#theme-toggle i#dark-icon {
-  color: #2b3dda;
-}
-
-body.dark-theme #theme-toggle i#light-icon {
-  display: block;
-}
-
-body.dark-theme #theme-toggle i#dark-icon {
-  display: none;
-}
-
 
 Footer Icon
 
@@ -2222,5 +2165,75 @@ section {
   }
   .socials {
     margin-top: 2rem; /* Reduce if needed */
+  }
+}
+/* Prevent horizontal scroll on mobile end */
+
+
+/* Theme Toggle Button */
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  margin-right: 0;
+  position: relative;
+  z-index: 1101;
+}
+
+#theme-toggle i {
+  font-size: 24px;
+  transition: color 0.3s, opacity 0.2s;
+  opacity: 0;
+  pointer-events: none;
+  display: inline-block;
+}
+
+#theme-toggle i#light-icon { color: #f39c12; }
+#theme-toggle i#dark-icon { color: #2b3dda; }
+
+body.dark-theme #theme-toggle i#light-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+body.dark-theme #theme-toggle i#dark-icon {
+  opacity: 0;
+  pointer-events: none;
+}
+body:not(.dark-theme) #theme-toggle i#light-icon {
+  opacity: 0;
+  pointer-events: none;
+}
+body:not(.dark-theme) #theme-toggle i#dark-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Desktop: place toggle in navbar */
+@media (min-width: 769px) {
+  nav.navbar ul {
+    display: flex;
+    align-items: center;
+  }
+  #theme-toggle {
+    position: static;
+    margin-left: 1.5rem;
+    order: 99;
+  }
+}
+
+/* Mobile: place toggle before hamburger */
+@media (max-width: 768px) {
+  #theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 70px; /* space before hamburger */
+    margin: 0;
+    z-index: 1101;
+  }
+  #menu {
+    right: 20px;
   }
 }
