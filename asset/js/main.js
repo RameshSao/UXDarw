@@ -223,7 +223,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Enable smooth scrolling via CSS
+// Enable smooth scrolling via CSS _Removes # from URL_ Start //
+// This is a simple way to enable smooth scrolling for all in-page links
+// without needing to add JavaScript to each link.
+// It uses the CSS property scroll-behavior, which is supported in most modern browsers.
 document.documentElement.style.scrollBehavior = 'smooth';
 
 // Find all in-page links
@@ -241,3 +244,5 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     history.replaceState(null, '', window.location.pathname + window.location.search);
   });
 });
+
+// Enable smooth scrolling via CSS _Removes # from URL_ End //
