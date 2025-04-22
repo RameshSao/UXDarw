@@ -1787,6 +1787,12 @@ fas fa-envelope {
   color: #ffffff !important; /* Force the color change */
 }
 
+.fas.fa-phone::before,
+i.fas.fa-envelope::before,
+i.fas.fa-map-marked-alt::before {
+  color: white;
+}
+
 
 
 a.ai-style-change-1 {
@@ -2203,3 +2209,4 @@ section {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
