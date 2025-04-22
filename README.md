@@ -1,29 +1,36 @@
-# UXDraw.com
+UXDraw.com is the Tech Services division of Ramesh Sao, offering professional UX/Product design services, strategic consulting, and hands‑on implementation for digital products.
 
-**UXDraw.com** is a personal portfolio and professional showcase created by [Ramesh],
-a seasoned UX and Product Designer with 11+ years of experience in crafting user-centric digital solutions.
-The website highlights design projects, UX research, accessibility practices, and strategic design thinking.
+🌐 Live Site
+Tech Services: https://www.uxdraw.com
 
-## 🌐 Live Website
+Personal Portfolio: https://www.uxdraw.com/portfolio
 
-Visit the live site: [https://www.uxdraw.com](https://www.uxdraw.com)
+🧩 Services
+Branding
+Brand identity creation, logo design, visual guidelines, and messaging frameworks for cohesive experiences.
 
----
+Product Design
+Wireframing, interactive prototyping, UI design systems, and high‑fidelity mockups for web and mobile.
 
-## 🧩 Features
+Development
+End‑to‑end web & mobile app development: architecture, MVP planning, coding, QA, and deployment.
 
-- ✨ Clean, modern, responsive layout
-- 📱 Mobile-first design with optimized accessibility
-- 🔍 Detailed case studies and UX research breakdowns
-- 🧠 UX strategies, personas, flows, and wireframes
-- ♿️ Accessibility compliant (WCAG standards, UserWay widget)
-- 💡 Built with HTML, CSS, and vanilla JavaScript for full control and customization
+Marketing
+Digital marketing strategy, content creation, social media campaigns, and performance analytics to drive user acquisition and engagement.
 
----
 
-## 🛠 Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- UserWay (Accessibility Widget)
+📁 Personal Portfolio
+Your curated portfolio of case studies, projects, and research work lives here:
+
+Portfolio URL: https://www.uxdraw.com/portfolio
+
+Inside you’ll find:
+
+Detailed UX case studies (personas, flows, wireframes, research insights)
+
+Highlights of award‑winning and recognized projects
+
+Demo links, prototypes, and video walkthroughs
+
+Testimonials and team collaboration stories
