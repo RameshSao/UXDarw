@@ -1333,7 +1333,7 @@ body.dark-theme .home .content p {
   transition: 0.5s;
   color: #fff;
   background: #18023f;
-  box-shadow: 0px 5px 10px #3044f799;
+  box-shadow: 0px 5px 10px #2b3dda;
   text-align: center;
 }
 .morebtn .btn span {
@@ -1524,7 +1524,7 @@ form .button-area {
   border-radius: 5px;
   padding: 13px 25px;
   background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  box-shadow: 0px 5px 10px #2b3dda;
   transition: 0.3s ease;
   font-family: "Nunito", sans-serif;
 }
@@ -1774,18 +1774,17 @@ h2.ai-style-change-1 {
 .content h2 {
   margin-top: 24px;
 }
-    color: #ffffff !important; /* Force the color change */
-  }
+    color: #ffffff !important; /* Force the color change */ 
 
 
-fas fa-envelope {
+.fas.fa-envelope {
   color: #ffffff !important; /* Force the color change */
 }
 
-fas fa-envelope {
+.fas.fa-envelope {
   color: #ffffff !important; /* Force the color change */
 }
-
+  
 
 
 a.ai-style-change-1 {
@@ -1929,7 +1928,7 @@ body.dark-theme .education .box-container .box {
 /* Project Button Dark Fix */
 body.dark-theme .projects .btn,
 body.dark-theme .resumebtn .btn {
-  background-color: #4dabf7;
+  background-color: #2b3dda;
   box-shadow: none;
   color: #121212;
 }
@@ -2072,7 +2071,7 @@ body.dark-theme .tag {
 }
 
 .testimonial .user .info a {
-  color: #0077b5;
+  color: #2b3dda;
   font-size: 1.8rem;
   margin-top: 0.2rem;
 }
@@ -2203,3 +2202,6 @@ i.fas.fa-envelope::before,
 i.fas.fa-map-marked-alt::before {
   color: white;
 }
+
+
+
