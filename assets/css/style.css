@@ -316,23 +316,6 @@ html::-webkit-scrollbar-thumb {
   background: #2b3dda;
 }
 
-/* pre loader start */
-.loader-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-  background: var(--section-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
-.loader-container.fade-out {
-  top: -120%;
-}
-/* pre loader end */
 
 #skills {
   padding-bottom: 0 !important;
@@ -374,13 +357,13 @@ header .logo {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
-  color: var(--text);
+  color: #2b3dda;
 }
 header .logo i {
   font-size: 2.2rem;
 }
 header .logo:hover {
-  color: #2b3dda;
+  color: #18023f;
 }
 
 header {
