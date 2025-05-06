@@ -71,11 +71,17 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Product Design", "UI/UX Design, Research", "Motion - Graphic Design", "Audio-Video Editing", "Little Bit Web Development", ],
+    strings: ["Digital Product Design", "UI/UX Design, Research", "Motion - Graphic Design", "Audio-Video Editing", "Little Bit Web Development", ],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
     backDelay: 500,
+    onComplete: (self) => {
+        console.log("Typing animation completed");
+    },
+    onStringTyped: (arrayPos, self) => {
+        console.log(`Typed string at position: ${arrayPos}`);
+    },
 });
 // <!-- typed js effect ends -->
 
