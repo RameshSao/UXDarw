@@ -1,36 +1,50 @@
-UXDraw.com is the Tech Services division of Ramesh Sao, offering professional UX/Product design services, strategic consulting, and hands‑on implementation for digital products.
+UXDraw Education
+Welcome to UXDraw Education — your comprehensive resource for mastering User Experience (UX) Design through practical insights, research, and real-world case studies.
 
-🌐 Live Site
-Tech Services: https://www.uxdraw.com
+What is UXDraw Education?
+UXDraw Education is a curated platform designed for aspiring and professional UX designers who want to deepen their knowledge and skills. Here, you’ll find a rich collection of:
 
-Personal Portfolio: https://www.uxdraw.com/portfolio
+In-depth UX case studies featuring personas, user journeys, wireframes, and usability testing
 
-🧩 Services
-Branding
-Brand identity creation, logo design, visual guidelines, and messaging frameworks for cohesive experiences.
+Research articles covering UX best practices, design principles, and accessibility guidelines
 
-Product Design
-Wireframing, interactive prototyping, UI design systems, and high‑fidelity mockups for web and mobile.
+Hands-on tutorials that guide you through the process of designing effective and user-centered digital products
 
-Development
-End‑to‑end web & mobile app development: architecture, MVP planning, coding, QA, and deployment.
+Industry insights and interviews with UX experts
 
-Marketing
-Digital marketing strategy, content creation, social media campaigns, and performance analytics to drive user acquisition and engagement.
+Tools and templates to streamline your design workflow
 
+Who is it for?
+UX/UI designers looking to sharpen their craft
 
+Product managers and developers seeking a better understanding of user-centric design
 
-📁 Personal Portfolio
-Your curated portfolio of case studies, projects, and research work lives here:
+Students and educators in design-related fields
 
-Portfolio URL: https://www.uxdraw.com/portfolio
+Anyone passionate about improving digital experiences
 
-Inside you’ll find:
+Features
+Detailed breakdowns of UX methodologies and strategies
 
-Detailed UX case studies (personas, flows, wireframes, research insights)
+Real examples from award-winning projects
 
-Highlights of award‑winning and recognized projects
+Interactive prototypes and demos to explore
 
-Demo links, prototypes, and video walkthroughs
+Tips on accessibility (WCAG) and inclusive design
 
-Testimonials and team collaboration stories
+Guidance on user research and persona development
+
+How to Use
+Explore case studies and articles at your own pace.
+
+Follow tutorials to practice hands-on design exercises.
+
+Use provided templates to kickstart your projects.
+
+Apply learnings to your own UX design challenges.
+
+Get Involved
+Contributions, feedback, and collaboration are welcome! Feel free to open issues, suggest topics, or share your own case studies.
+
+Explore the world of UX design with UXDraw Education — where learning meets practice.
+
