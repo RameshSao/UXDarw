@@ -23,6 +23,83 @@
 
 <body>
 
+ <!-- Custom Cursor -->
+
+<div class="cursor">
+  <div class="cursor__ball">
+    <svg height="50" width="50"> <!-- Bigger cursor -->
+      <circle cx="25" cy="25" r="22" stroke-width="0"></circle>
+    </svg>
+  </div>
+</div>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    cursor: none; /* hide system cursor */
+  }
+
+  .cursor {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 2000
+  }
+
+  .cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    transition: transform 0s; /* instant position update */
+  }
+
+  .cursor__ball circle {
+    fill: white;
+  }
+
+  a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+  }
+</style>
+
+<script>
+  const $cursorBall = document.querySelector('.cursor__ball');
+  const $hoverables = document.querySelectorAll('a');
+
+  document.body.addEventListener('mousemove', (e) => {
+    // Instantly set position
+    $cursorBall.style.transform = `translate(${e.clientX - 25}px, ${e.clientY - 25}px) scale(${currentScale})`;
+  });
+
+  let currentScale = 1;
+
+  $hoverables.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      currentScale = 1.7;
+      $cursorBall.style.transform = `translate(${lastX - 25}px, ${lastY - 25}px) scale(${currentScale})`;
+    });
+    el.addEventListener('mouseleave', () => {
+      currentScale = 1;
+      $cursorBall.style.transform = `translate(${lastX - 25}px, ${lastY - 25}px) scale(${currentScale})`;
+    });
+  });
+
+  // Track last mouse position for accurate scaling
+  let lastX = 0, lastY = 0;
+  document.body.addEventListener('mousemove', (e) => {
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+</script>
+ <!-- Custom Cursor -->
+
   <!-- pre loader -->
   <!-- <div class="loader-container">
   <img draggable="false" src="./assets/images/preloader.gif" alt="">
