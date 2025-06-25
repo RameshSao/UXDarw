@@ -54,5 +54,9 @@
       {
         "name": "InDesign",
         "icon": "https://img.icons8.com/?size=48&id=51lMuEpYaQ8k&format=png&color=000000"
+    },
+    {
+        "name": "Lottiefiles",
+        "icon": "https://cdn.iconscout.com/icon/free/png-512/free-lottiefiles-logo-icon-download-in-svg-png-gif-file-formats--lottifiles-brand-iconscout-pack-logos-icons-4674917.png?f=webp&w=512"
     }
 ]
