@@ -7,7 +7,7 @@
   --primary: #2b3dda;
   --primary-dark: #18023f;
   --secondary: #f8f9fa;
-  --highlight: #ffe600;
+  --highlight: #18023f;
   --card-bg: #ffffff;
   --section-bg: #f8f9fa;
   --nav-link: #000000;
@@ -24,7 +24,7 @@ body.dark-theme {
   --primary: #2b3dda;
   --primary-dark: #1e1e1e;
   --secondary: #1e1e1e;
-  --highlight: #ffe600;
+  --highlight: #18023f;
   --card-bg: #1e1e1e;
   --section-bg: #181818;
   --nav-link: #ffffff;
@@ -1907,18 +1907,20 @@ body.dark-theme .education .box-container .box {
   background-color: #1a1a1a;
   box-shadow: none;
 }
-
-/* Project Button Dark Fix */
-body.dark-theme .projects .btn,
-body.dark-theme .resumebtn .btn {
-  background-color: #2b3dda;
-  box-shadow: none;
-  color: #121212;
+/* Unified dark theme button style for About Me, Resume, and Project buttons */
+body.dark-theme .btn,
+body.dark-theme .resumebtn .btn,
+body.dark-theme .home .btn {
+  background-color: #2b3dda !important;
+  color: #fff !important;
+  box-shadow: none !important;
 }
-body.dark-theme .projects .btn:hover,
-body.dark-theme .resumebtn .btn:hover {
-  background-color: #ffffff;
-  color: #121212;
+
+body.dark-theme .btn:hover,
+body.dark-theme .resumebtn .btn:hover,
+body.dark-theme .home .btn:hover {
+  background-color: #18023f !important;
+  color: #ffffff !important;
 }
 
 /* Experience Container Dark Fix */
@@ -1939,18 +1941,7 @@ body.dark-theme .skills .container .bar {
   box-shadow: none;
 }
 
-/* Projects - Button dark blue like background */
-body.dark-theme .projects .btn,
-body.dark-theme .resumebtn .btn {
-  background-color: #232a3a;
-  box-shadow: none;
-  color: #ffffff;
-}
-body.dark-theme .projects .btn:hover,
-body.dark-theme .resumebtn .btn:hover {
-  background-color: #4dabf7;
-  color: #121212;
-}
+
 
 /* Contact Section - Use dark blue background */
 body.dark-theme #contact {
@@ -2186,5 +2177,78 @@ i.fas.fa-map-marked-alt::before {
   color: white;
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2b3dda;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(43, 61, 218, 0.08);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover, .btn:focus {
+  background: #18023f;
+  color: #fff;
+  text-decoration: none;
+}
+
+.resumebtn {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-secondary {
+  background: transparent !important;
+  color: #2b3dda !important;
+  border: 2px solid #2b3dda !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background: #2b3dda !important;
+  color: #fff !important;
+  border-color: #2b3dda !important;
+}
+
+/* Dark theme for secondary button */
+body.dark-theme .btn-secondary {
+  background: transparent !important;
+  color: #2b3dda !important;
+  border: 2px solid #2b3dda !important;
+}
+
+body.dark-theme .btn-secondary:hover,
+body.dark-theme .btn-secondary:focus {
+  background: transparent !important;
+  color: #2b3dda !important;
+  border-color: #2b3dda !important;
+}
+
+/* Fix: Force outlined Download button in dark mode */
+body.dark-theme .btn.btn-secondary,
+body.dark-theme .resumebtn .btn.btn-secondary {
+  background: transparent !important;
+  color: #2b3dda !important;
+  border: 2px solid #2b3dda !important;
+  box-shadow: none !important;
+}
+body.dark-theme .btn.btn-secondary:hover,
+body.dark-theme .resumebtn .btn.btn-secondary:hover,
+body.dark-theme .btn.btn-secondary:focus,
+body.dark-theme .resumebtn .btn.btn-secondary:focus {
+  background: transparent !important;
+  color: #2b3dda !important;
+  border-color: #2b3dda !important;
+}
 
 
