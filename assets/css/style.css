@@ -2251,4 +2251,12 @@ body.dark-theme .resumebtn .btn.btn-secondary:focus {
   border-color: #2b3dda !important;
 }
 
-
+/* Hide custom cursor on touch/mobile devices */
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  .cursor {
+    display: none !important;
+  }
+  html, body {
+    cursor: auto !important;
+  }
+}
