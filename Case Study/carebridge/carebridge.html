@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareBridge – Complete UX Case Study</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --secondary: #8b5cf6;
+      --success: #10b981;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+      margin: 0 auto 1rem;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.98);
+      z-index: 100;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    nav li {
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0.6rem 1.4rem;
+      border-radius: 24px;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+      color: var(--text);
+      border: 1px solid var(--border);
+      background: white;
+    }
+    nav li:hover, nav li.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+      width: 100%;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-dark);
+      text-align: center;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid #e0f7ff;
+    }
+    h3 {
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+    }
+    p { margin-bottom: 1rem; }
+    
+    /* Interview Section */
+    .interview-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .interview-pair {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @media(min-width: 768px) {
+      .interview-pair {
+        flex-direction: row;
+      }
+    }
+    .interview-column {
+      flex: 1;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.8rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    .interview-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .interview-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+    }
+    .interview-header h3 {
+      margin-bottom: 0.2rem;
+    }
+    .interview-header p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    .interview-question {
+      margin-bottom: 1.5rem;
+    }
+    .interview-question h4 {
+      font-size: 1rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Empathy Map */
+    .empathy-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    @media(min-width: 768px) {
+      .empathy-container {
+        flex-direction: row;
+      }
+    }
+    .empathy-map {
+      flex: 1;
+    }
+    .empathy-map h3 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary-dark);
+    }
+    .empathy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    .empathy-table th, 
+    .empathy-table td {
+      border: 1px solid var(--border);
+      padding: 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .empathy-table th {
+      background-color: #f0f7ff;
+      width: 20%;
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+    .empathy-table tr:nth-child(even) {
+      background-color: var(--bg);
+    }
+    
+    /* Persona Section */
+    .persona-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    @media(min-width: 768px) {
+      .persona-container {
+        flex-direction: row;
+      }
+    }
+    .persona {
+      flex: 1;
+      background: var(--bg);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+    .persona-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .persona-header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 4px solid var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .persona-header h3 {
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+    .persona-header p {
+      font-style: italic;
+      color: var(--text-light);
+    }
+    .persona-details {
+      margin-bottom: 1.5rem;
+    }
+    .persona-details p {
+      margin-bottom: 0.5rem;
+    }
+    .persona-details strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .day-in-life {
+      background: #f0f7ff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    .day-in-life h4 {
+      color: var(--primary-dark);
+      margin-bottom: 0.8rem;
+    }
+    .day-in-life ul {
+      padding-left: 1.2rem;
+    }
+    .day-in-life li {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .persona-quote {
+      font-style: italic;
+      padding: 1.2rem;
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      color: var(--text);
+      margin-top: 1.5rem;
+    }
+    
+    /* Journey Map */
+    .journey-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      width: 100%;
+      overflow-x: auto;
+    }
+    .journey-column {
+      min-width: 800px;
+    }
+    .journey-column h3 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary-dark);
+    }
+    .journey-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .journey-table th, 
+    .journey-table td {
+      border: 1px solid var(--border);
+      padding: 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .journey-table th {
+      background-color: #f0f7ff;
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+    .journey-table tr:nth-child(even) {
+      background-color: var(--bg);
+    }
+    
+    /* Brainstorming */
+    .brainstorm-context {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    .brainstorm-triggers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .trigger-card {
+      flex: 1 1 200px;
+      background: white;
+      padding: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    .trigger-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .board {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .sticky-note {
+      width: 220px;
+      min-height: 220px;
+      padding: 1.2rem;
+      border-radius: 10px;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+      position: relative;
+      overflow-wrap: break-word;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+    .sticky-note:hover {
+      transform: translateY(-5px);
+    }
+    .sticky-note::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      top: 0;
+      left: 0;
+      background: rgba(255,255,255,0.4);
+      border-bottom: 1px dashed rgba(0,0,0,0.1);
+    }
+    .note-title {
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--text);
+      font-size: 1.05rem;
+      padding-top: 6px;
+    }
+    .note-content {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .yellow { background: #fef9c3; }
+    .pink { background: #fce7f3; }
+    .blue { background: #e0f2fe; }
+    .green { background: #dcfce7; }
+    .purple { background: #f3e8ff; }
+    
+    /* Flowchart */
+    .flowchart-container {
+      margin: 2.5rem 0;
+    }
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .node {
+      background: #f5f3ff;
+      border: 2px solid var(--secondary);
+      color: #4c1d95;
+      padding: 14px 22px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      min-width: 180px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .arrow::after {
+      content: "↓";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -24px;
+      font-size: 22px;
+      color: var(--secondary);
+    }
+    .arrow.right::after {
+      content: "→";
+      left: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -28px;
+    }
+    .subtext {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+    .highlight-box {
+      background: #f0fdf4;
+      border-left: 4px solid var(--success);
+      padding: 1.5rem;
+      max-width: 600px;
+      margin: 2.5rem auto;
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .highlight-box ul {
+      padding-left: 1.5rem;
+    }
+    .highlight-box li {
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+    }
+    .highlight-box strong {
+      color: #047857;
+    }
+    
+    /* Designs Section */
+    .designs-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .design-column {
+      width: 100%;
+      text-align: center;
+    }
+    .design-column h3 {
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    .image-mockup {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .image-mockup:hover {
+      transform: scale(1.02);
+    }
+
+    /* Competitive Analysis Table */
+    .competitive-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+    }
+    .competitive-table th, 
+    .competitive-table td {
+      border: 1px solid var(--border);
+      padding: 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .competitive-table th {
+      background-color: #f0f7ff;
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+    .competitive-table tr:nth-child(even) {
+      background-color: var(--bg);
+    }
+
+    /* Information Architecture Section */
+    .ia-section {
+      background: #f8fafc;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      border-left: 4px solid var(--secondary);
+    }
+    .ia-section h3 {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    .ia-section ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .ia-section li {
+      margin-bottom: 0.5rem;
+    }
+    .ia-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    @media(min-width: 768px) {
+      .ia-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .ia-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .ia-card h4 {
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    
+    /* Responsive adjustments */
+    @media(max-width: 768px) {
+      section {
+        padding: 1.5rem;
+      }
+      .interview-column, .persona {
+        padding: 1.5rem;
+      }
+      .sticky-note {
+        width: 100%;
+        max-width: 280px;
+      }
+      nav ul {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+      }
+      nav li {
+        flex-shrink: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="app-logo.svg" alt="CareBridge Logo" class="logo">
+    <h1>CareBridge UX Case Study</h1>
+    <p>Accessible caregiving solution for elderly & visually impaired</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li data-target="overview" class="active">Overview</li>
+      <li data-target="interviews">User Interviews</li>
+      <li data-target="research">Research</li>
+      <li data-target="empathy">Empathy Map</li>
+      <li data-target="persona">Personas</li>
+      <li data-target="journey">Journey Map</li>
+      <li data-target="brainstorm">Brainstorming</li>
+      <li data-target="ia">Information Architecture</li>
+      <li data-target="flowchart">User Flow</li>
+      <li data-target="designs">Wireframe & Mockup</li>
+    </ul>
+  </nav>
+
+  <!-- New Overview Section -->
+  <section id="overview">
+    <h2>Project Overview</h2>
+    <div class="highlight-box">
+      <h3>CareBridge: Remote Caregiving Solution</h3>
+      <p>CareBridge is a mobile application designed to help caregivers remotely support elderly or visually impaired family members through simple, accessible interfaces.</p>
+      
+      <h4 style="margin-top: 1.5rem;">Key Features:</h4>
+      <ul>
+        <li>Voice-guided interface for care receivers</li>
+        <li>Remote reminder management for caregivers</li>
+        <li>One-tap emergency calling</li>
+        <li>Medication tracking with confirmation</li>
+        <li>Photo-based contact system</li>
+      </ul>
+      
+      <h4 style="margin-top: 1.5rem;">Project Duration:</h4>
+      <p>6 months (Research to High-Fidelity Prototype)</p>
+    </div>
+  </section>
+
+  <section id="interviews">
+    <h2>1. User Interviews</h2>
+    <div class="interview-container">
+      <div class="interview-pair">
+        <div class="interview-column">
+          <div class="interview-header">
+            <img src="ritu-profile.jpg" alt="Ritu Sinha">
+            <div>
+              <h3>Ritu Sinha</h3>
+              <p>Daughter & Primary Caregiver</p>
+              <p>Gurgaon (Father in Patna)</p>
+            </div>
+          </div>
+          
+          <div class="interview-question">
+            <h4>1. How do you currently manage your father's care remotely?</h4>
+            <p>I mostly call him twice a day. One call in the morning to remind him about his pills and another in the evening to check on him. Sometimes I send reminders on WhatsApp, but he doesn't always read them.</p>
+          </div>
+          
+          <div class="interview-question">
+            <h4>2. What tasks do you help him with from afar?</h4>
+            <p>Medicine timing, doctor appointments, grocery delivery, and occasionally sending money or checking on his mental state. I try to be available, but with work and my own kids, it's hard to stay consistent.</p>
+          </div>
+          
+          <div class="interview-question">
+            <h4>3. What's the biggest challenge you face?</h4>
+            <p>Not knowing whether he's actually taken his medicine. Sometimes he says he forgot, or that the alarm didn't ring. I feel anxious all day until I confirm.</p>
+          </div>
+          
+          <div class="interview-question">
+            <h4>4. Have you tried any tech-based solution earlier?</h4>
+            <p>I tried setting alarms on his phone, but he kept turning them off accidentally. I also looked into Google Assistant, but he found it confusing. He doesn't like apps that feel too "smart" or cluttered.</p>
+          </div>
+          
+          <div class="interview-question">
+            <h4>5. What's your biggest fear as a caregiver?</h4>
+            <p>That he might fall or feel unwell and won't be able to reach anyone. Even the idea that he'd feel helpless and alone is really hard to think about.</p>
+          </div>
+        </div>
+        
+        <div class="interview-column">
+          <div class="interview-header">
+            <img src="shyam-profile.jpg" alt="Shyam Sinha">
+            <div>
+              <h3>Shyam Sinha</h3>
+              <p>Care Receiver</p>
+              <p>76 years old, Lives alone in Patna</p>
+            </div>
+          </div>
+          
+          <div class="interview-question">
+            <h4>1. What's your daily routine like?</h4>
+            <p>I wake up around 6, take my BP pill, drink tea, and listen to the radio. My daughter calls me around 8 to check if I took my medicine. After that, I mostly stay home unless someone comes.</p>
+          </div>
+          
+          <div class="interview-question">
+            <h4>2. Do you use your phone a lot?</h4>
+            <p>Only for calls. I sometimes listen to bhajans on YouTube, but the rest is confusing. I don't type or read small messages.</p>
+          </div>
+          
+          <div class="interview-question">
+            <h4>3. How do you remember important things like medicine?</h4>
+            <p>I try to remember, or I wait for Ritu's call. Sometimes I forget and take it late.</p>
+          </div>
+          
+          <div class="interview-question">
+            <h4>4. Have you ever felt lost using your phone?</h4>
+            <p>Yes, many times. So many small icons. Sometimes I press something by mistake and I don't know how to go back.</p>
+          </div>
+          
+          <div class="interview-question">
+            <h4>5. What would help you feel more confident using your phone?</h4>
+            <p>If it spoke to me. Or just showed big buttons with my daughter's face. I don't want anything too complicated.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>2. Research</h2>
+    
+    <h3>Competitive Analysis: Elderly & Accessibility-Focused Care Apps</h3>
+    <table class="competitive-table">
+      <thead>
+        <tr>
+          <th>App Name</th>
+          <th>Key Features</th>
+          <th>Strengths</th>
+          <th>Weaknesses</th>
+          <th>Accessibility</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CaringBridge</td>
+          <td>Journal sharing, health updates, private groups</td>
+          <td>Emotional support platform, community focus</td>
+          <td>Not real-time, no emergency support, lacks custom reminders</td>
+          <td>Text-based only</td>
+          <td>More suited for medical status updates than real-time interaction</td>
+        </tr>
+        <tr>
+          <td>CareZone</td>
+          <td>Med tracker, calendar, document storage, pill reminders</td>
+          <td>All-in-one medication & scheduling</td>
+          <td>Discontinued in 2022 (formerly strong UX), no caregiver interaction now</td>
+          <td>Simple UI, no audio assistance</td>
+          <td>Was a comprehensive solution but no longer active</td>
+        </tr>
+        <tr>
+          <td>Papa</td>
+          <td>Companion care via gig workers (in-person or virtual)</td>
+          <td>On-demand caregivers, mental wellness</td>
+          <td>Expensive, trust barrier, not designed for family care specifically</td>
+          <td>Human interaction but no built-in voice tech</td>
+          <td>Targets companionship more than caregiver tools</td>
+        </tr>
+        <tr>
+          <td>Be My Eyes</td>
+          <td>Blind & low-vision users connect with volunteers</td>
+          <td>Real-time video support from sighted people</td>
+          <td>No reminder system, no caregiver control or app customization</td>
+          <td>High accessibility, excellent voice/video support</td>
+          <td>Limited to spontaneous volunteer help, not structured caregiving</td>
+        </tr>
+        <tr>
+          <td>Oscar Senior</td>
+          <td>Video calls, medication reminders, simplified UI for seniors</td>
+          <td>Remote caregiver control, large fonts</td>
+          <td>Enterprise pricing, UI still complex for some elderly</td>
+          <td>Senior-friendly UI with voice prompt</td>
+          <td>Closest in intent to CareBridge but lacks barcode sync and offline SOS</td>
+        </tr>
+        <tr>
+          <td>Alexa / Echo Show</td>
+          <td>Voice-based reminders, calls, smart home integration</td>
+          <td>Hands-free, customizable routines, strong voice UI</td>
+          <td>Needs Wi-Fi, requires Amazon account, limited UX for visually impaired</td>
+          <td>Voice-first, screen reader support</td>
+          <td>Good for tech-savvy users, but not focused on two-way caregiving</td>
+        </tr>
+        <tr>
+          <td>CareSmartz360</td>
+          <td>Agency-focused care scheduling, caregiver clock-in/out</td>
+          <td>Business-level scheduling, billing</td>
+          <td>Not personal/family use, too complex for elder-care end-users</td>
+          <td>Low priority on end-user accessibility</td>
+          <td>B2B solution, not suitable for family-based personal care</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="highlight-box">
+      <h3>What CareBridge Does Better</h3>
+      <table class="empathy-table">
+        <tr><th>Unique Differentiators</th><th>Why It Matters</th></tr>
+        <tr>
+          <td>Role-based setup (Barcode scan)</td>
+          <td>Seamless caregiver-receiver pairing without complex setup</td>
+        </tr>
+        <tr>
+          <td>Push-to-talk + Voice-first design</td>
+          <td>Ideal for low-vision users and non-tech-savvy elderly</td>
+        </tr>
+        <tr>
+          <td>Offline-critical features</td>
+          <td>SOS and reminders work even with poor/no network</td>
+        </tr>
+        <tr>
+          <td>Accessible UI design with level-based toggles</td>
+          <td>Visual, auditory, and cognitive accessibility out of the box</td>
+        </tr>
+        <tr>
+          <td>Multi-caregiver support</td>
+          <td>Encourages family collaboration and distributed care responsibility</td>
+        </tr>
+        <tr>
+          <td>Hindi + regional language fallback</td>
+          <td>Localization ensures inclusivity for non-English speaking users</td>
+        </tr>
+        <tr>
+          <td>Emergency-first UX</td>
+          <td>Prioritizes safety and connection over app features</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="empathy">
+    <h2>3. Empathy Map</h2>
+    <div class="empathy-container">
+      <div class="empathy-map">
+        <h3>Ritu Sinha (Caregiver)</h3>
+        <table class="empathy-table">
+          <tr><th>Thinks</th><td>"Is Papa okay today?"<br>"Did he take his morning medicine?"<br>"I wish I could check on him without interrupting work"</td></tr>
+          <tr><th>Feels</th><td>Anxious when unresponsive<br>Guilty about not being physically present<br>Overwhelmed balancing care with work</td></tr>
+          <tr><th>Says</th><td>"Just tap on my photo to call me"<br>"I wish I could be there more often"<br>"Use the big red button if needed"</td></tr>
+          <tr><th>Does</th><td>Checks reminders status<br>Sends voice messages instead of texts<br>Customizes the interface for clarity</td></tr>
+          <tr><th>Pain Points</th><td>No real-time updates about his status<br>Unreliable communication methods<br>Constant worry affecting work</td></tr>
+        </table>
+      </div>
+      
+      <div class="empathy-map">
+        <h3>Shyam Sinha (Care Receiver)</h3>
+        <table class="empathy-table">
+          <tr><th>Thinks</th><td>"Did Ritu call today?"<br>"I hope I took my medicine"<br>"I don't want to disturb her"</td></tr>
+          <tr><th>Feels</th><td>Lonely but hesitant to reach out<br>Confused by technology<br>Anxious about making mistakes</td></tr>
+          <tr><th>Says</th><td>"Where is that button to call her?"<br>"That ring again, what does it mean?"<br>"She must be busy with her office"</td></tr>
+          <tr><th>Does</th><td>Listens to voice reminders<br>Taps contact photos to call<br>Avoids reaching out unless important</td></tr>
+          <tr><th>Pain Points</th><td>Forgets medication timing<br>Struggles with small touch targets<br>No simple way to signal for non-emergency help</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="persona">
+    <h2>4. User Personas</h2>
+    <div class="persona-container">
+      <div class="persona">
+        <div class="persona-header">
+          <img src="ritu-persona.jpg" alt="Ritu Sinha">
+          <h3>Ritu Sinha</h3>
+          <p>"The Dutiful Remote Daughter"</p>
+        </div>
+        
+        <div class="persona-details">
+          <p><strong>Age:</strong> 42</p>
+          <p><strong>Location:</strong> Gurgaon</p>
+          <p><strong>Profession:</strong> HR Manager</p>
+          <p><strong>Tech Skills:</strong> High – comfortable with apps, automation, reminders</p>
+          <p><strong>Device:</strong> iPhone & Laptop</p>
+          <p><strong>Language:</strong> Hindi, English</p>
+          
+          <div class="day-in-life">
+            <h4>Responsibilities:</h4>
+            <ul>
+              <li>Takes care of father's medical routines remotely</li>
+              <li>Manages his medicine orders and bills</li>
+              <li>Wants to ensure he doesn't feel alone or anxious</li>
+            </ul>
+          </div>
+          
+          <div class="day-in-life">
+            <h4>Pain Points:</h4>
+            <ul>
+              <li>Worries about missed medications</li>
+              <li>Unable to track father's day-to-day routines</li>
+              <li>Can't be available during work hours for constant calls</li>
+              <li>Finds it hard to explain new apps to her father</li>
+            </ul>
+          </div>
+          
+          <div class="persona-quote">
+            "Papa just needs a simple screen with reminders and my photo to tap. If he's okay, I can focus at work."
+          </div>
+        </div>
+      </div>
+      
+      <div class="persona">
+        <div class="persona-header">
+          <img src="shyam-persona.jpg" alt="Shyam Sinha">
+          <h3>Shyam Sinha</h3>
+          <p>"The Independent but Vulnerable Elder"</p>
+        </div>
+        
+        <div class="persona-details">
+          <p><strong>Age:</strong> 76</p>
+          <p><strong>Location:</strong> Patna, Bihar, India</p>
+          <p><strong>Disability:</strong> Partial Vision Loss, Mild Memory Decline (early dementia)</p>
+          <p><strong>Language:</strong> Hindi (Fluent), English (Basic)</p>
+          <p><strong>Living Situation:</strong> Lives alone with part-time help</p>
+          <p><strong>Tech Comfort:</strong> Low - only uses voice calls, occasionally listens to bhajans on YouTube</p>
+          <p><strong>Device:</strong> Android phone with large display</p>
+          <p><strong>Personality:</strong> Calm, spiritual, traditional, emotionally attached to family</p>
+          
+          <div class="day-in-life">
+            <h4>A Day in His Life:</h4>
+            <ul>
+              <li><strong>6:00 AM:</strong> Wakes up, listens to devotional audio</li>
+              <li><strong>8:00 AM:</strong> Needs reminder for blood pressure medication</li>
+              <li><strong>11:00 AM:</strong> House help arrives</li>
+              <li><strong>1:00 PM:</strong> Forgets to drink water unless reminded</li>
+              <li><strong>4:00 PM:</strong> Calls daughter or listens to news</li>
+              <li><strong>6:00 PM:</strong> Gets confused about which medicine to take</li>
+              <li><strong>9:00 PM:</strong> Misses evening pill without prompt</li>
+            </ul>
+          </div>
+          
+          <div class="day-in-life">
+            <h4>Pain Points:</h4>
+            <ul>
+              <li>Forgets medicine timing</li>
+              <li>Misses water breaks</li>
+              <li>Struggles to call correct contact</li>
+              <li>Panics during emergencies, can't find right number</li>
+              <li>Can't read small fonts or complicated app screens</li>
+            </ul>
+          </div>
+          
+          <div class="persona-quote">
+            "Beti ke bina kuch yaad nahi rehta. Ye machine (app) kuch yaad dilaye toh accha lage."<br><br>
+            ("Without my daughter, I forget things. If this device could remind me, that would be helpful.")
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <h2>5. User Journey Map</h2>
+    <div class="journey-container">
+      <div class="journey-column">
+        <h3>Ritu's Caregiver Journey</h3>
+        <table class="journey-table">
+          <tr><th>Stage</th><th>Touchpoints</th><th>Actions</th><th>Emotions</th><th>Pain Points</th><th>Opportunities</th></tr>
+          
+          <tr>
+            <td>Discovery</td>
+            <td>Friend referral, health issue trigger, app store search</td>
+            <td>Learns about app after father misses medicine</td>
+            <td>Concerned, hopeful</td>
+            <td>Overwhelmed by options, unsure of privacy</td>
+            <td>Simple, emotional marketing. Assure privacy, local languages</td>
+          </tr>
+          
+          <tr>
+            <td>Download & Setup</td>
+            <td>App download, QR code on father's phone</td>
+            <td>Installs app, chooses "Caregiver", scans barcode on father's device</td>
+            <td>Hopeful, tech-confident</td>
+            <td>Worry if pairing will confuse father</td>
+            <td>QR scan tutorial, voice-over guide for elderly, support chat</td>
+          </tr>
+          
+          <tr>
+            <td>Profile Setup</td>
+            <td>Caregiver dashboard UI</td>
+            <td>Enters father's name, selects "Elderly", assigns accessibility levels (Vision, Cognitive)</td>
+            <td>Focused, responsible</td>
+            <td>Unsure about the level of impairment</td>
+            <td>Add examples or smart recommendations during selection</td>
+          </tr>
+          
+          <tr>
+            <td>Customizing UI</td>
+            <td>Accessibility setup, contact selection</td>
+            <td>Adds herself, doctor, uncle as top contacts. Uploads their photos</td>
+            <td>Reassured, in control</td>
+            <td>Unsure if father will find the icons</td>
+            <td>Let caregiver preview receiver's interface (test mode)</td>
+          </tr>
+          
+          <tr>
+            <td>Reminders & Alerts</td>
+            <td>Reminders dashboard</td>
+            <td>Sets medicine, water, prayer reminders, adds notes in Hindi voice</td>
+            <td>Productive, thoughtful</td>
+            <td>Confused with time zones or repeat logic</td>
+            <td>Use natural language input like "Remind Papa at 8am daily"</td>
+          </tr>
+          
+          <tr>
+            <td>Monitoring</td>
+            <td>Home screen, activity history, missed alert reports</td>
+            <td>Checks if reminders were dismissed or missed. Sends quick voice note to check on him</td>
+            <td>Reassured when things work</td>
+            <td>Gets worried when reminders are skipped</td>
+            <td>Send real-time confirmation "Reminder acknowledged by Papa"</td>
+          </tr>
+          
+          <tr>
+            <td>Emergency Event</td>
+            <td>SOS notification, push alert</td>
+            <td>Gets notified when SOS is pressed, location is shared, calls immediately</td>
+            <td>Anxious → Relieved</td>
+            <td>Needs clarity on situation and next steps</td>
+            <td>Show status ("Ambulance Called", "Uncle Informed"), provide call shortcut</td>
+          </tr>
+          
+          <tr>
+            <td>Routine Use</td>
+            <td>Voice message, dashboard, updates</td>
+            <td>Sends daily voice messages, updates reminders as doctor prescribes changes</td>
+            <td>Calm, connected</td>
+            <td>Needs better routine integration</td>
+            <td>Gamify care achievements ("3 Days On-Time Meds") for both parties</td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="journey-column">
+        <h3>Shyam's Care Receiver Journey</h3>
+        <table class="journey-table">
+          <tr><th>Stage</th><th>Touchpoints</th><th>Actions</th><th>Emotions</th><th>Pain Points</th><th>Opportunities</th></tr>
+          
+          <tr>
+            <td>Initial Setup</td>
+            <td>Phone handover, app opens on QR scan</td>
+            <td>Daughter scans QR code → device shows welcome screen with voice greeting</td>
+            <td>Confused → Curious</td>
+            <td>Doesn't understand app setup, afraid of pressing wrong buttons</td>
+            <td>Audio-guided setup in Hindi, minimal text, soft tones</td>
+          </tr>
+          
+          <tr>
+            <td>First Impressions</td>
+            <td>Home screen (large Date, Time, Tap to Talk)</td>
+            <td>Hears app speak date/time. Explores icons for medicine and water</td>
+            <td>Calm, a little skeptical</td>
+            <td>Small hesitation using unfamiliar icons</td>
+            <td>Use large icons + spoken label confirmation on tap</td>
+          </tr>
+          
+          <tr>
+            <td>Receiving Reminders</td>
+            <td>Audio reminders for medicine and water</td>
+            <td>Gets 8am voice reminder: "Please take your morning medicine"</td>
+            <td>Reassured, alert</td>
+            <td>Might forget what medicine to take</td>
+            <td>Add photo of pill or name with reminder; allow replay by voice</td>
+          </tr>
+          
+          <tr>
+            <td>Calling Family</td>
+            <td>Favorites with large photos</td>
+            <td>Taps photo of daughter to call her easily</td>
+            <td>Happy, connected</td>
+            <td>Sometimes taps wrong face</td>
+            <td>Add spoken name when hovering over contacts</td>
+          </tr>
+          
+          <tr>
+            <td>Using Tap to Talk</td>
+            <td>"Tap to Talk" mic button</td>
+            <td>Says: "What time is it?", "Call Ritu" → App responds</td>
+            <td>Proud, independent</td>
+            <td>May not pronounce clearly at times</td>
+            <td>Allow regional language, confirm with audio feedback</td>
+          </tr>
+          
+          <tr>
+            <td>Emergency Situation</td>
+            <td>SOS button</td>
+            <td>Presses SOS when dizzy → auto-calls daughter and shows location</td>
+            <td>Anxious → Relieved</td>
+            <td>Unsure if help is really coming</td>
+            <td>Voice feedback: "Ritu has been alerted. Help is on the way."</td>
+          </tr>
+          
+          <tr>
+            <td>Daily Routine Use</td>
+            <td>Water reminder, music app, checking date/time</td>
+            <td>Starts to expect regular reminders, taps once or twice a day</td>
+            <td>Comfortable, confident</td>
+            <td>Might get bored or ignore non-urgent alerts</td>
+            <td>Add custom tones (like bhajans), reward sounds after successful actions</td>
+          </tr>
+          
+          <tr>
+            <td>Long-Term Use</td>
+            <td>Monthly updates, audio greeting from daughter</td>
+            <td>Listens to recorded voice messages, builds habit of using Tap to Talk</td>
+            <td>Safe, emotionally connected</td>
+            <td>Might not explore new features</td>
+            <td>Keep interface consistent, add seasonal changes or "Good Morning" messages</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="brainstorm">
+    <h2>6. Brainstorming Session</h2>
+    
+    <div class="brainstorm-context">
+      <h3>Context</h3>
+      <p>How might we create a digital companion that supports care receivers with accessibility needs (elderly or children with impairments), while empowering caregivers to manage their routines remotely all with simplicity, safety, and emotional warmth?</p>
+    </div>
+    
+    <h3 style="margin-top: 2rem;">Brainstorm Triggers</h3>
+    <div class="brainstorm-triggers">
+      <div class="trigger-card">
+        <h4>What if your parent couldn't read a screen anymore?</h4>
+        <p>Design implications for voice-first interaction</p>
+      </div>
+      <div class="trigger-card">
+        <h4>What if your child could only tap or listen, not type?</h4>
+        <p>Minimal input methods needed</p>
+      </div>
+      <div class="trigger-card">
+        <h4>How can we help someone feel independent?</h4>
+        <p>Even when they rely on someone daily</p>
+      </div>
+      <div class="trigger-card">
+        <h4>What if the caregiver is overwhelmed?</h4>
+        <p>Or far away with limited connectivity</p>
+      </div>
+    </div>
+    
+    <h3 style="margin-top: 2rem;">What We Knew from the Start</h3>
+    <ul>
+      <li>Accessibility wasn't optional - it had to be baked into the core experience</li>
+      <li>Caregivers and receivers are emotionally connected, not just service users</li>
+      <li>Tech should adapt to the user's impairment, not force them to adapt</li>
+      <li>Everyone needs peace of mind, but in very different ways</li>
+    </ul>
+    
+    <h3 style="margin-top: 2rem;">Early Idea Directions</h3>
+    <ul>
+      <li>A dual-mode app with mirrored yet role-specific interfaces</li>
+      <li>QR pairing to simplify setup across locations</li>
+      <li>"Tap to Talk" as an anchor feature for voice UI, emergency help, or social interaction</li>
+      <li>Visuals that are touchable, speakable, and memorable (e.g., contact faces, single-button actions)</li>
+      <li>Caregiver dashboard with control, reminders, and updates</li>
+      <li>Profiles that support custom accessibility layering (vision, motor, cognitive)</li>
+    </ul>
+    
+    <h3 style="margin-top: 2rem;">Initial Constraints I Set</h3>
+    <ul>
+      <li>No login required for care receivers</li>
+      <li>Must work offline once synced - Via SMS fallback</li>
+      <li>Language and voice support are mandatory</li>
+      <li>Low learning curve - usable by someone who's never used a smartphone before</li>
+    </ul>
+    
+    <h3 style="margin-top: 2rem;">Insight Cards</h3>
+    <div class="board">
+      <div class="sticky-note yellow">
+        <div class="note-title">Child with Low Vision</div>
+        <div class="note-content">An 8-year-old who just wants to hear stories and tap mom's photo to talk. Simplicity > Features. Visual UX must have strong voice + icon fallback.</div>
+      </div>
+      <div class="sticky-note pink">
+        <div class="note-title">Remote Daughter</div>
+        <div class="note-content">Working in another city trying to manage father's medicine, water, and emotional check-ins. Need for remote scheduling + emotional touchpoints.</div>
+      </div>
+      <div class="sticky-note blue">
+        <div class="note-title">Elderly User Error</div>
+        <div class="note-content">An elderly man tapping the wrong contact and panicking. Importance of safe defaults, photo-based UI, and feedback (audio confirmation).</div>
+      </div>
+      <div class="sticky-note green">
+        <div class="note-title">Professional Caregiver</div>
+        <div class="note-content">A nurse who manages 5 seniors in different homes. Need for caregiver dashboard, multiple patient profiles, task status logs.</div>
+      </div>
+      <div class="sticky-note purple">
+        <div class="note-title">Tech-Resistant Elder</div>
+        <div class="note-content">A traditional elder who mistrusts "smart" apps. Role of tone, language (Hindi/vernacular), human-first onboarding.</div>
+      </div>
+    </div>
+    
+    <h3 style="margin-top: 2rem;">Key Insights</h3>
+    <table class="empathy-table">
+      <tr><th>Insight</th><th>Impact</th></tr>
+      <tr>
+        <td>Independence is emotional, not just functional</td>
+        <td>Design must protect dignity, not infantilize the user</td>
+      </tr>
+      <tr>
+        <td>Visual UI alone is not enough</td>
+        <td>Voice-first interaction is essential for visually impaired users</td>
+      </tr>
+      <tr>
+        <td>One caregiver isn't always enough</td>
+        <td>Multi-caregiver support is vital for distributed family or professional setups</td>
+      </tr>
+      <tr>
+        <td>Setup is a shared journey</td>
+        <td>Caregiver configures, but receiver must feel comfortable using it</td>
+      </tr>
+      <tr>
+        <td>Cultural and language familiarity builds trust</td>
+        <td>Local voice, Hindi guidance, and tone make the app feel safe and usable</td>
+      </tr>
+    </table>
+    
+    <h3 style="margin-top: 2rem;">Design Opportunities</h3>
+    <table class="empathy-table">
+      <tr><th>Area</th><th>Opportunity</th></tr>
+      <tr>
+        <td>Onboarding</td>
+        <td>QR-pairing between devices</td>
+      </tr>
+      <tr>
+        <td>Accessibility</td>
+        <td>Choose disability types + levels, dynamic UI adaptation</td>
+      </tr>
+      <tr>
+        <td>Communication</td>
+        <td>Push-to-talk, voice notes, tap photo-to-call interface</td>
+      </tr>
+      <tr>
+        <td>Reminders</td>
+        <td>Custom categories (meds, therapy, hydration), voice alerts</td>
+      </tr>
+      <tr>
+        <td>Emergency</td>
+        <td>One-tap SOS with location + alerts to all caregivers</td>
+      </tr>
+      <tr>
+        <td>Trust & Safety</td>
+        <td>Activity logs, "acknowledged" reminders, gentle tones</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="ia">
+    <h2>7. Information Architecture</h2>
+    
+    <div class="ia-section">
+      <h3>1. App Entry Point</h3>
+      <ul>
+        <li>Splash Screen</li>
+        <li>Onboarding (Voice + Visual prompts)</li>
+        <li>User Type Selection
+          <ul>
+            <li>I am a Caregiver</li>
+            <li>This is the Care Receiver's phone</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="ia-section">
+      <h3>2. Barcode Setup Flow (One-time)</h3>
+      <ul>
+        <li>Care Receiver app generates barcode</li>
+        <li>Caregiver scans barcode → Links account</li>
+        <li>Choose Accessibility Needs (checklist)</li>
+        <li>Confirm pairing and permissions</li>
+      </ul>
+    </div>
+    
+    <div class="ia-grid">
+      <div class="ia-card">
+        <h4>👴 Care Receiver – Main Navigation</h4>
+        <ul>
+          <li><strong>Home</strong>
+            <ul>
+              <li>Date & Time (Large font)</li>
+              <li>"Tap to Talk" (Push-to-talk button)</li>
+              <li>Next Reminder (Voice + Text)</li>
+              <li>Top 3 Quick Contacts (with profile photo)</li>
+              <li>SOS Emergency Button (calls caregiver/ambulance)</li>
+            </ul>
+          </li>
+          <li><strong>Reminders</strong>
+            <ul>
+              <li>Water</li>
+              <li>Medicine</li>
+              <li>Daily Routines (Walk, Prayer, TV time)</li>
+            </ul>
+          </li>
+          <li><strong>Contacts</strong>
+            <ul>
+              <li>Family List (Call with 1 tap)</li>
+              <li>Dial Pad (Voice-enabled)</li>
+              <li>Navigation (Map to Home, Caregiver house)</li>
+            </ul>
+          </li>
+          <li><strong>Menu / Settings</strong>
+            <ul>
+              <li>Volume Control</li>
+              <li>Accessibility Mode (High contrast, Font size)</li>
+              <li>Language</li>
+              <li>Device status (Battery, Signal)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="ia-card">
+        <h4>👩‍⚕️ Caregiver – Main Navigation</h4>
+        <ul>
+          <li><strong>Dashboard</strong>
+            <ul>
+              <li>Linked Receivers</li>
+              <li>Current Reminders</li>
+              <li>Last Interaction Time</li>
+            </ul>
+          </li>
+          <li><strong>Care Receiver Profile</strong>
+            <ul>
+              <li>Name, Age, Photo, Preferences</li>
+              <li>Accessibility Categories:
+                <ul>
+                  <li>Vision (Low vision, blind)</li>
+                  <li>Hearing</li>
+                  <li>Cognitive</li>
+                  <li>Motor</li>
+                </ul>
+              </li>
+              <li>Change UI Mode (Light/Dark, Big Buttons)</li>
+            </ul>
+          </li>
+          <li><strong>Reminders</strong>
+            <ul>
+              <li>Add/Edit/Delete reminders</li>
+              <li>Categories: Medicine, Food, Water, Custom</li>
+              <li>Set Frequency, Voice Notes</li>
+            </ul>
+          </li>
+          <li><strong>Contacts & Communication</strong>
+            <ul>
+              <li>Add/Remove Quick Contacts</li>
+              <li>Send Text/Voice Message</li>
+              <li>Video Call</li>
+              <li>Voice Feedback Log</li>
+            </ul>
+          </li>
+          <li><strong>App Settings</strong>
+            <ul>
+              <li>Language & Voice</li>
+              <li>Emergency Number Management</li>
+              <li>Notification Preferences</li>
+              <li>Offline Alert Setup</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="ia-section">
+      <h3>⚙️ System Architecture (Background Functions)</h3>
+      <ul>
+        <li>Barcode Pairing & Auth</li>
+        <li>Cloud Sync (Firebase / AWS)</li>
+        <li>SOS API / Local Emergency Dialing</li>
+        <li>Push Notification & Reminders</li>
+        <li>Screen Reader & Voice Assist Integration</li>
+        <li>Multi-language Support</li>
+        <li>Data Privacy + Encryption (GDPR ready)</li>
+      </ul>
+    </div>
+    
+    <div class="ia-section">
+      <h3>✅ Accessibility Tiers (Configurable by Caregiver)</h3>
+      <table class="empathy-table">
+        <tr><th>Tier</th><th>Support Features</th></tr>
+        <tr>
+          <td>Level 1</td>
+          <td>Big font, contrast toggle, simple nav, no scrolling</td>
+        </tr>
+        <tr>
+          <td>Level 2</td>
+          <td>Voice cues, audio buttons, tap-to-talk, text-to-speech for all text</td>
+        </tr>
+        <tr>
+          <td>Level 3</td>
+          <td>Fully gesture-based, no typing required, smart responses, full voice UX</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="flowchart">
+    <h2>8. User Flow Diagram</h2>
+    <div class="flowchart-container">
+      <div class="flowchart">
+        <div class="node arrow">App Home</div>
+        <div class="row">
+          <div class="node">Care Receiver</div>
+          <div class="node">Caregiver</div>
+        </div>
+        <div class="row">
+          <div class="node">Barcode</div>
+          <div class="node">Scan</div>
+        </div>
+        <div class="node arrow">Both Login Approved</div>
+        <div class="row">
+          <div class="node">
+            Care Receiver View
+            <div class="arrow"></div>
+          </div>
+          <div class="node">
+            Caregiver View
+            <div class="arrow"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="node">
+            Home Screen
+            <div class="subtext">Walkie-talkie, Contacts, Menu</div>
+          </div>
+          <div class="node">
+            Create / Add Receiver / Settings
+            <div class="subtext">Add Contact, Enable, Profile</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="node">Push to Talk</div>
+          <div class="node">Text/Voice Messages</div>
+          <div class="node">Profile Settings</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="highlight-box">
+      <strong>Navigation Details:</strong>
+      <ul>
+        <li><strong>Home:</strong> Push to Talk (large central button), Medication reminder status</li>
+        <li><strong>Messages:</strong> Text and Voice messages with simple playback controls</li>
+        <li><strong>Profile:</strong> Location sharing settings, Emergency contacts, Geofencing setup</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="designs">
+    <h2>9. Wireframe & Mockup</h2>
+    <div class="designs-container">
+      <div class="design-column">
+        <h3>Low-Fidelity Wireframes</h3>
+        <img src="wireframes.jpg" alt="Wireframes" class="image-mockup">
+        <p>Initial wireframes focused on large touch targets (minimum 48x48px), high contrast colors, and voice feedback for all interactions. The simplified interface was tested with elderly users to ensure comprehension.</p>
+        
+        <h3 style="margin-top: 2rem;">Key Wireframe Features</h3>
+        <ul>
+          <li>Oversized buttons with icon+text labels</li>
+          <li>Photo-based contact system</li>
+          <li>Color-coded medication reminders</li>
+          <li>Persistent emergency button</li>
+          <li>Voice command interface</li>
+        </ul>
+      </div>
+      
+      <div class="design-column">
+        <h3>High-Fidelity Mockups</h3>
+        <img src="mockups.jpg" alt="Mockups" class="image-mockup">
+        <p>Final UI implementing accessibility best practices with adjustable text sizes, voice guidance, and customizable interface. The design went through 3 iterations based on user testing with elderly participants.</p>
+        
+        <h3 style="margin-top: 2rem;">Accessibility Improvements</h3>
+        <ul>
+          <li>Dynamic text sizing (up to 200%)</li>
+          <li>Voice feedback for all actions</li>
+          <li>Customizable color schemes</li>
+          <li>Haptic feedback options</li>
+          <li>Simplified navigation flow</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('section');
+      const navItems = document.querySelectorAll('nav li');
+      
+      // Scroll to section function
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+          updateActiveNav(sectionId);
+        }
+      }
+      
+      // Update active nav item
+      function updateActiveNav(activeId) {
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.dataset.target === activeId) {
+            item.classList.add('active');
+          }
+        });
+      }
+      
+      // Set up nav item click handlers
+      navItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const target = this.dataset.target;
+          scrollToSection(target);
+        });
+      });
+      
+      // Intersection Observer for scroll detection
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const current = entry.target.id;
+            updateActiveNav(current);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all sections except overview (we want overview to be default)
+      sections.forEach(section => {
+        if (section.id !== 'overview') {
+          observer.observe(section);
+        }
+      });
+      
+      // Initialize with overview active
+      updateActiveNav('overview');
+    });
+  </script>
+</body>
+</html>
