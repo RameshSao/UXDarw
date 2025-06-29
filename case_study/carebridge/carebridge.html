@@ -641,6 +641,7 @@
         transform: translateY(-8px) rotate(-45deg);
       }
     }
+    
   </style>
 </head>
 <body>
@@ -776,116 +777,227 @@
     </div>
   </section>
 
-  <section id="research">
+<section id="research">
     <h2>Research</h2>
     
     <h3>Competitive Analysis: Elderly & Accessibility-Focused Care Apps</h3>
-    <table class="competitive-table">
-      <thead>
-        <tr>
-          <th>App Name</th>
-          <th>Key Features</th>
-          <th>Strengths</th>
-          <th>Weaknesses</th>
-          <th>Accessibility</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>CaringBridge</td>
-          <td>Journal sharing, health updates, private groups</td>
-          <td>Emotional support platform, community focus</td>
-          <td>Not real-time, no emergency support, lacks custom reminders</td>
-          <td>Text-based only</td>
-          <td>More suited for medical status updates than real-time interaction</td>
-        </tr>
-        <tr>
-          <td>CareZone</td>
-          <td>Med tracker, calendar, document storage, pill reminders</td>
-          <td>All-in-one medication & scheduling</td>
-          <td>Discontinued in 2022 (formerly strong UX), no caregiver interaction now</td>
-          <td>Simple UI, no audio assistance</td>
-          <td>Was a comprehensive solution but no longer active</td>
-        </tr>
-        <tr>
-          <td>Papa</td>
-          <td>Companion care via gig workers (in-person or virtual)</td>
-          <td>On-demand caregivers, mental wellness</td>
-          <td>Expensive, trust barrier, not designed for family care specifically</td>
-          <td>Human interaction but no built-in voice tech</td>
-          <td>Targets companionship more than caregiver tools</td>
-        </tr>
-        <tr>
-          <td>Be My Eyes</td>
-          <td>Blind & low-vision users connect with volunteers</td>
-          <td>Real-time video support from sighted people</td>
-          <td>No reminder system, no caregiver control or app customization</td>
-          <td>High accessibility, excellent voice/video support</td>
-          <td>Limited to spontaneous volunteer help, not structured caregiving</td>
-        </tr>
-        <tr>
-          <td>Oscar Senior</td>
-          <td>Video calls, medication reminders, simplified UI for seniors</td>
-          <td>Remote caregiver control, large fonts</td>
-          <td>Enterprise pricing, UI still complex for some elderly</td>
-          <td>Senior-friendly UI with voice prompt</td>
-          <td>Closest in intent to CareBridge but lacks barcode sync and offline SOS</td>
-        </tr>
-        <tr>
-          <td>Alexa / Echo Show</td>
-          <td>Voice-based reminders, calls, smart home integration</td>
-          <td>Hands-free, customizable routines, strong voice UI</td>
-          <td>Needs Wi-Fi, requires Amazon account, limited UX for visually impaired</td>
-          <td>Voice-first, screen reader support</td>
-          <td>Good for tech-savvy users, but not focused on two-way caregiving</td>
-        </tr>
-        <tr>
-          <td>CareSmartz360</td>
-          <td>Agency-focused care scheduling, caregiver clock-in/out</td>
-          <td>Business-level scheduling, billing</td>
-          <td>Not personal/family use, too complex for elder-care end-users</td>
-          <td>Low priority on end-user accessibility</td>
-          <td>B2B solution, not suitable for family-based personal care</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll-container">
+        <table class="competitive-table">
+            <thead>
+                <tr>
+                    <th>App Name</th>
+                    <th>Key Features</th>
+                    <th>Strengths</th>
+                    <th>Weaknesses</th>
+                    <th>Accessibility</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CaringBridge</td>
+                    <td>Journal sharing, health updates, private groups</td>
+                    <td>Emotional support platform, community focus</td>
+                    <td>Not real-time, no emergency support, lacks custom reminders</td>
+                    <td>Text-based only</td>
+                    <td>More suited for medical status updates than real-time interaction</td>
+                </tr>
+                <tr>
+                    <td>CareZone</td>
+                    <td>Med tracker, calendar, document storage, pill reminders</td>
+                    <td>All-in-one medication & scheduling</td>
+                    <td>Discontinued in 2022 (formerly strong UX), no caregiver interaction now</td>
+                    <td>Simple UI, no audio assistance</td>
+                    <td>Was a comprehensive solution but no longer active</td>
+                </tr>
+                <tr>
+                    <td>Papa</td>
+                    <td>Companion care via gig workers (in-person or virtual)</td>
+                    <td>On-demand caregivers, mental wellness</td>
+                    <td>Expensive, trust barrier, not designed for family care specifically</td>
+                    <td>Human interaction but no built-in voice tech</td>
+                    <td>Targets companionship more than caregiver tools</td>
+                </tr>
+                <tr>
+                    <td>Be My Eyes</td>
+                    <td>Blind & low-vision users connect with volunteers</td>
+                    <td>Real-time video support from sighted people</td>
+                    <td>No reminder system, no caregiver control or app customization</td>
+                    <td>High accessibility, excellent voice/video support</td>
+                    <td>Limited to spontaneous volunteer help, not structured caregiving</td>
+                </tr>
+                <tr>
+                    <td>Oscar Senior</td>
+                    <td>Video calls, medication reminders, simplified UI for seniors</td>
+                    <td>Remote caregiver control, large fonts</td>
+                    <td>Enterprise pricing, UI still complex for some elderly</td>
+                    <td>Senior-friendly UI with voice prompt</td>
+                    <td>Closest in intent to CareBridge but lacks barcode sync and offline SOS</td>
+                </tr>
+                <tr>
+                    <td>Alexa / Echo Show</td>
+                    <td>Voice-based reminders, calls, smart home integration</td>
+                    <td>Hands-free, customizable routines, strong voice UI</td>
+                    <td>Needs Wi-Fi, requires Amazon account, limited UX for visually impaired</td>
+                    <td>Voice-first, screen reader support</td>
+                    <td>Good for tech-savvy users, but not focused on two-way caregiving</td>
+                </tr>
+                <tr>
+                    <td>CareSmartz360</td>
+                    <td>Agency-focused care scheduling, caregiver clock-in/out</td>
+                    <td>Business-level scheduling, billing</td>
+                    <td>Not personal/family use, too complex for elder-care end-users</td>
+                    <td>Low priority on end-user accessibility</td>
+                    <td>B2B solution, not suitable for family-based personal care</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     
     <div class="highlight-box">
-      <h3>What CareBridge Does Better</h3>
-      <table class="empathy-table">
-        <tr><th>Unique Differentiators</th><th>Why It Matters</th></tr>
-        <tr>
-          <td>Role-based setup (Barcode scan)</td>
-          <td>Seamless caregiver-receiver pairing without complex setup</td>
-        </tr>
-        <tr>
-          <td>Push-to-talk + Voice-first design</td>
-          <td>Ideal for low-vision users and non-tech-savvy elderly</td>
-        </tr>
-        <tr>
-          <td>Offline-critical features</td>
-          <td>SOS and reminders work even with poor/no network</td>
-        </tr>
-        <tr>
-          <td>Accessible UI design with level-based toggles</td>
-          <td>Visual, auditory, and cognitive accessibility out of the box</td>
-        </tr>
-        <tr>
-          <td>Multi-caregiver support</td>
-          <td>Encourages family collaboration and distributed care responsibility</td>
-        </tr>
-        <tr>
-          <td>Hindi + regional language fallback</td>
-          <td>Localization ensures inclusivity for non-English speaking users</td>
-        </tr>
-        <tr>
-          <td>Emergency-first UX</td>
-          <td>Prioritizes safety and connection over app features</td>
-        </tr>
-      </table>
+        <h3>What CareBridge Does Better</h3>
+        <div class="table-scroll-container">
+            <table class="empathy-table">
+                <tr><th>Unique Differentiators</th><th>Why It Matters</th></tr>
+                <tr>
+                    <td>Role-based setup (Barcode scan)</td>
+                    <td>Seamless caregiver-receiver pairing without complex setup</td>
+                </tr>
+                <tr>
+                    <td>Push-to-talk + Voice-first design</td>
+                    <td>Ideal for low-vision users and non-tech-savvy elderly</td>
+                </tr>
+                <tr>
+                    <td>Offline-critical features</td>
+                    <td>SOS and reminders work even with poor/no network</td>
+                </tr>
+                <tr>
+                    <td>Accessible UI design with level-based toggles</td>
+                    <td>Visual, auditory, and cognitive accessibility out of the box</td>
+                </tr>
+                <tr>
+                    <td>Multi-caregiver support</td>
+                    <td>Encourages family collaboration and distributed care responsibility</td>
+                </tr>
+                <tr>
+                    <td>Hindi + regional language fallback</td>
+                    <td>Localization ensures inclusivity for non-English speaking users</td>
+                </tr>
+                <tr>
+                    <td>Emergency-first UX</td>
+                    <td>Prioritizes safety and connection over app features</td>
+                </tr>
+            </table>
+        </div>
     </div>
-  </section>
+</section>
+
+<style>
+    /* Table Container for Horizontal Scrolling */
+    .table-scroll-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 20px 0;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* Base Table Styles */
+    .competitive-table, .empathy-table {
+        width: 100%;
+        min-width: 700px; /* Minimum width before scrolling kicks in */
+        border-collapse: collapse;
+        font-size: 0.95em;
+    }
+
+    /* Competitive Table Specific Styles */
+    .competitive-table th, 
+    .competitive-table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .competitive-table th {
+        background-color: #f5f5f5;
+        font-weight: 600;
+        position: sticky;
+        top: 0;
+    }
+
+    .competitive-table tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+
+    /* Empathy Table Specific Styles */
+    .empathy-table {
+        min-width: 600px;
+    }
+
+    .empathy-table th, 
+    .empathy-table td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .empathy-table th {
+        background-color: #e8f4fc;
+        color: #0066cc;
+    }
+
+    .empathy-table tr:nth-child(even) {
+        background-color: #f5faff;
+    }
+
+    /* Highlight Box */
+    .highlight-box {
+        background-color: #f8f9fa;
+        border-left: 4px solid #0066cc;
+        padding: 15px;
+        margin: 25px 0;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .highlight-box h3 {
+        color: #0066cc;
+        margin-top: 0;
+    }
+
+    /* Scrollbar Styling */
+    .table-scroll-container::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 4px;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .competitive-table, .empathy-table {
+            font-size: 0.9em;
+        }
+        
+        .competitive-table th, 
+        .competitive-table td,
+        .empathy-table th,
+        .empathy-table td {
+            padding: 10px 12px;
+        }
+    }
+</style>
+
 
   <section id="empathy">
     <h2>Empathy Map</h2>
