@@ -570,6 +570,77 @@
         flex-shrink: 0;
       }
     }
+
+        /* Hamburger styles */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 101;
+    }
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .logo-mobile {
+      display: none;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+    
+    @media (max-width: 768px) {
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        position: relative;
+      }
+      .logo-mobile {
+        display: block;
+        z-index: 101;
+      }
+      .hamburger {
+        display: block;
+      }
+      nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 5rem 1rem 1rem;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        transition: left 0.3s;
+        z-index: 100;
+        gap: 0.5rem;
+      }
+      nav ul.active {
+        left: 0;
+      }
+      nav li {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+      }
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
   </style>
 </head>
 <body>
@@ -583,18 +654,26 @@
   </header>
 
   <nav>
-    <ul>
-      <li data-target="overview" class="active">Overview</li>
-      <li data-target="interviews">User Interviews</li>
-      <li data-target="research">Research</li>
-      <li data-target="empathy">Empathy Map</li>
-      <li data-target="persona">Personas</li>
-      <li data-target="journey">Journey Map</li>
-      <li data-target="brainstorm">Brainstorming</li>
-      <li data-target="ia">Information Architecture</li>
-      <li data-target="flowchart">User Flow</li>
-      <li data-target="designs">Wireframe & Mockup</li>
-    </ul>
+    <div class="nav-container">
+      <div class="logo-mobile">CareBridge</div>
+      <div class="hamburger" id="hamburger" aria-label="Open navigation" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li data-target="overview" class="active">Overview</li>
+        <li data-target="interviews">User Interviews</li>
+        <li data-target="research">Research</li>
+        <li data-target="empathy">Empathy Map</li>
+        <li data-target="persona">Personas</li>
+        <li data-target="journey">Journey Map</li>
+        <li data-target="brainstorm">Brainstorming</li>
+        <li data-target="ia">Information Architecture</li>
+        <li data-target="flowchart">User Flow</li>
+        <li data-target="designs">Wireframe & Mockup</li>
+      </ul>
+    </div>
   </nav>
 
   <!-- New Overview Section -->
@@ -1519,6 +1598,27 @@
       
       // Initialize with overview active
       updateActiveNav('overview');
+    });
+  </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.querySelector('nav ul');
+      // Toggle mobile menu
+      hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      // Close menu when clicking a nav item (mobile)
+      navMenu.querySelectorAll('li').forEach(item => {
+        item.addEventListener('click', function() {
+          if (window.innerWidth <= 768) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+          }
+        });
+      });
     });
   </script>
 </body>
