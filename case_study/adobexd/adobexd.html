@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe XD Case Study: From Beta to Fall</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #4300FF; /* Adobe purple */
+            --secondary: #FF7D00; /* Adobe orange */
+            --dark: #2C2C2C;
+            --light: #F5F5F5;
+            --gray: #6D6D6D;
+            --success: #36B37E;
+            --warning: #FFAB00;
+            --danger: #FF5630;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            margin-top: 2.5rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            color: var(--primary);
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+        
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), #6A00F4);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Navigation */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+            .logo {
+      width: 80px;
+      height: auto;
+      margin: 0 auto 1rem;
+    }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 0.75rem 0;
+            color: var(--dark);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        /* Phase Cards */
+        .phase-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .phase-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-box {
+            background-color: rgba(67, 0, 255, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature-list li:before {
+            content: "→";
+            color: var(--primary);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        /* User Reflection */
+        .user-reflection {
+            background-color: #F9FAFB;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--secondary);
+            position: relative;
+        }
+        
+        .user-reflection:before {
+            content: '"';
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+            font-size: 4rem;
+            color: rgba(255, 125, 0, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .user-reflection p {
+            font-style: italic;
+            color: var(--gray);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .user-reflection .author {
+            font-weight: 600;
+            font-style: normal;
+            color: var(--dark);
+            margin-top: 1rem;
+        }
+        
+        /* Lessons Learned */
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        @media (min-width: 768px) {
+            .lessons-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .lessons-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+        }
+        
+        .lessons-card h4 {
+            display: flex;
+            align-items: center;
+        }
+        
+        .lessons-card h4:before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+        }
+        
+        .worked h4:before {
+            background-color: var(--success);
+        }
+        
+        .didnt-work h4:before {
+            background-color: var(--danger);
+        }
+        
+        .lessons-card ul {
+            list-style-type: none;
+            margin-top: 1rem;
+        }
+        
+        .lessons-card ul li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .lessons-card ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--gray);
+        }
+        
+        /* Key Takeaway */
+        .key-takeaway {
+            background: linear-gradient(135deg, var(--primary), #6A00F4);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+        
+        .key-takeaway h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        footer p {
+            margin-bottom: 0;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .phase-card, .highlight-box, .user-reflection {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <img src="adobe-xd-icon.svg" alt="Adobe XD Logo" class="logo">
+                <div class="logo">Case Study</div>
+                <nav class="nav-links">
+                    <a href="#overview">Overview</a>
+                    <a href="#phase1">Phase 1</a>
+                    <a href="#phase2">Phase 2</a>
+                    <a href="#phase3">Phase 3</a>
+                    <a href="#phase4">Phase 4</a>
+                    <a href="#lessons">Lessons</a>
+                </nav>
+                <button class="hamburger">☰</button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#overview">Overview</a>
+                <a href="#phase1">Phase 1</a>
+                <a href="#phase2">Phase 2</a>
+                <a href="#phase3">Phase 3</a>
+                <a href="#phase4">Phase 4</a>
+                <a href="#lessons">Lessons</a>
+            </div>
+            <div class="header-content">
+                <h1 style="color: white;">Adobe XD   From Beta to Fall</h1>
+                <p>How Adobe's UX design tool started strong but ultimately lost to Figma</p>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section id="overview">
+            <h2>📌 Overview</h2>
+            <p>Adobe XD was Adobe's answer to the growing demand for a modern UI/UX design tool. Initially launched as "Project Comet," it promised powerful performance, native prototyping, and seamless Creative Cloud integration. Yet, despite strong beginnings, Adobe XD could not keep up with rapidly evolving competition especially Figma and ultimately lost its relevance.</p>
+        </section>
+        
+        <section id="phase1">
+            <div class="phase-card">
+                <div class="phase-title">
+                    <h3>🚀 Phase 1: The Beta Buzz (2016–2017)</h3>
+                </div>
+                
+                <h4>🔹 Launch Highlights</h4>
+                <ul class="feature-list">
+                    <li>Unveiled: Adobe MAX 2015 as "Project Comet"</li>
+                    <li>Public Beta: March 2016</li>
+                    <li>Positioning: A unified platform for UX design and prototyping, faster and more intuitive than Photoshop or Illustrator</li>
+                </ul>
+                
+                <h4>🔧 Core Features</h4>
+                <ul class="feature-list">
+                    <li>Repeat Grid</li>
+                    <li>Interactive prototyping in the same tool</li>
+                    <li>Fast, vector-based performance</li>
+                    <li>Native macOS and later Windows support</li>
+                    <li>Creative Cloud Libraries sync</li>
+                </ul>
+                
+                <div class="user-reflection">
+                    <p>"When we tried the beta, it was surprisingly good even though it felt half-baked. The best part was how everything worked seamlessly within the Adobe ecosystem, like other apps we were already using. It was really easy to use and felt familiar. At that time, web-based apps weren't the norm people didn't always have reliable internet access. We were also exploring Figma on the side, but honestly didn't realize intentionally or unintentionally that it would completely take over. Now, there's no competition."</p>
+                    <div class="author">  Ramesh Sao</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="phase2">
+            <div class="phase-card">
+                <div class="phase-title">
+                    <h3>📈 Phase 2: Momentum & Growth (2017–2019)</h3>
+                </div>
+                
+                <h4>🌟 Growth Highlights</h4>
+                <ul class="feature-list">
+                    <li>Plugin support launched</li>
+                    <li>Added features like Auto-Animate, voice prototyping</li>
+                    <li>Collaborations with Slack, Jira, Zeplin, and other third-party tools</li>
+                    <li>Windows version became more stable and feature-complete</li>
+                </ul>
+                
+                <h4>📊 Market Position</h4>
+                <p>XD started gaining popularity among Adobe users and teams already on Creative Cloud. Still, Figma and Sketch were gaining more attention due to faster updates and flexibility.</p>
+            </div>
+        </section>
+        
+        <section id="phase3">
+            <div class="phase-card">
+                <div class="phase-title">
+                    <h3>🧱 Phase 3: Plateau & Pressure (2020–2022)</h3>
+                </div>
+                
+                <h4>⚠️ Warning Signs</h4>
+                <ul class="feature-list">
+                    <li>Adobe XD lagged behind in features like real-time collaboration and browser accessibility</li>
+                    <li>Figma soared due to its ease of sharing, teamwork features, and browser-first design</li>
+                    <li>Adobe XD's updates slowed down and lacked innovation</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="phase4">
+            <div class="phase-card">
+                <div class="phase-title">
+                    <h3>🧨 Phase 4: The Figma Acquisition Attempt & The Fall (2022–2024)</h3>
+                </div>
+                
+                <h4>💼 Adobe Attempts to Acquire Figma</h4>
+                <ul class="feature-list">
+                    <li>Announced: September 15, 2022</li>
+                    <li>Adobe agreed to acquire Figma for $20 billion, signaling that even Adobe acknowledged XD could no longer compete.</li>
+                    <li>Reason: Rather than battle Figma, Adobe tried to absorb its biggest rival</li>
+                    <li>User Reaction: Designers feared Figma would lose its identity or become paywalled</li>
+                </ul>
+                
+                <h4>Regulatory Roadblock:</h4>
+                <ul class="feature-list">
+                    <li>U.S. DOJ, EU, and UK antitrust bodies launched investigations</li>
+                    <li>In 2024, Adobe and Figma mutually terminated the acquisition, unable to secure regulatory approval</li>
+                </ul>
+                
+                <h4>📉 Post-Acquisition Fallout</h4>
+                <ul class="feature-list">
+                    <li>Adobe stopped promoting or investing in XD</li>
+                    <li>No new major updates were released in 2023–2024</li>
+                    <li>By 2025, Adobe XD was unofficially discontinued, with support fading</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="fall">
+            <h2>⚰️ The Fall of Adobe XD</h2>
+            <ul class="feature-list">
+                <li>Lacked real-time collaboration until too late</li>
+                <li>Failed to grow a strong plugin and community ecosystem like Figma</li>
+                <li>Adobe's slower development culture couldn't keep pace with fast-moving competitors</li>
+                <li>Focus shifted to AI, Firefly, Photoshop innovations instead</li>
+            </ul>
+        </section>
+        
+        <section id="lessons">
+            <h2>📚 Lessons Learned</h2>
+            <div class="lessons-grid">
+                <div class="lessons-card worked">
+                    <h4>What Worked</h4>
+                    <ul>
+                        <li>Clean, simple UI</li>
+                        <li>Integrated prototyping</li>
+                        <li>Seamless with Adobe CC</li>
+                        <li>Good for static design</li>
+                    </ul>
+                </div>
+                
+                <div class="lessons-card didnt-work">
+                    <h4>What Didn't</h4>
+                    <ul>
+                        <li>Poor community traction</li>
+                        <li>Slower innovation</li>
+                        <li>No browser-based access</li>
+                        <li>Late to co-editing & team collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="takeaway">
+            <div class="key-takeaway">
+                <h3>🧠 Key Takeaway</h3>
+                <p>Adobe XD was born out of Adobe's desire to dominate the UI/UX space but failed to evolve fast enough. Figma redefined collaboration, accessibility, and community engagement in design tools. Adobe's attempt to buy Figma was itself an admission of defeat, and ultimately, XD faded out not because it was bad but because it wasn't the best.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© Ramesh Sao, Adobe XD Case Study. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        hamburger.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
