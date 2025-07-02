@@ -3,9 +3,9 @@
   import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
   const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "yourdomain.firebaseapp.com",
-    projectId: "your-project-id",
+    apiKey: "AIzaSyD1L4ZM2ubfYyVw3JEnFlBPuGNvBx0KuGE",
+    authDomain: "www.uxdraw.com",
+    projectId: "mockup-b1bdd",
     // ... other keys
   };
 
@@ -13,11 +13,17 @@
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
+  // IMPORTANT: For security, replace '*' with your main application's origin.
+  // For example: 'https://www.uxdraw.com'
+  const parentOrigin = '*';
+
   signInWithPopup(auth, provider)
     .then((result) => {
-      window.parent.postMessage({ token: result.user.accessToken }, "*");
+      window.parent.postMessage({ token: result.user.accessToken }, parentOrigin);
+      window.close(); // Close the popup after successful login
     })
     .catch((error) => {
-      window.parent.postMessage({ error: error.message }, "*");
+      window.parent.postMessage({ error: error.message }, parentOrigin);
+      window.close(); // Also close the popup on error
     });
 </script>
