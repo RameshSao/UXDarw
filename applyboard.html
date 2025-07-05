@@ -1,53 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords"
-    content="Ramesh Sao, portfolio, Ramesh, UI/UX Designer, personal portfolio, portfolio design, portfolio website, personal portfolio" />
-  <meta name="description" content="Welcome to Ramesh's Portfolio. UI/UX/Product Designer and Researcher" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Favicon -->
-  <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-png">
-  <title>Project | Coming Soon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Crystal Design System Journey</title>
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #f5f7ff;
+            --text-color: #333;
+            --light-text: #777;
+            --font-large: 24px;
+            --font-medium: 20px; /* Increased for accessibility */
+            --font-regular: 18px; /* Increased base size */
+            --font-small: 16px;
+            --nav-button-padding: 15px 25px; /* Larger tap targets */
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: var(--font-regular);
+        }
+        
+        .nav-container {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap; /* Allows wrapping on small screens */
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: var(--font-medium);
+            margin: 8px 10px;
+            padding: var(--nav-button-padding);
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .hero {
+            background-color: var(--secondary-color);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        
+        .placeholder-img {
+            background-color: #eee;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            border-radius: 8px;
+            color: #999;
+            font-size: var(--font-large);
+        }
+        
+        .two-column {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .two-column > div {
+            flex: 1;
+        }
+        
+        .role-box {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .role-box h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .role-box ul {
+            padding-left: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+            
+            nav a {
+                font-size: var(--font-regular);
+                padding: 12px 15px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<div class="bgimg">
-  <div class="middle">
-    <i class="fas fa-hourglass-half coming-soon-icon"></i> <!-- Coming Soon Icon -->
-    <h1>COMING SOON</h1>
-    <h2>ApplyBoard</h2>
-    <hr>
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/Lr0I8SfBZjjoRtTbuLoFHh/PRD-22-001-Mobile-App-2.0?node-id=2152-153440&p=f&scaling=min-zoom&content-scaling=fixed&page-id=2139%3A140670&starting-point-node-id=2152%3A153440&embed-host=share" allowfullscreen></iframe>
-    <p id="random-text"></p> <!-- Placeholder for random text -->
-  </div>
-</div>
-
-<script>
-  // Array of random messages
-  const messages = [
-    "Thank you for your interest in my new project!",
-    "Stay tuned for something amazing!",
-    "Exciting things are on the way!",
-    "We appreciate your patience!",
-    "Big updates are coming soon!"
-  ];
-
-  // Select a random message
-  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-
-  // Display the random message in the placeholder
-  document.getElementById("random-text").textContent = randomMessage;
-</script>
-
+    <div class="nav-container">
+        <nav>
+            <a href="#overview" class="active">Overview</a>
+            <a href="#research">Research</a>
+            <a href="#design">Design Process</a>
+            <a href="#components">Components</a>
+            <a href="#outcomes">Outcomes</a>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <section id="overview">
+            <div class="hero">
+                <h1>My Design System Journey: Building Crystal</h1>
+                <p class="subtitle">Creating harmony across products through systematic design</p>
+            </div>
+            
+            <div class="placeholder-img">[Project Hero Image]</div>
+            
+            <p>When I joined the team, I noticed our products suffered from inconsistent designs as multiple teams worked in silos. This case study documents my 18-month effort to establish Crystal - a comprehensive design system that brought cohesion to our digital ecosystem while accelerating our workflow.</p>
+            
+            <div class="two-column">
+                <div class="role-box">
+                    <h3>My Role</h3>
+                    <ul>
+                        <li>Lead UX/Visual Designer</li>
+                        <li>System Architecture</li>
+                        <li>Component Creation</li>
+                        <li>Accessibility Advocate</li>
+                        <li>Cross-team Collaboration</li>
+                    </ul>
+                </div>
+                
+                <div class="role-box">
+                    <h3>Project Details</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> Nov 2022 - Sept 2024</li>
+                        <li><strong>Client:</strong> Internal Product Teams</li>
+                        <li><strong>Tools:</strong> Figma, Storybook, Jira</li>
+                        <li><strong>Team:</strong> 4 Designers, 6 Developers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="research">
+            <h2>Discovering the Need for Systemization</h2>
+            
+            <div class="placeholder-img">[Research Process Visualization]</div>
+            
+            <p>Through audits of our existing products, I identified 47 variations of buttons, 12 different color systems, and inconsistent spacing patterns. Interviews with 14 designers and developers revealed:</p>
+            
+            <ul>
+                <li>80% of designers spent over 30% of their time recreating existing components</li>
+                <li>Developers reported 15-20% of bugs stemmed from design inconsistencies</li>
+                <li>New team members needed 3-4 weeks to learn all design variations</li>
+            </ul>
+            
+            <p>This research convinced stakeholders to invest in a unified system. I led workshops to define our core principles: <strong>Clarity</strong>, <strong>Consistency</strong>, and <strong>Scalability</strong>.</p>
+        </section>
+        
+        <section id="design">
+            <h2>Structuring the Design Approach</h2>
+            
+            <div class="placeholder-img">[Design Process Diagram]</div>
+            
+            <p>I advocated for Atomic Design methodology after evaluating several approaches. Breaking components into atoms, molecules, and organisms created a natural hierarchy that matched our development process.</p>
+            
+            <h3>Foundation First</h3>
+            <p>Before building components, I established:</p>
+            <ul>
+                <li>A 4px baseline grid for all measurements</li>
+                <li>An accessible color palette with WCAG AA compliance</li>
+                <li>Type scale with optimal readability ratios</li>
+                <li>Motion guidelines for interactive elements</li>
+            </ul>
+            
+            <div class="placeholder-img">[Design Tokens Example]</div>
+            
+            <h3>Component Creation</h3>
+            <p>Each component went through:</p>
+            <ol>
+                <li>Research of industry patterns</li>
+                <li>Multiple design explorations</li>
+                <li>Accessibility review</li>
+                <li>Developer consultation</li>
+                <li>Documentation in Storybook</li>
+            </ol>
+        </section>
+        
+        <section id="components">
+            <h2>Building the Component Library</h2>
+            
+            <div class="placeholder-img">[Component Library Screenshot]</div>
+            
+            <p>I created 56 core components with variants, focusing on:</p>
+            
+            <div class="two-column">
+                <div>
+                    <h3>Atoms</h3>
+                    <ul>
+                        <li>Buttons with 8 intent states</li>
+                        <li>Text inputs with validation</li>
+                        <li>Accessible form controls</li>
+                        <li>Icon system with 120+ symbols</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Molecules & Organisms</h3>
+                    <ul>
+                        <li>Data tables with sorting</li>
+                        <li>Complex form patterns</li>
+                        <li>Navigation systems</li>
+                        <li>Feedback components</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="placeholder-img">[Component Variants Example]</div>
+        </section>
+        
+        <section id="outcomes">
+            <h2>Measurable Impact</h2>
+            
+            <div class="placeholder-img">[Metrics Dashboard]</div>
+            
+            <p>After implementation across three product teams:</p>
+            
+            <ul>
+                <li><strong>Design velocity</strong> increased by 40%</li>
+                <li><strong>Development time</strong> for common UI reduced by 35%</li>
+                <li><strong>Accessibility issues</strong> decreased by 60%</li>
+                <li><strong>New hire ramp-up</strong> time cut in half</li>
+            </ul>
+            
+            <p>The system continues to evolve, with quarterly reviews to incorporate new patterns and technologies while maintaining consistency.</p>
+        </section>
+    </div>
 </body>
 </html>
