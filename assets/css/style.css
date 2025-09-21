@@ -995,7 +995,7 @@ header .navbar ul li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin: 2rem;
+  margin: 2rem 0;
 }
 .projects .box-container .box {
   flex: 1 1 30rem;
@@ -1087,8 +1087,7 @@ header .navbar ul li a:hover {
 /* Ensure the button is aligned at the bottom */
 .btns {
   margin-top: auto; /* Push the button to the bottom */
-  padding-bottom: 1rem;
-  text-align: left; /* Align the button to the left */
+  text-align: center; /* Center the button horizontally */
   padding-top: 1rem; /* Add spacing above the button */
 }
 
@@ -1142,8 +1141,13 @@ header .navbar ul li a:hover {
 }
 
 .projects .desc p {
-  font-size: 1.6rem; /* Adjust the font size of the description text */
-  color: var(--text);       /* Ensure the description text is readable */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1.5rem; /* Space for button */
+  min-height: 6.6rem; /* Ensures consistent height for 3 lines */
 }
 
 .projects .viewall {
@@ -1182,7 +1186,6 @@ header .navbar ul li a:hover {
 
 .btns {
   margin-top: auto; /* Push the button to the bottom */
-  padding-bottom: 1rem;
   text-align: left; /* Align the button to the left */
   padding-top: 1rem; /* Add spacing above the button */
 }
@@ -2072,33 +2075,32 @@ body.dark-theme .tag {
 }
 
 @media (max-width: 767px) {
+  .testimonial {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .testimonial .swiper-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .testimonial .swiper-slide.box {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding: 1rem 0.5rem 2rem 0.5rem !important; /* left/right padding for space */
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(43, 61, 218, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .testimonial .swiper-button-next,
   .testimonial .swiper-button-prev {
     display: none;
   }
-  .testimonial .swiper-slide.box {
-    margin-right: 0 !important;
-  }
 }
-.testimonial .swiper-wrapper {
-  align-items: stretch;
-}
-.testimonial .swiper-slide.box {
-  height: auto !important;
-  min-height: unset;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 3rem; /* gives breathing room at the bottom */
-}
-
-
-
-.testimonial .swiper-slide.box p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
-
 @media (max-width: 600px) {
   .testimonial .swiper-slide.box p {
     font-size: 1.4rem;
@@ -2254,22 +2256,6 @@ body.dark-theme .resumebtn .btn.btn-secondary {
   color: #2b3dda !important;
   border: 2px solid #2b3dda !important;
   box-shadow: none !important;
-}
-body.dark-theme .btn.btn-secondary:hover,
-body.dark-theme .resumebtn .btn.btn-secondary:hover,
-body.dark-theme .btn.btn-secondary:focus,
-body.dark-theme .resumebtn .btn.btn-secondary:focus {
-  background: transparent !important;
-  color: #2b3dda !important;
-  border-color: #2b3dda !important;
-}
-
-/* Hide custom cursor on touch/mobile devices */
-@media (hover: none) and (pointer: coarse), (max-width: 768px) {
-  .cursor {
-    display: none !important;
-  }
-  html, body {
     cursor: auto !important;
   }
 }
@@ -2281,64 +2267,45 @@ body.dark-theme .resumebtn .btn.btn-secondary:focus {
   height: 316px;
   max-height: 316px;
   min-height: 316px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 12px rgba(43, 61, 218, 0.08);
-  overflow: hidden;
+  /* ...other styles... */
 }
-@media (max-width: 500px) {
-  .projects .box {
-    max-width: 100%;
-    min-width: 0;
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    max-height: none;
+
+.projects .btns {
+  margin-top: auto;
+  padding-bottom: 1rem;
+  text-align: left;
+}
+
+/* Example Swiper initialization */
+var swiper = new Swiper('.testimonial-slider', {
+  slidesPerView: 1,
+  spaceBetween: 0, // Remove extra space between cards on mobile
+  centeredSlides: false,
+  loop: false,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 32
+    }
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+  speed: 600,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   }
-}
+});
 
-/* New styles for project description and read more link */
-.desc {
-  font-size: 1.4rem;
-  color: var(--text);
-  margin-top: 1rem;
-  line-height: 1.6;
-}
-
-.desc p {
-  margin: 0;
-}
-
-.read-more {
-  color: #2b3dda;
-  font-weight: 600;
-  margin-left: 0.5rem;
-  text-decoration: underline;
-  font-size: 1.4rem;
-}
-.read-more:hover {
-  color: #18023f;
-}
-
-/* Specific styles for CareBridge project */
-.case_study .desc {
-  font-size: 1.6rem;
-  color: #fff;
-  margin-top: 1rem;
-  line-height: 1.5;
-}
-
-.case_study .desc a {
-  color: #ffe600;
-  font-weight: 600;
-}
-
-.case_study .desc a:hover {
-  color: #fff;
-  text-decoration: underline;
+.projects .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
 }
