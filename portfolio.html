@@ -672,9 +672,9 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.testimonial-slider', {
-    loop: true,
+    loop: false,
     grabCursor: true,
-    spaceBetween: 40,
+    spaceBetween: 20,
     slidesPerView: 1,
     centeredSlides: false,
     slideToClickedSlide: true,
@@ -683,19 +683,14 @@
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      425: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-      },
       768: {
         slidesPerView: 2,
-        spaceBetween: 40,
+        spaceBetween: 30,
       },
       1024: {
         slidesPerView: 4,
         spaceBetween: 30,
       }
-      
     },
     autoplay: {
       delay: 5000,
