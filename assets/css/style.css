@@ -158,7 +158,13 @@ header .navbar ul li a:hover {
   color: var(--text);
 }
 .projects .desc p {
-  color: var(--text);
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1.5rem; /* Space for button */
+  min-height: 6.6rem; /* Ensures consistent height for 3 lines */
 }
 
 /* Education Section */
@@ -986,9 +992,9 @@ header .navbar ul li a:hover {
   color: #ffe600;
 }
 .projects .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin: 2rem;
 }
 .projects .box-container .box {
@@ -1021,8 +1027,13 @@ header .navbar ul li a:hover {
 }
 
 .projects .desc p {
-  font-size: 1.6rem; /* Adjust font size */
-  color: var(--text); /* Set text color */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1.5rem; /* Space for button */
+  min-height: 6.6rem; /* Ensures consistent height for 3 lines */
 }
 
 .btn {
@@ -1076,7 +1087,8 @@ header .navbar ul li a:hover {
 /* Ensure the button is aligned at the bottom */
 .btns {
   margin-top: auto; /* Push the button to the bottom */
-  text-align: center; /* Center the button horizontally */
+  padding-bottom: 1rem;
+  text-align: left; /* Align the button to the left */
   padding-top: 1rem; /* Add spacing above the button */
 }
 
@@ -1170,6 +1182,7 @@ header .navbar ul li a:hover {
 
 .btns {
   margin-top: auto; /* Push the button to the bottom */
+  padding-bottom: 1rem;
   text-align: left; /* Align the button to the left */
   padding-top: 1rem; /* Add spacing above the button */
 }
@@ -2259,4 +2272,73 @@ body.dark-theme .resumebtn .btn.btn-secondary:focus {
   html, body {
     cursor: auto !important;
   }
+}
+
+.projects .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 316px;
+  max-height: 316px;
+  min-height: 316px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(43, 61, 218, 0.08);
+  overflow: hidden;
+}
+@media (max-width: 500px) {
+  .projects .box {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+}
+
+/* New styles for project description and read more link */
+.desc {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.desc p {
+  margin: 0;
+}
+
+.read-more {
+  color: #2b3dda;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
+.read-more:hover {
+  color: #18023f;
+}
+
+/* Specific styles for CareBridge project */
+.case_study .desc {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.case_study .desc a {
+  color: #ffe600;
+  font-weight: 600;
+}
+
+.case_study .desc a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
