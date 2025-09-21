@@ -993,9 +993,36 @@ header .navbar ul li a:hover {
 }
 .projects .box-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin: 2rem 0;
+}
+
+/* Tablet: 2 cards per row */
+@media (max-width: 900px) {
+  .projects .box-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 0;
+  }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+  .projects .box-container {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;
+    margin: 0;
+  }
+  .projects .box,
+  .projects iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 0 2rem 0;
+    display: block;
+  }
 }
 .projects .box-container .box {
   flex: 1 1 30rem;
@@ -1027,13 +1054,7 @@ header .navbar ul li a:hover {
 }
 
 .projects .desc p {
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Show only 3 lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 1.5rem; /* Space for button */
-  min-height: 6.6rem; /* Ensures consistent height for 3 lines */
+  font-size: 1.4rem;
 }
 
 .btn {
@@ -2310,10 +2331,18 @@ var swiper = new Swiper('.testimonial-slider', {
   margin: 2rem 0;
 }
 
+@media (max-width: 900px) {
+  .projects .box-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 0;
+  }
+}
+
 @media (max-width: 600px) {
   .projects .box-container {
     grid-template-columns: 1fr !important;
-    gap: 1.5rem;
+    gap: 1.2rem;
     margin: 0;
   }
   .projects .box,
