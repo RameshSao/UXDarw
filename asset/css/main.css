@@ -1688,10 +1688,29 @@ section,
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+#testimonials.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#testimonials .section-title {
+  padding-bottom: 30px;
+}
+
+#testimonials .section-title h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+}
+
+#testimonials .section-title p {
+  font-size: 15px;
+}
+
 .testimonials .testimonial-item {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
-  padding: 30px;
+  padding: 22px;
   position: relative;
   height: 100%;
 }
@@ -1705,13 +1724,13 @@ section,
 }
 
 .testimonials .testimonial-item h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 13px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
@@ -1728,7 +1747,7 @@ section,
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
   color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  font-size: 26px;
+  font-size: 20px;
   line-height: 0;
 }
 
@@ -1748,7 +1767,9 @@ section,
 
 .testimonials .testimonial-item p {
   font-style: italic;
-  margin: 15px 0 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0 0 0;
   padding: 0;
 }
 
