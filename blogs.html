@@ -1,12 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<body>
-  
-  <script>
-    window.location.href = "https://blog.uxdraw.com";
-  </script
 
-</body>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Engineering Insights & Product Case Studies | UXDraw</title>
+  <meta name="description" content="Read in-depth case studies, UX research articles, and mobile product engineering breakdowns from UXDraw design studio.">
+  <meta name="keywords" content="UXDraw Blog, UX Case Studies, Mobile App Design, Flutter Engineering, Product Strategy, Ramesh Sao">
+  <link rel="canonical" href="https://www.uxdraw.com/blogs.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Engineering Insights & Product Case Studies | UXDraw">
+  <meta property="og:description" content="In-depth case studies, UX research, and mobile product engineering breakdowns from UXDraw.">
+  <meta property="og:url" content="https://www.uxdraw.com/blogs.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicons -->
+  <link href="asset/img/favicon.ico" rel="icon">
+  <link href="asset/img/UXDraw.png" rel="UXDraw">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="asset/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="asset/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="asset/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="asset/css/main.css" rel="stylesheet">
+
+  <style>
+    .blog-hero {
+      padding: 140px 0 60px;
+      background: linear-gradient(135deg, rgba(255, 153, 51, 0.05) 0%, #ffffff 100%);
+    }
+    .article-card {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      border-color: rgba(255, 153, 51, 0.3);
+    }
+    .article-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="asset/img/logo.png" alt="UXDraw Logo">
+        <h1 class="sitename">UXDraw</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="blogs.html" class="active">Case Studies & Insights</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="portfolio.html">Founder Portfolio</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section class="blog-hero text-center">
+      <div class="container" data-aos="fade-up">
+        <span class="badge bg-warning bg-opacity-10 text-dark px-3 py-2 rounded-pill fw-bold text-uppercase small mb-3">
+          Knowledge & Case Studies
+        </span>
+        <h1 class="display-4 fw-black text-dark mb-3">Product Architecture & UX Insights</h1>
+        <p class="lead text-muted max-w-2xl mx-auto">
+          Explore how we design and engineer scalable digital products, high-precision algorithms, and human-centered user experiences.
+        </p>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-5">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-4">
+
+          <!-- Featured Article: Hindu Calendar -->
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="article-card border-warning border-opacity-25" style="background: linear-gradient(180deg, #ffffff 0%, rgba(255, 153, 51, 0.03) 100%);">
+              <div>
+                <span class="article-tag bg-warning text-white">Featured Case Study</span>
+                <h2 class="fw-black h3 text-dark mb-3">
+                  <a href="case_study/hindu_calendar_app.html" class="text-dark text-decoration-none hover-primary">
+                    Designing & Engineering Hindu Calendar & Today Panchang: Zero-Ad Vedic App with 100k+ Users
+                  </a>
+                </h2>
+                <p class="text-secondary leading-relaxed mb-4">
+                  A deep dive into how UXDraw architected an ad-free, high-precision Swiss Ephemeris Vedic astrological engine in Flutter. Discover our human-centered approach to eliminating prayer-time video ads, achieving sub-arcminute celestial accuracy, and localizing into 34 languages.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <span class="badge bg-light text-dark border">Flutter</span>
+                  <span class="badge bg-light text-dark border">Swiss Ephemeris</span>
+                  <span class="badge bg-light text-dark border">UX Research</span>
+                  <span class="badge bg-light text-dark border">ASO & SEO</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="small text-muted fw-bold">By Ramesh Kumar Sao &bull; 8 min read</span>
+                <a href="case_study/hindu_calendar_app.html" class="btn btn-warning text-white fw-bold btn-sm px-3 rounded-pill">
+                  Read Full Case Study <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Article: Ad-Free Devotion -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="article-card">
+              <div>
+                <span class="article-tag bg-primary bg-opacity-10 text-primary">UX Philosophy</span>
+                <h3 class="fw-bold h5 text-dark mb-3">
+                  Why Devotional Apps Must Be Ad-Free: The Sacred UX Principles
+                </h3>
+                <p class="text-secondary small leading-relaxed mb-4">
+                  Examining the negative cognitive friction caused by interstitial ads during morning meditation and prayers, and how respectful monetization models preserve user trust.
+                </p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="small text-muted fw-bold">UX Research &bull; 4 min</span>
+                <a href="case_study/hindu_calendar_app.html#philosophy" class="btn btn-outline-dark btn-sm rounded-pill px-3">
+                  Read <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3: Localization at Scale -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="article-card">
+              <div>
+                <span class="article-tag bg-success bg-opacity-10 text-success">Mobile Engineering</span>
+                <h3 class="fw-bold h5 text-dark mb-3">
+                  Mobile Localization at Scale: Supporting 34 Indic Languages in Flutter
+                </h3>
+                <p class="text-secondary small leading-relaxed mb-4">
+                  How we architected a zero-lag string resolution and font rendering pipeline across Devanagari, Telugu, Tamil, Bengali, and complex Indic scripts without ANR drops.
+                </p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="small text-muted fw-bold">Architecture &bull; 5 min</span>
+                <a href="case_study/hindu_calendar_app.html" class="btn btn-outline-dark btn-sm rounded-pill px-3">
+                  Explore <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 4: Swiss Ephemeris -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="article-card">
+              <div>
+                <span class="article-tag bg-info bg-opacity-10 text-info">Data & Math</span>
+                <h3 class="fw-bold h5 text-dark mb-3">
+                  Sub-Arcminute Celestial Mechanics: Swiss Ephemeris vs. Approximations
+                </h3>
+                <p class="text-secondary small leading-relaxed mb-4">
+                  Why traditional static almanac tables diverge by up to 45 minutes from actual solar events, and how modern C++ ephemeris integrations solve it for worldwide GPS locations.
+                </p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="small text-muted fw-bold">Astrodynamics &bull; 6 min</span>
+                <a href="case_study/hindu_calendar_app.html" class="btn btn-outline-dark btn-sm rounded-pill px-3">
+                  Explore <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">UXDraw</span>
+          </a>
+          <p>User Experience Design & Research Analysis Wing. We turn complex engineering into human-centered digital experiences.</p>
+        </div>
+
+        <div class="col-lg-3 col-6 footer-links">
+          <h4>Case Studies</h4>
+          <ul>
+            <li><a href="case_study/hindu_calendar_app.html">Hindu Calendar App</a></li>
+            <li><a href="blogs.html">Engineering Insights</a></li>
+            <li><a href="portfolio.html">Founder Portfolio</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start">
+          <h4>Flagship Products</h4>
+          <p>Hindu Calendar & Today Panchang Mobile App</p>
+          <p>TodayPanchang.in Web Platform</p>
+          <p><strong>Website:</strong> <a href="https://www.todaypanchang.in">www.todaypanchang.in</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>&copy; <span>Copyright</span> <strong class="px-1 sitename">UXDraw</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/vendor/aos/aos.js"></script>
+  <script src="asset/js/main.js"></script>
+
 </body>
 </html>
